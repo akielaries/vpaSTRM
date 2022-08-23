@@ -15,14 +15,34 @@ current issues:
 
 """
 
+from flask import Response, Flask, render_template
+import threading
+import argparse
+import datetime, time
+import imutils
 import cv2
 
-#
+"""
+initialize window obj; 26-28 allow us to resize the cv window opened
+# on execution
+"""
 window = "top"
 cv2.namedWindow(window, cv2.WINDOW_NORMAL)
 cv2.resizeWindow(window, 720, 720)
 
-capture_obj = cv2.VideoCapture('rtsp://admin:password123@192.168.1.176:554/2')
+""" 
+intialize output frame, lock for thread-safe exchange of the  output frames
+useful when open in multiple tabs supposedly
+"""
+output_frame = None
+lock = threading.lock()
+
+# initialize a object for flask
+app = Flask(__name__)
+
+
+# source of our video stream is an ANNKE l51dm, will use rtsp protocol to view
+source_obj = cv2.VideoCapture('rtsp://admin:password123@192.168.1.176:554/2')
 # capture_obj = cv2.VideoCapture('rtsp://admin:password123@10.55.34.245:554/2')
 
 def capture():
