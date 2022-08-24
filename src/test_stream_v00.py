@@ -4,12 +4,23 @@ from the l51dm Annke turret IP Cam using openCV and displaying it on
 a simple webpage using Flask.
 
 - first declare the window this video output will be displayed on
-and enable it to be resized. 
+and enable it to be resized (used for displaying to stdout)
+- declare an output frame object and ensure using threads safely 
+- initialize flask object
+
 - declare capture object and pass in the full rtsp cmd
 - confirm capture is opened 
+
+def index():
+
+def stream():
 - original orientation of camera if placed on flat side down, displays
 upside down, used cv2.flip to flip cam vertically
 - 
+
+def generate():
+
+def video_feed():
 
 current issues: 
 - when flipping orientation of camera output, must also flip the timestamp 
@@ -121,3 +132,5 @@ if __name__ == '__main__':
 # release the video stream pointer
 capture.release()
 cv2.destroyAllWindows()
+
+
