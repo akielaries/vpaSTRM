@@ -104,6 +104,9 @@ def generate():
 
 """
 Route this method to *url*/video_feed
+
+issues : 
+    - when visiting the url, loads infinitely
 """
 @app.route("/video_feed")
 def video_feed():
