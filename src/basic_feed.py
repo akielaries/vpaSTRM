@@ -17,7 +17,6 @@ current issues:
 
 import cv2
 
-#
 window = "top"
 cv2.namedWindow(window, cv2.WINDOW_NORMAL)
 cv2.resizeWindow(window, 720, 720)

@@ -12,11 +12,6 @@ current issues:
 - when flipping orientation of camera output, must also flip the timestamp 
 """
 
-from flask import Response, Flask, render_template
-import threading
-import argparse
-import datetime, time
-import imutils
 import cv2
 
 """
