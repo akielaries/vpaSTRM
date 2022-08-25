@@ -40,7 +40,7 @@ index():
 @app.route("/")
 def index():
     # return the rendered template
-    return render_template("index.html")
+    return render_template("../templates/index.html")
 
 """
 stream_feed():
