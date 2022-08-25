@@ -12,6 +12,7 @@ RUN apt install -y cmake g++ wget unzip
 
 # install base python img
 RUN apt-get install -y python3-dev python3-distutils python3-pip python3-apt gfortran gcc 
+RUN pip3 install --upgrade pip setuptools wheel
 RUN pip3 install --upgrade pip
 
 # copy script we are running
@@ -24,7 +25,7 @@ RUN apt-get install -y libgtk-3-dev
 # numpy
 # RUN pip3 install numpy
 # RUN apt-get install -y python3-numpy
-RUN pip3 install numpy==1.7
+RUN apt install -y python3-numpy
 
 # install datetime
 RUN pip3 install datetime 
