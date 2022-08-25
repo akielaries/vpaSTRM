@@ -10,7 +10,7 @@ Also 1 cpp example with basic feed.
 
 **fetch updates**
 ```
-sudo apt-get update
+$ sudo apt-get update
 ```
 
 **py 2&3 support**
@@ -21,20 +21,20 @@ sudo apt-get install python3-dev python3-numpy
 
 **pip3 for easy installation of some python modules**
 ```
-sudo apt-get -y install python3-pip
+$ sudo apt-get -y install python3-pip
 ```
 
 **For GTK GUI features**
 ```
-sudo apt-get install libgtk-3-dev
+$ sudo apt-get install libgtk-3-dev
 ```
 **datetime lib**
 ```
-pip3 install datetime
+$ pip3 install datetime
 ```
 **openCV**
 ```
-pip3 install opencv-python
+$ pip3 install opencv-python
 ```
 
 **Flask** 
@@ -44,7 +44,7 @@ $ pip3 install flask
 
 **imutils**
 ```
-pip3 install imutils
+$ pip3 install imutils
 ```
 
 # Build this project
