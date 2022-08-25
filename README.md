@@ -2,7 +2,7 @@
 WIP repo on using opencv with python to utilize the 
 Annke l51dm IP turret camera as a tool to monitor the 
 DISCOVER test site, specifically the Terrestrial Robots. 
-Also 1 cpp example with basic feed.
+Also 1 cpp example providing basic feed.
 
 
 # Dependencies
