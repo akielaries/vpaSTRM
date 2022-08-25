@@ -58,6 +58,7 @@ $ docker build -t ip_cam . &&
 docker image ls
 $ docker container run --privledged -d ip_cam
 ```
+**manually**
 ```
 $ git clone git@github.com:DiscoverCCRI/ip_cam.git &&
 cd ip_cam/src &&
