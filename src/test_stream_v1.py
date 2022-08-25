@@ -140,7 +140,7 @@ if __name__ == '__main__':
    
     args = vars(ap.parse_args())
     
-    thr_arg = threading.Thread(target=stream, args=(args["frame_count"],))
+    thr_arg = threading.Thread(target=stream_feed, args=(args["frame_count"],))
     thr_arg.daemon = True
     thr_arg.start()
     
