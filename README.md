@@ -39,9 +39,9 @@ $ pip3 install datetime opencv-python flask imutils
 $ git clone git@github.com:DiscoverCCRI/ip_cam.git &&
 cd ip_cam/src &&
 python3 test_stream_v1.py
-
-Enter IP of your local machine into a browser and your RTSP stream should be present.
 ```
+Enter IP of your local machine into a browser and your RTSP stream should be present.
+
 
 # Issues
 Issues I ran into when installing on Raspian on RPI 4
