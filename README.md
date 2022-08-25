@@ -28,24 +28,12 @@ $ sudo apt-get -y install python3-pip
 ```
 $ sudo apt-get install libgtk-3-dev
 ```
-**datetime lib**
+bulk install our python dependencies using pip
+**datetime, openCV, Flask, imutils**
 ```
-$ pip3 install datetime
-```
-**openCV**
-```
-$ pip3 install opencv-python
+$ pip3 install datetime opencv-python flask imutils
 ```
 
-**Flask** 
-```
-$ pip3 install flask
-```
-
-**imutils**
-```
-$ pip3 install imutils
-```
 
 # Build this project
 ```
