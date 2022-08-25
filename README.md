@@ -6,11 +6,26 @@ Also cpp example providing basic feed.
 
 
 # Dependencies
-- Assumes you are using some type of linux-based (or OSX)environment.
+- Assumes you are using some type of linux-based (or OSX)environment. More specifically
+this repo was tested on the Rapsberry Pi 4 especially the portion on Docker.
 
 **fetch updates**
 ```
 $ sudo apt-get update
+```
+
+**install Docker**
+```
+$ curl -sSL https://get.docker.com | sh
+```
+add user to docker grp
+```
+$ sudo usermod -aG docker pi
+```
+confirm installation by checking version and running hello world container
+```
+$ docker --version
+$ docker run hello-world
 ```
 
 **py 2&3 support**
@@ -35,6 +50,14 @@ $ pip3 install datetime opencv-python flask imutils
 ```
 
 # Build this project
+**with Docker**
+```
+$ git clone git@github.com:DiscoverCCRI/ip_cam.git &&
+cd /build 
+$ docker build -t ip_cam . &&
+docker image ls
+$ docker container run --privledged -d ip_cam
+```
 ```
 $ git clone git@github.com:DiscoverCCRI/ip_cam.git &&
 cd ip_cam/src &&
