@@ -24,11 +24,11 @@ $ curl -sSL https://get.docker.com | sh
         $ sudo usermod -aG docker pi
         $ sudo chmod 666 /var/run/docker.sock 
         ``` <br>
-    confirm installation by checking version and running hello world container
+- confirm installation by checking version and running hello world container <br>
         ```
         $ docker --version
         $ docker run hello-world
-        ```
+        ``` <br>
         
 **py 2&3 support**
 ```
@@ -47,14 +47,14 @@ pip3 install ngrok-api
 ```
 visit here for more directions: https://github.com/ngrok/ngrok-api-python
 - You'll want to [create an ngrok account](https://dashboard.ngrok.com/get-started/setup) and add your authtoken to the 
-ngrok agent as well as add your API-key to /src/test_stream_v1.py
+ngrok agent as well as add your API-key to /src/test_stream_v1.py <br>
         ```
         $ ngrok config add-authtoken <authtoken>
-        ```
-- after setting up ngrok open up port 5000 to forward publicly
+        ``` <br>
+- after setting up ngrok open up port 5000 to forward publicly <br>
         ```
         $ ngrok http 5000
-        ```
+        ``` <br>
 this will open an ngrok session and provide you with the generated public facing
 URL of your project.
 
@@ -104,7 +104,7 @@ and your feed should be present.
 *using the ngrok cmd* <br>
     ```
     ngrok http 5000 
-    ```
+    ``` <br>
     
 ![example4](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/ngrok_session.png)
 
