@@ -100,7 +100,6 @@ and your feed should be present.
 *see: ip_cam/src/proxy_stream.py*
 ![example3](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/localhost-to-ngrok_stream.png)
 
-
 ***ngrok interface***
 ![example4](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/ngrok_session.png)
 
