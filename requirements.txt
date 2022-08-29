@@ -1,0 +1,4 @@
+various requirements/prerequisites needed to get this project running. please 
+see scripts/Dockerfile.
+
+
