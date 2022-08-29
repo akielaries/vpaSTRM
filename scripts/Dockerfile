@@ -17,8 +17,14 @@ RUN pip3 install --upgrade pip
 
 # copy script we are running
 
+# install ngrok for proxying localhost to generated URL from ngrok
+RUN apt install -y ngrok 
+RUN pip3 install ngrok-api
+# add your authtoken to your confid
+RUN config add-authtoken <authtoken>
+# open up port 5000 to the public
+RUN ngrok http 5000
 
-# install dependencies
 # GTK GUI features
 RUN apt-get install -y libgtk-3-dev
 
