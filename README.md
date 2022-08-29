@@ -28,16 +28,7 @@ confirm installation by checking version and running hello world container
 $ docker --version
 $ docker run hello-world
 ```
-**intall ngrok for proxying**
-```
-$ curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | 
-sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && 
-echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | 
-sudo tee /etc/apt/sources.list.d/ngrok.list 
-&& sudo apt update 
-&& sudo apt install ngrok
 
-```
 **py 2&3 support**
 ```
 sudo apt-get install python-dev python-numpy
@@ -48,6 +39,25 @@ sudo apt-get install python3-dev python3-numpy
 ```
 $ sudo apt-get -y install python3-pip
 ```
+**intall ngrok for proxying, making localhost visible to outside**
+```
+$ sudo apt update && 
+sudo apt install ngrok &&
+pip3 install ngrok-api
+```
+follow more directions here: https://github.com/ngrok/ngrok-api-python
+You'll want to create an ngrok account and add your authtoken to the ngrok agent
+as well as add your API-key to /src/test_stream_v1.py
+```
+ngrok config add-authtoken <authtoken>
+```
+after setting up ngrok open up port 5000 to forward publicly
+```
+ngrok http 5000
+```
+this will open an ngrok session and provide you with the generated public facing
+URL of your project.
+
 
 **For GTK GUI features**
 ```
