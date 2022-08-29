@@ -19,7 +19,7 @@ $ sudo apt-get update
 ```
 $ curl -sSL https://get.docker.com | sh
 ```
-- add user to docker grp and fix perms on docker sock
+- add user to docker grp and fix perms on docker sock <br>
         ```
         $ sudo usermod -aG docker pi
         $ sudo chmod 666 /var/run/docker.sock 
