@@ -23,7 +23,7 @@ $ curl -sSL https://get.docker.com | sh
         ```
         $ sudo usermod -aG docker pi
         $ sudo chmod 666 /var/run/docker.sock 
-        ```
+        ``` <br>
     confirm installation by checking version and running hello world container
         ```
         $ docker --version
