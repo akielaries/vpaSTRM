@@ -88,19 +88,23 @@ Enter the IP address of the machine you are hosting this project from in a brows
 and your feed should be present. 
 
 # Examples
-***Using opencv to view basic feed*** 
+***Using opencv to view basic feed***
+
 *see: ip_cam/src/tests/basic_feed.py*
 ![example](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/basic_feed.png)
 
 ***Using flask to host IP camera's feed on localhost port 5000***
+
 *see: ip_cam/src/test_stream_v1.py*
 ![example2](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/flask_localhost.png)
 
 ***Using ngrok to proxy localhost port 5000 to generated URL***
+
 *see: ip_cam/src/proxy_stream.py*
 ![example3](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/localhost-to-ngrok_stream.png)
 
 ***ngrok interface***
+
 *using the ngrok cmd*
     ```
     ngrok http 5000
