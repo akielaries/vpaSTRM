@@ -87,6 +87,24 @@ python3 test_stream_v1.py proxy_stream.py
 Enter the IP address of the machine you are hosting this project from in a browser
 and your feed should be present. 
 
+# Issues
+Issues I ran into when installing on Raspian on RPI 4
+  - When installing imutils there might be some errors, to fix I installed
+  these packages and fixed some various issues with numpy
+    ```
+    pip3 install opencv-python
+    sudo apt-get install libcblas-dev
+    sudo apt-get install libhdf5-dev
+    sudo apt-get install libhdf5-serial-dev
+    sudo apt-get install libatlas-base-dev
+    sudo apt-get install libjasper-dev 
+    sudo apt-get install libqtgui4 
+    ```
+  - Issues with numpy on my local machine with bad versions. To fix:
+    ```
+    $ pip3 install -U numpy
+    ```
+
 # Examples
 ***Using opencv to view basic feed*** <br>
 *see: ip_cam/src/tests/basic_feed.py* <br>
@@ -107,22 +125,3 @@ and your feed should be present.
     ``` <br>
     
 ![example4](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/ngrok_session.png)
-
-
-# Issues
-Issues I ran into when installing on Raspian on RPI 4
-  - When installing imutils there might be some errors, to fix I installed
-  these packages and fixed some various issues with numpy
-    ```
-    pip3 install opencv-python
-    sudo apt-get install libcblas-dev
-    sudo apt-get install libhdf5-dev
-    sudo apt-get install libhdf5-serial-dev
-    sudo apt-get install libatlas-base-dev
-    sudo apt-get install libjasper-dev 
-    sudo apt-get install libqtgui4 
-    ```
-  - Issues with numpy on my local machine with bad versions. To fix:
-    ```
-    $ pip3 install -U numpy
-    ```
