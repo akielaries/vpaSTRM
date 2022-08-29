@@ -101,6 +101,10 @@ and your feed should be present.
 ![example3](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/localhost-to-ngrok_stream.png)
 
 ***ngrok interface***
+*using the ngrok cmd*
+    ```
+    ngrok http 5000
+    ```
 ![example4](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/ngrok_session.png)
 
 
