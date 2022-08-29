@@ -75,7 +75,7 @@ $ pip3 install datetime opencv-python flask imutils
 **with Docker**
 ```
 $ git clone git@github.com:DiscoverCCRI/ip_cam.git &&
-cd /build 
+cd /scripts 
 $ docker build -t ip_cam . &&
 docker image ls
 $ docker container run --privledged -d ip_cam
