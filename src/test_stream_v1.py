@@ -10,6 +10,7 @@ import argparse
 import datetime, time
 import imutils
 import cv2
+
 """
 initialize the output frame and a lock used to ensure thread-safe
 exchanges of the output frames (useful when multiple browsers/tabs are viewing the stream)
@@ -40,15 +41,13 @@ index():
 @app.route("/")
 def index():
     # return the rendered template
-    return render_template("../templates/index.html")
+    return render_template("index.html")
 
 """
 stream_feed():
     - set output and thread lock variables and read in the frames
     - set a stream var = to our openCV's flip method for correct orientation
     - resize our streams window in the webpage 
-
-
 """
 def stream_feed(frame_count):
     global output_frame, thr_lock
@@ -71,8 +70,11 @@ def stream_feed(frame_count):
                     output_frame = frame.copy()
             else:
                 continue 
-        else:
-            print('camera open failed')
+    else:
+        print('camera open failed')
+    
+    print(stream)
+        
 
 """
 generate():
