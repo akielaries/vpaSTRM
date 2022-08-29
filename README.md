@@ -6,6 +6,7 @@ Also cpp example providing basic feed.
 
 
 # Dependencies
+---
 - Assumes you are using some type of linux-based (or OSX)environment. More specifically
 this repo was tested on the Rapsberry Pi 4 especially the portion on Docker.
 
@@ -70,6 +71,7 @@ $ pip3 install datetime opencv-python flask imutils
 ```
 
 # Build this project
+---
 **with Docker**
 ```
 $ git clone git@github.com:DiscoverCCRI/ip_cam.git &&
@@ -88,6 +90,7 @@ Enter the IP address of the machine you are hosting this project from in a brows
 and your feed should be present. 
 
 # Issues
+---
 Issues I ran into when installing on Raspian on RPI 4
   - When installing imutils there might be some errors, to fix I installed
   these packages and fixed some various issues with numpy
@@ -106,6 +109,7 @@ Issues I ran into when installing on Raspian on RPI 4
     ```
 
 # Examples
+---
 ***Using opencv to view basic feed*** <br>
 *see: ip_cam/src/tests/basic_feed.py* <br>
 ![example](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/basic_feed.png)
