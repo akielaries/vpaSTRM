@@ -21,8 +21,14 @@ window = "top"
 cv2.namedWindow(window, cv2.WINDOW_NORMAL)
 cv2.resizeWindow(window, 720, 720)
 
-capture_obj = cv2.VideoCapture('rtsp://admin:password123@192.168.1.176:554/2')
-# capture_obj = cv2.VideoCapture('rtsp://admin:password123@10.55.34.245:554/2')
+# ip cam #1 local environment IP
+#capture_obj = cv2.VideoCapture('rtsp://admin:password123@192.168.1.176:554/2')
+capture_obj = cv2.VideoCapture('rtsp://admin:password123@192.168.1.124:554/2')
+
+# ip cam #1 test-site IP
+#capture_obj = cv2.VideoCapture('rtsp://admin:password123@10.55.34.251:554/2')
+#capture_obj = cv2.VideoCapture('rtsp://admin:password123@10.55.34.46:554/2')
+
 
 def capture():
     if capture_obj.isOpened():
