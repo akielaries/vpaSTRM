@@ -24,9 +24,9 @@ import threading
 #os.environ["OPENCV_FFMPEG_CAPTURE_OPTIONS"] = "rtsp_transport;udp"
 
 # ip cam #1 local environment IP
-src_url1 = cv2.VideoCapture('rtsp://admin:password123@192.168.1.176:554/2')
+src_url1 = cv2.VideoCapture('rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2')
 # ip cam #2 local env IP
-src_url2 = cv2.VideoCapture('rtsp://admin:password123@192.168.1.124:554/2')
+src_url2 = cv2.VideoCapture('rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2')
 
 # ip cam #1 test-site IP
 #capture_obj = cv2.VideoCapture('rtsp://admin:password123@10.55.34.251:554/2')
