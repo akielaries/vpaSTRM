@@ -50,6 +50,11 @@ cv2.resizeWindow(window1, 720, 720)
 #cv2.resizeWindow(window2, 720, 720)
 cv2.resizeWindow(window3, 720, 720)
 
+
+src_url1 = cv2.VideoCapture('rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2')
+
+src_url3 = cv2.VideoCapture('rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2')
+
 # method for capturing from our IP cameras
 def capture():
     if src_url1.isOpened() and src_url3.isOpened():
