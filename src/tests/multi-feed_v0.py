@@ -50,7 +50,11 @@ src_url3 = cv2.VideoCapture('rtsp://admin:password123@disc-cam3.iot.nau.edu:554/
 
 # method for capturing from our IP cameras
 def capture():
-    if src_url1.isOpened() and src_url3.isOpened():
+    if src_url1.isOpened(): 
+
+
+    
+    if src_url3.isOpened():
 
         var1 = src_url1.get(cv2.CAP_PROP_BUFFERSIZE)
     #var2 = src_url2.get(cv2.CAP_PROP_BUFFERSIZE)
