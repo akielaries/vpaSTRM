@@ -33,82 +33,71 @@ cv2.namedWindow(window1, cv2.WINDOW_NORMAL)
 cv2.namedWindow(window3, cv2.WINDOW_NORMAL)
 
 cv2.resizeWindow(window1, 720, 720)
-#cv2.resizeWindow(window2, 720, 720)
 cv2.resizeWindow(window3, 720, 720)
 
 # ip cam #1 test-site
-src_url1 = cv2.VideoCapture('rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2')
+src1 = cv2.VideoCapture('rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2')
 # ip cam #2 local env IP
 
 # ip cam #2 test-site
 #src_url2 = cv2.VideoCapture('rtsp://admin:password123@10.55.34.251:554/2')
 # ip cam #3 test-site
-src_url3 = cv2.VideoCapture('rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2')
+src3 = cv2.VideoCapture('rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2')
 # ip cam #1 test-site IP
 #capture_obj = cv2.VideoCapture('rtsp://admin:password123@10.55.34.251:554/2')
 #capture_obj = cv2.VideoCapture('rtsp://admin:password123@10.55.34.46:554/2')
 
 # method for capturing from our IP cameras
 def capture():
-    if src_url1.isOpened(): 
+    frame_num = 20
 
-
-    
-    if src_url3.isOpened():
-
-        var1 = src_url1.get(cv2.CAP_PROP_BUFFERSIZE)
-    #var2 = src_url2.get(cv2.CAP_PROP_BUFFERSIZE)
-        var3 = src_url3.get(cv2.CAP_PROP_BUFFERSIZE)
-
-        src_url1.set(cv2.CAP_PROP_BUFFERSIZE, 3)
-    #src_url2.set(cv2.CAP_PROP_BUFFERSIZE, 3)
-        src_url3.set(cv2.CAP_PROP_BUFFERSIZE, 3)
-
-        start_frame_num = 20
-        src_url1.set(cv2.CAP_PROP_POS_FRAMES, start_frame_num)
-    #src_url2.set(cv2.CAP_PROP_POS_FRAMES, start_frame_num)
-        src_url3.set(cv2.CAP_PROP_POS_FRAMES, start_frame_num)
-    
+    if src1.isOpened(): 
+        var1 = src1.get(cv2.CAP_PROP_BUFFERSIZE)
+        src1.set(cv2.CAP_PROP_BUFFERSIZE, 3)
+        src1.set(cv2.CAP_PROP_POS_FRAMES, frame_num)
         # ret; bool val returns true if fram is available
-        # frame; img arr vector 
-        ret1, frame1 = src_url1.read()
-        #ret2, frame2 = src_url2.read()
-        ret3, frame3 = src_url3.read()
-        # resize our frames
+          # frame; img arr vector 
+        ret1, frame1 = src1.read()
+        # resize frames
         cam_frame1 = cv2.resize(frame1, (0, 0), fx=.50,fy=.50)
-        #cam_frame2 = cv2.resize(frame2, (0, 0), fx=.50,fy=.50)
-        cam_frame3 = cv2.resize(frame3, (0, 0), fx=.50,fy=.50)
+    
     else:
         ret1 = False
+
+    if src3.isOpened():
+        var3 = src3.get(cv2.CAP_PROP_BUFFERSIZE)
+        src3.set(cv2.CAP_PROP_BUFFERSIZE, 3)
+        src3.set(cv2.CAP_PROP_POS_FRAMES, frame_num)
+        # ret; bool val returns true if fram is available
+            # frame; img arr vector 
+        ret3, frame3 = src3.read()
+        # resize our frames
+        cam_frame3 = cv2.resize(frame3, (0, 0), fx=.50,fy=.50)
+
+    else:
         ret3 = False
 
     while ret1 and ret3:
         # ret; bool val returns true if fram is available
             # frame; img arr vector
-        ret1, frame1 = src_url1.read()
-        #ret2, frame2 = src_url2.read()
-        ret3, frame3 = src_url3.read()
+        ret1, frame1 = src1.read()
+        ret3, frame3 = src3.read()
 
         # depending on how cam is mounted, adjust this line
             # for this instance we flip the camera vertically
         cam_frame1 = cv2.flip(frame1, 0)
-        #cam_frame2 = cv2.flip(cam_frame2, 0)
             #cam_frame3 = cv2.flip(frame3, 0)
 
-        #if (ret1):
-            # display our feeds in seperate resizable windows
+        # display our feeds in seperate resizable windows
         cv2.imshow(window1, cam_frame1)
-            #cv2.imshow(window2, cam_frame2)
         cv2.imshow(window3, frame3)
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
-    src_url1.release()
-    #src_url2.release()
-    src_url3.release()
+    src1.release()
+    src3.release()
     cv2.destroyAllWindows()
-
 
 if __name__ == '__main__':
     capture()

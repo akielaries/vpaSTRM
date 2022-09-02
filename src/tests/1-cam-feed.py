@@ -23,7 +23,7 @@ cv2.resizeWindow(window, 720, 720)
 
 # ip cam #1 local environment IP
 #capture_obj = cv2.VideoCapture('rtsp://admin:password123@192.168.1.177:554/2')
-capture_obj = cv2.VideoCapture('rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2')
+capture_obj = cv2.VideoCapture('rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2')
 # ip cam #1 test-site IP
 #capture_obj = cv2.VideoCapture('rtsp://admin:password123@10.55.34.251:554/2')
 #capture_obj = cv2.VideoCapture('rtsp://admin:password123@10.55.34.46:554/2')
