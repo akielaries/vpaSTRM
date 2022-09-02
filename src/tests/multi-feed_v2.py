@@ -17,37 +17,34 @@ current issues:
 
 import cv2
 
-window = "top"
-cv2.namedWindow(window, cv2.WINDOW_NORMAL)
-cv2.resizeWindow(window, 720, 720)
+# define window variables and size allowing for resizing when program runs
+window1 = "window1"
+window2 = "window2"
+cv2.namedWindow(window1, cv2.WINDOW_NORMAL)
+cv2.namedWindow(window2, cv2.WINDOW_NORMAL)
+cv2.resizeWindow(window1, 720, 720)
+cv2.resizeWindow(window2, 720, 720)
 
-# ip cam #1 local environment IP
-#capture_obj = cv2.VideoCapture('rtsp://admin:password123@192.168.1.177:554/2')
-capture_obj = cv2.VideoCapture('rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2')
-# ip cam #1 test-site IP
-#capture_obj = cv2.VideoCapture('rtsp://admin:password123@10.55.34.251:554/2')
-#capture_obj = cv2.VideoCapture('rtsp://admin:password123@10.55.34.46:554/2')
-
+src1 = cv2.VideoCapture('rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2')
+src2 = cv2.VideoCapture('rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2')
 
 def capture():
-    if capture_obj.isOpened():
-        # ret; bool val returns true if fram is available
-        # frame; img arr vector 
-        ret, frame = capture_obj.read()
-    else:
-        ret = False
-    while ret:
-        ret, frame = capture_obj.read()
-        # depending on how cam is mounted, adjust this line
-            # for this instance we flip the camera vertically
-        stream = cv2.flip(frame, 0);
+    while True:
+        ret1, frame1 = src1.read()
+        ret2, frame2 = src2.read()
+
+        if (ret1):
+            cv2.imshow(window1, frame1)
+    
+        if (ret2):
+            cv2.imshow(window2, frame2)
         
-        # cv2.imshow("Capturing", frame)
-        cv2.imshow(window, stream)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
-    capture_obj.release()
+
+    src1.release()
+    src3.release()
     cv2.destroyAllWindows()
 
 def main():
