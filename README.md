@@ -110,17 +110,21 @@ Issues I ran into when installing on Raspian on RPI 4
 
 # Examples
 ---
-***Using opencv to view basic feed*** <br>
-*see: ip_cam/src/tests/basic_feed.py* <br>
+***Using openCV to view basic feed*** <br>
+see: ```ip_cam/src/tests/1-cam-feed.py```
 ![example](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/basic_feed.png)
 
+***Using openCV to view multiple cameras*** <br>
+see: ```ip_cam/src/tests/multi-feed_v3.py```
+![example2](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/multi-stream.png)
+
 ***Using flask to host IP camera's feed on localhost port 5000*** <br>
-*see: ip_cam/src/test_stream_v1.py* <br>
-![example2](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/flask_localhost.png)
+see: ```ip_cam/src/test_stream_v1.py```
+![example3](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/flask_localhost.png)
 
 ***Using ngrok to proxy localhost port 5000 to generated URL*** <br>
 *see: ip_cam/src/proxy_stream.py* <br>
-![example3](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/localhost-to-ngrok_stream.png)
+![example4](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/localhost-to-ngrok_stream.png)
 
 ***ngrok interface*** <br>
 *using the ngrok cmd* <br>
