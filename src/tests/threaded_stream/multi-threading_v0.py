@@ -36,17 +36,25 @@ def previewcam(previewname, camid):
             break
     cv2.destroyWindow(previewname)
 
+threadLock = threading.Lock()
+threads = []
 # Create different threads for each video stream, then start it.
 thread1 = CamThread("Test Site Cam2", 'rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2')
 thread2 = CamThread("Test Site Cam3", 'rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2')
-
-#thread3 = CamThread("Garage", 'rtsp://username:SuperSecurePassword@192.168.1.2/Streaming/Channels/302')
 
 thread1.start()
 thread2.start()
 #thread3.start()
 
-# check out tutorials point link below for multi-threading sample
+threads.append(thread1)
+threads.append(thread2)
+
+for t in threads:
+    t.join()
+print("EXITING MAIN THREAD")
+
+
+
 # https://www.tutorialspoint.com/python/python_multithreading.htm
 
 
