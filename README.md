@@ -1,8 +1,9 @@
 # Introduction
 WIP repo on using opencv, flask and ngrok with python to utilize the 
 Annke l51dm IP turret camera as a tool to monitor the 
-DISCOVER test site, specifically the Terrestrial Robots. 
-Also cpp example providing basic feed.
+DISCOVER test site, specifically the NSF Demo. 
+
+Note: Will also be working on some implementations in C++. For now see some examples on providing basic feed.
 
 
 # Dependencies
