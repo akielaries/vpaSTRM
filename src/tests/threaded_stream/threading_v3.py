@@ -191,13 +191,13 @@ if __name__ == '__main__':
 
     # Create camera widgets
     print('Creating Camera Widgets...')
-    #zero = CameraWidget(screen_width//3, screen_height//3, camera0)
-    #one = CameraWidget(screen_width//3, screen_height//3, camera1)
+    zero = CameraWidget(screen_width//3, screen_height//3, camera0)
+    one = CameraWidget(screen_width//3, screen_height//3, camera1)
 
     # Add widgets to layout
     print('Adding widgets to layout...')
-    #ml.addWidget(zero.get_video_frame(),0,0,1,1)
-    #ml.addWidget(one.get_video_frame(),0,1,1,1)
+    ml.addWidget(zero.get_video_frame(),0,0,1,1)
+    ml.addWidget(one.get_video_frame(),0,1,1,1)
     #ml.addWidget(two.get_video_frame(),0,2,1,1)
     #ml.addWidget(three.get_video_frame(),1,0,1,1)
     #ml.addWidget(four.get_video_frame(),1,1,1,1)
