@@ -35,11 +35,11 @@ RTSP format for l51dm cameras :
 # capture = cv2.VideoCapture(src1)
 
 
-def parse_cams(src):
-    sources = ['rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2',
+def parse_cams(id):
+    cameras = ['rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2',
                'rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2']
 
-    return sources[int(src)]
+    return cameras[int(id)]
 
 
 """
@@ -143,11 +143,11 @@ video_feed():
 issues : 
     - when visiting the url, loads infinitely
 """
-@app.route('/video_feed/<string:src>/', methods=["GET"])
-def video_feed(src):
+@app.route('/video_feed/<string:id>/', methods=["GET"])
+def video_feed(id):
     # return the response generated along with the specific media
     # type (mime type)
-    return Response(generate(src),
+    return Response(generate(id),
         mimetype = 'multipart/x-mixed-replace; boundary=frame')
 
 
@@ -165,9 +165,9 @@ if __name__ == '__main__':
     ap.add_argument("-f", "--frame-count", type=int, default=32,
         help="# of frames used to construct the background model")
    
-    args = vars(ap.parse_args())
+    kwargs = vars(ap.parse_args())
     
-    thr_arg = threading.Thread(target=stream_feed, args=(args["cam_id"],["frame_count"],))
+    thr_arg = threading.Thread(target=stream_feed, kwargs=(kwargs["cam_id"],["frame_count"],))
     thr_arg.daemon = True
     thr_arg.start()
     
@@ -176,9 +176,5 @@ if __name__ == '__main__':
     #app.run(host=args["ip"], port=args["port"], debug=True,
     #    threaded=True, use_reloader=False)
     app.run(host= '0.0.0.0',debug=True)
-
-# release the video stream pointer
-capture.release()
-cv2.destroyAllWindows()
 
 
