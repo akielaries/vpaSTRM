@@ -37,6 +37,10 @@ class VideoStreamWidget(object):
         if key == ord('q'):
             self.capture.release()
             cv2.destroyAllWindows()
+            # implement something like this; to my knowledge no 
+            # such function exists
+            # self.thread.stop()
+
             exit(1)
 
 # perhaps include a thread.stop to clean things up

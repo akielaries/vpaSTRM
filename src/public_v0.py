@@ -29,17 +29,8 @@ RTSP format for l51dm cameras :
     - rtsp://user:pass@IPADDRESS:554/channel
         * 554 = default RTSP port
 """
-# capture_obj = "rtsp://admin:password123@192.168.1.176:554/2"
-# src1 = "rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2"
-# src2 = "rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2"
-# capture = cv2.VideoCapture(src1)
-
-
-def parse_cams(src):
-    sources = ['rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2',
-               'rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2']
-    return sources[int(src)]
-
+capture_obj = "rtsp://admin:password123@192.168.1.176:554/2"
+capture = cv2.VideoCapture(capture_obj)
 
 """
 index():
@@ -47,11 +38,10 @@ index():
 
 ** "routes" are essentially URLs of our application (i.e. 192.168.1.176)
 """
-@app.route('/', methods=["GET"])
+@app.route("/")
 def index():
     # return the rendered template
     return render_template("index.html")
-
 
 """
 stream_feed():
@@ -59,18 +49,15 @@ stream_feed():
     - set a stream var = to our openCV's flip method for correct orientation
     - resize our streams window in the webpage 
 """
-def stream_feed(cam_id, frame_count):
+def stream_feed(frame_count):
     global output_frame, thr_lock
-
-    stream = parse_cams(cam_id)
-    capture = cv2.VideoCapture(stream)
     # variables for streaming to window on local machine
     # window = "top"
     # cv2.namedWindow(window, cv2.WINDOW_NORMAL)
     # cv2.resizeWindow(window, 720, 720)
 
-    while True:
-        if capture.isOpened():
+    if capture.isOpened():
+        while True:
             ret, frame = capture.read()
             # depending on how cam is mounted, adjust this line
                 # for this instance we flip the camera vertically
@@ -84,7 +71,7 @@ def stream_feed(cam_id, frame_count):
             else:
                 continue 
     else:
-        print('ERR:     COULD NOT OPEN STREAM')
+        print('camera open failed')
     
     print(stream)
         
@@ -98,12 +85,10 @@ issues:
     - video(or rather continuous photo) stream is rather choppy
     not sure if any improvements could be made in here
 """
-def generate(cam_id, frame_count):
+def generate():
     # grab global references to the output frame and lock variables
     global output_frame, thr_lock
-    
-    stream = parse_cams(cam_id)
-
+ 
     # loop over frames from the output stream
     while True:
         # wait until the lock is acquired
@@ -123,7 +108,6 @@ def generate(cam_id, frame_count):
         yield(b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + 
             bytearray(encoded_img) + b'\r\n')
 
-
 """
 video_feed():
     - returns streaming response
@@ -137,13 +121,12 @@ video_feed():
 issues : 
     - when visiting the url, loads infinitely
 """
-@app.route('/video_feed/<string:src>/', methods=["GET"])
-def video_feed(src):
+@app.route("/cam1")
+def video_feed():
     # return the response generated along with the specific media
     # type (mime type)
-    return Response(generate(src),
-        mimetype = 'multipart/x-mixed-replace; boundary=frame')
-
+    return Response(generate(),
+        mimetype = "multipart/x-mixed-replace; boundary=frame")
 
 """
 - check to see if this is the main thread of execution
@@ -154,14 +137,12 @@ def video_feed(src):
 if __name__ == '__main__':
     # construct the argument parser and parse command line arguments
     ap = argparse.ArgumentParser()
-    ap.add_argument("-c", "--cam_id", type=int, 
-        help="# of cams we want to stream/display")
     ap.add_argument("-f", "--frame-count", type=int, default=32,
         help="# of frames used to construct the background model")
    
     args = vars(ap.parse_args())
     
-    thr_arg = threading.Thread(target=stream_feed, args=(args["cam_id"],["frame_count"],))
+    thr_arg = threading.Thread(target=stream_feed, args=(args["frame_count"],))
     thr_arg.daemon = True
     thr_arg.start()
     
