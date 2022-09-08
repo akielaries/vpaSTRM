@@ -38,6 +38,7 @@ RTSP format for l51dm cameras :
 def parse_cams(src):
     sources = ['rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2',
                'rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2']
+
     return sources[int(src)]
 
 
@@ -83,6 +84,11 @@ def stream_feed(cam_id, frame_count):
                     output_frame = frame.copy()
             else:
                 continue 
+            key = cv2.waitKey(1)
+            if key == ord('q'):
+                capture.release()
+                cv2.destroyAllWindows()
+                exit(1)
     else:
         print('ERR:     COULD NOT OPEN STREAM')
     
@@ -98,7 +104,7 @@ issues:
     - video(or rather continuous photo) stream is rather choppy
     not sure if any improvements could be made in here
 """
-def generate(cam_id, frame_count):
+def generate(cam_id):
     # grab global references to the output frame and lock variables
     global output_frame, thr_lock
     
