@@ -78,6 +78,7 @@ def stream_feed(cam_id, frame_count):
             stream = cv2.flip(frame, 0)
             # stream to stdout
             # cv2.imshow(window, stream)
+            time.sleep(0.02)
             if frame.shape:
                 frame = cv2.resize(stream, (640,360))
                 with thr_lock:
@@ -157,7 +158,8 @@ def video_feed(id):
     * creation of argument parser var, pass in frame count and host,
     return
 """
-if __name__ == '__main__':
+#if __name__ == '__main__':
+def main():
     # construct the argument parser and parse command line arguments
     ap = argparse.ArgumentParser()
     ap.add_argument("-c", "--cam_id", type=int, 
@@ -167,14 +169,19 @@ if __name__ == '__main__':
    
     kwargs = vars(ap.parse_args())
     
-    thr_arg = threading.Thread(target=stream_feed, kwargs=(kwargs["cam_id"],["frame_count"],))
-    thr_arg.daemon = True
+    thr_arg = threading.Thread(target=stream_feed, kwargs=(kwargs["cam_id"],kwargs["frame_count"],))
+    #thr_arg.daemon = True
     thr_arg.start()
     
     # start the flask app passing in host, not requiring execution of program
     # as new edits arise, instead refresh page 
     #app.run(host=args["ip"], port=args["port"], debug=True,
     #    threaded=True, use_reloader=False)
-    app.run(host= '0.0.0.0',debug=True)
+    app.run(host= '0.0.0.0',debug=True, threaded=True)
+
+if __name__ == '__main__':
+    main()
+
+
 
 
