@@ -1,7 +1,12 @@
 from threading import Thread
+from flask import Response, Flask, render_template
+import argparse
+import datetime, time
 import imutils
-import cv2, time
+import cv2
 
+
+app = Flask(__name__)
 
 camlink1 = "rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2"
 camlink2 = "rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2"
@@ -54,7 +59,9 @@ class VideoStreamWidget(object):
 if __name__ == '__main__':
     video_stream_widget = VideoStreamWidget(camlink1, "Cam 2")
     video_stream_widget2 = VideoStreamWidget(camlink2, "Cam 3")
-
+    
+    app.run(host= '0.0.0.0',debug=True)
+    
     while True:
         try:
             video_stream_widget.show_frame()
