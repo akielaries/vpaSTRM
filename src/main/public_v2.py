@@ -61,6 +61,17 @@ stream_feed():
     - set output and thread lock variables and read in the frames
     - set a stream var = to our openCV's flip method for correct orientation
     - resize our streams window in the webpage 
+
+
+<----- LEAVE OFF HERE  ----->
+    - rethink this method especially. other non-threaded version works fine 
+    without this. perhaps morph stream_feed into a resize function since we 
+    do not need to display anything using the OpenCV windows, only the HTML
+    webpage we are creating for localhost. 
+    - maybe pass a camera object into here and return the new resized frame
+
+    OVERALL THINK OF A NEW WAY TO USE THIS 
+
 """
 def stream_feed(cam_id, frame_count):
     global output_frame, thr_lock
