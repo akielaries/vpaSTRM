@@ -23,6 +23,7 @@ thr_lock = threading.Lock()
 app = Flask(__name__)
 
 """
+method for parsing our cam ids. declared as a list
 declare capture object and pass in the full rtsp cmd and 
 confirm capture is opened 
 
@@ -30,12 +31,6 @@ RTSP format for l51dm cameras :
     - rtsp://user:pass@IPADDRESS:554/channel
         * 554 = default RTSP port
 """
-# capture_obj = "rtsp://admin:password123@192.168.1.176:554/2"
-# src1 = "rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2"
-# src2 = "rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2"
-# capture = cv2.VideoCapture(src1)
-
-
 def parse_cams(id):
     cameras = ['rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2',
                'rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2']
@@ -43,17 +38,6 @@ def parse_cams(id):
     return cameras[int(id)]
     #cam_id = cameras[int(id)]
     #return cam_id
-
-"""
-index():
-    - return the template store in templates/index.html
-
-** "routes" are essentially URLs of our application (i.e. 192.168.1.176)
-"""
-@app.route('/', methods=["GET"])
-def index():
-    # return the rendered template
-    return render_template("index.html")
 
 
 """
@@ -88,16 +72,18 @@ def stream_feed(cam_id, frame_count):
             ret, frame = capture.read()
             # depending on how cam is mounted, adjust this line
                 # for this instance we flip the camera vertically
-            stream = cv2.flip(frame, 0)
+            #stream = cv2.flip(frame, 0)
             # stream to stdout
-            # cv2.imshow(window, stream)
-            time.sleep(0.02)
+            #cv2.imshow(stream)
+            #time.sleep(0.02)
             if frame.shape:
                 frame = cv2.resize(stream, (640,360))
+                #cv2.imshow(stream)
                 with thr_lock:
                     output_frame = frame.copy()
             else:
                 continue 
+
             key = cv2.waitKey(1)
             if key == ord('q'):
                 capture.release()
@@ -167,6 +153,18 @@ def video_feed(id):
 
 
 """
+index():
+    - return the template store in templates/index.html
+
+** "routes" are essentially URLs of our application (i.e. 192.168.1.176)
+"""
+@app.route('/', methods=["GET"])
+def index():
+    # return the rendered template
+    return render_template("index.html")
+
+
+"""
 - check to see if this is the main thread of execution
 - pass in our arguments to get our applicatoin running
     * creation of argument parser var, pass in frame count and host,
@@ -174,8 +172,8 @@ def video_feed(id):
 """
 #if __name__ == '__main__':
 def main():
-    #cam_id = id
-    #frame_count = output_frame
+    cam_id = 0
+    frame_count = output_frame
     # construct the argument parser and parse command line arguments
     ap = argparse.ArgumentParser()
     ap.add_argument("-c", "--cam_id", type=int, 
@@ -184,9 +182,11 @@ def main():
         help="# of frames used to construct the background model")
    
     # kwargs for multiple arguments
-    args = vars(ap.parse_args())
+    kargs = vars(ap.parse_args())
     #thr_arg = threading.Thread(target=stream_feed, kwargs=(["cam_id"],["frame_count"],))
     thr_arg = threading.Thread(target=stream_feed, kwargs={'cam_id':cam_id,'frame_count':frame_count})
+    #thr_arg = threading.Thread(target=stream_feed, kwargs=(args{'cam_id':cam_id,'frame_count':frame_count}))
+    
     #thread1 = th
     #thr_arg = threading.Thread(target=stream_feed, args=(["cam_id"],["frame_count"],))
     #data_dict = {'cam_id':cam_id, 'frame_count':frame_count}
