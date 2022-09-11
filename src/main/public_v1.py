@@ -41,7 +41,8 @@ def parse_cams(id):
                'rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2']
 
     return cameras[int(id)]
-
+    #cam_id = cameras[int(id)]
+    #return cam_id
 
 """
 index():
@@ -95,6 +96,7 @@ def stream_feed(cam_id, frame_count):
         print('ERR:     COULD NOT OPEN STREAM')
     
     print(stream)
+    return cam_id, frame_count
         
 
 """
@@ -130,7 +132,7 @@ def generate(cam_id):
         # yield the output frame in the byte format
         yield(b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + 
             bytearray(encoded_img) + b'\r\n')
-
+    return cam_id
 
 """
 video_feed():
@@ -161,6 +163,8 @@ def video_feed(id):
 """
 #if __name__ == '__main__':
 def main():
+    #cam_id = id
+    #frame_count = output_frame
     # construct the argument parser and parse command line arguments
     ap = argparse.ArgumentParser()
     ap.add_argument("-c", "--cam_id", type=int, 
@@ -168,12 +172,14 @@ def main():
     ap.add_argument("-f", "--frame-count", type=int, default=32,
         help="# of frames used to construct the background model")
    
-    kwargs = vars(ap.parse_args())
-    params = {kwargs}
-    #thr_arg = threading.Thread(target=stream_feed, kwargs=(kwargs["cam_id"],kwargs["frame_count"],))
+    # kwargs for multiple arguments
+    args = vars(ap.parse_args())
+    #thr_arg = threading.Thread(target=stream_feed, kwargs=(["cam_id"],["frame_count"],))
+    thr_arg = threading.Thread(target=stream_feed, kwargs={'cam_id':cam_id,'frame_count':frame_count})
+    #thread1 = th
     #thr_arg = threading.Thread(target=stream_feed, args=(["cam_id"],["frame_count"],))
     #data_dict = {'cam_id':cam_id, 'frame_count':frame_count}
-    thr_arg = threading.Thread(target=stream_feed, kwargs=params)
+    #thr_arg = threading.Thread(target=stream_feed, kwargs=params)
     thr_arg.daemon = True
     thr_arg.start()
     

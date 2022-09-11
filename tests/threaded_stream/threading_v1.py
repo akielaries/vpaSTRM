@@ -55,6 +55,4 @@ print("EXITING MAIN THREAD")
 
 
 
-# https://www.tutorialspoint.com/python/python_multithreading.htm
-
 
