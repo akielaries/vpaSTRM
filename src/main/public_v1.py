@@ -6,6 +6,7 @@ a simple webpage using Flask.
 # import the necessary packages
 from flask import Response, Flask, render_template
 import threading
+import multiprocessing
 import argparse 
 import datetime, time
 import imutils
@@ -161,17 +162,19 @@ def video_feed(id):
 #if __name__ == '__main__':
 def main():
     # construct the argument parser and parse command line arguments
-    ap = argparse.ArgumentParser()
-    ap.add_argument("-c", "--cam_id", type=int, 
-        help="# of cams we want to stream/display")
-    ap.add_argument("-f", "--frame-count", type=int, default=32,
-        help="# of frames used to construct the background model")
+    #ap = argparse.ArgumentParser()
+    #ap.add_argument("-c", "--cam_id", type=int, 
+    #    help="# of cams we want to stream/display")
+    #ap.add_argument("-f", "--frame-count", type=int, default=32,
+    #    help="# of frames used to construct the background model")
    
-    kwargs = vars(ap.parse_args())
+    #kwargs = vars(ap.parse_args())
     
-    thr_arg = threading.Thread(target=stream_feed, kwargs=(kwargs["cam_id"],kwargs["frame_count"],))
+    #thr_arg = threading.Thread(target=stream_feed, kwargs=(kwargs["cam_id"],kwargs["frame_count"],))
+    #data_dict = {'cam_id':cam_id, 'frame_count':frame_count}
+    #thr_arg = threading.Thread(target=stream_feed, kwargs=kwargs)
     #thr_arg.daemon = True
-    thr_arg.start()
+    #thr_arg.start()
     
     # start the flask app passing in host, not requiring execution of program
     # as new edits arise, instead refresh page 
