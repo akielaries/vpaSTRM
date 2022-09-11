@@ -162,24 +162,28 @@ def video_feed(id):
 #if __name__ == '__main__':
 def main():
     # construct the argument parser and parse command line arguments
-    #ap = argparse.ArgumentParser()
-    #ap.add_argument("-c", "--cam_id", type=int, 
-    #    help="# of cams we want to stream/display")
-    #ap.add_argument("-f", "--frame-count", type=int, default=32,
-    #    help="# of frames used to construct the background model")
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-c", "--cam_id", type=int, 
+        help="# of cams we want to stream/display")
+    ap.add_argument("-f", "--frame-count", type=int, default=32,
+        help="# of frames used to construct the background model")
    
-    #kwargs = vars(ap.parse_args())
-    
+    kwargs = vars(ap.parse_args())
+    params = {kwargs}
     #thr_arg = threading.Thread(target=stream_feed, kwargs=(kwargs["cam_id"],kwargs["frame_count"],))
+    #thr_arg = threading.Thread(target=stream_feed, args=(["cam_id"],["frame_count"],))
     #data_dict = {'cam_id':cam_id, 'frame_count':frame_count}
-    #thr_arg = threading.Thread(target=stream_feed, kwargs=kwargs)
-    #thr_arg.daemon = True
-    #thr_arg.start()
+    thr_arg = threading.Thread(target=stream_feed, kwargs=params)
+    thr_arg.daemon = True
+    thr_arg.start()
     
     # start the flask app passing in host, not requiring execution of program
     # as new edits arise, instead refresh page 
     #app.run(host=args["ip"], port=args["port"], debug=True,
     #    threaded=True, use_reloader=False)
+    #data_dict = {'cam_id':cam_id, 'frame_count':frame_count}
+    #thr1 = threading.Thread(target=stream_feed, kwargs=my_dict)
+
     app.run(host= '0.0.0.0',debug=True, threaded=True)
 
 
