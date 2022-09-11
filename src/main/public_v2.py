@@ -54,8 +54,9 @@ queues = {}
 
 # Read from file (for tesing)
 dict = {
-        "name1":{ "disc-cam2.iot.nau.edu":"vid1.264",  "fname":"recordings/cam-2.264"},
-        "name2":{ "disc-cam3.iot.nau.edu":"vid2.264",  "fname":"recordings/cam-3.264"}
+
+        "name1":{ "ip":"rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2",  "fname":"vid_from_q3.264"},
+        #"name2":{ "ip":"rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2",  "fname":"vid_from_q3.264"},
         #"name3":{ "ip":"vid3.264",  "fname":"vid_from_q3.264"},
         #"name4":{ "ip":"vid4.264",  "fname":"vid_from_q4.264"},
         #"name5":{ "ip":"vid5.264",  "fname":"vid_from_q5.264"},
