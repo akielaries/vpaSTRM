@@ -5,9 +5,9 @@ of RTSP based cameras with future implementation of GUI in the works.
 > :warning: *This repo is forked from [here](https://github.com/DiscoverCCRI/ip_cam) and serves
 as a "new version" also developed by [me](https://github.com/akielaries), building off of the application
 used for the DiscoverCCRI research study. This project will be open source and welcomes contributors.*
+=======
 
 Note: Will also be working on some implementations in C++. For now see some examples on providing basic feed.
-
 
 # Dependencies
 ---
@@ -137,13 +137,3 @@ see: ```ip_cam/src/test_stream_v1.py```
     ``` <br>
     
 ![example4](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/ngrok_session.png)
-
-# Ideas
-- think of different py libs to implement GUI, PyQt, Tkinter, etc
-- maybe implement my own, if going for speed and effeciency lets write it in C!
-- modularize what ever the final result is for the demo into something usable
-for an application. 
-- if we are using C, research how to a C-based GUI can talk with our existing python
-implementations.
-- research using GTK with C
-- Research using curses (terminal-based GUI)
