@@ -1,6 +1,7 @@
 # Introduction
 WIP repo using opencv, flask and ngrok with python to stream feeds
-of RTSP based cameras. Future implementation of GUI in the works.
+of RTSP based cameras specifically to monitor the DISCOVER test site for the NSF Demo. 
+Future implementation of GUI in the works.
 
 Note: Will also be working on some implementations in C++. For now see some examples on providing basic feed.
 
