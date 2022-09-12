@@ -141,3 +141,4 @@ see: ```ip_cam/src/test_stream_v1.py```
 for an application. 
 - if we are using C, research how to a C-based GUI can talk with our existing python
 implementations.
+- research using GTK with C
