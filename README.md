@@ -133,13 +133,3 @@ see: ```ip_cam/src/test_stream_v1.py```
     ``` <br>
     
 ![example4](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/ngrok_session.png)
-
-# Ideas
-- think of different py libs to implement GUI, PyQt, Tkinter, etc
-- maybe implement my own, if going for speed and effeciency lets write it in C!
-- modularize what ever the final result is for the demo into something usable
-for an application. 
-- if we are using C, research how to a C-based GUI can talk with our existing python
-implementations.
-- research using GTK with C
-- Research using curses (terminal-based GUI)
