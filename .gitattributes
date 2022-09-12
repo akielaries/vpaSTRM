@@ -1,1 +1,1 @@
-special-vendored-path/* linguist-vendored
+dist/* linguist-vendored=false
