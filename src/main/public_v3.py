@@ -36,9 +36,6 @@ def parse_cams(id):
                'rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2']
 
     return cameras[int(id)]
-    #cam_id = cameras[int(id)]
-    #return cam_id
-
 
 """
 stream_feed():
@@ -67,15 +64,15 @@ stream_feed():
 def stream_feed(cam_id, frame_count):
     global output_frame, thr_lock
 
-    stream = parse_cams(cam_id)
-    capture = cv2.VideoCapture(stream)
+    frame = parse_cams(cam_id)
+    capture = cv2.VideoCapture(frame)
     # variables for streaming to window on local machine
     # window = "top"
     # cv2.namedWindow(window, cv2.WINDOW_NORMAL)
     # cv2.resizeWindow(window, 720, 720)
 
-    while True:
-        if capture.isOpened():
+    if capture.isOpened():
+        while True:
             ret, frame = capture.read()
             # depending on how cam is mounted, adjust this line
                 # for this instance we flip the camera vertically
@@ -83,15 +80,14 @@ def stream_feed(cam_id, frame_count):
             # stream to stdout
             #cv2.imshow(stream)
             #time.sleep(0.02)
-            #if frame.shape:
-                # frame = cv2.resize(stream, (640,360))
-            frame = imutils.resize(frame, width=620)
-            cv2.imshow(stream, frame)
-                
-            with thr_lock:
-                output_frame = frame.copy()
-            #else:
-            #    continue 
+            if frame.shape:
+                frame = cv2.resize(frame, (640,360))
+            #frame = imutils.resize(frame, width=620)    
+                with thr_lock:
+                    output_frame = frame.copy()
+            
+            else:
+                continue 
 
         key = cv2.waitKey(1)
         if key == ord('q'):
@@ -102,7 +98,6 @@ def stream_feed(cam_id, frame_count):
         print('ERR:     COULD NOT OPEN STREAM')
     
     return cam_id, frame_count
-        
 
 """
 generate():
@@ -117,7 +112,7 @@ def generate(cam_id):
     # grab global references to the output frame and lock variables
     global output_frame, thr_lock
     
-    stream = parse_cams(cam_id)
+    #stream = parse_cams(cam_id)
 
     # loop over frames from the output stream
     while True:
@@ -135,9 +130,13 @@ def generate(cam_id):
                 continue
  
         # yield the output frame in the byte format
-        yield(b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + 
-            bytearray(encoded_img) + b'\r\n')
-    return cam_id
+        #yield(b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + 
+        #    bytearray(encoded_img) + b'\r\n')
+        # concate frame one by one and show result
+        yield (b'--frame\r\n' 
+            b'Content-Type: image/jpeg\r\n\r\n' + encoded_img + b'\r\n')
+
+    return cam_id, output_frame
 
 """
 video_feed():
@@ -181,7 +180,8 @@ def index():
 #if __name__ == '__main__':
 def main():
     cam_id = 0
-    frame_count = output_frame
+    # frame_count = output_frame
+    frame_count = 0
     # construct the argument parser and parse command line arguments
     ap = argparse.ArgumentParser()
     ap.add_argument("-c", "--cam_id", type=int, 
@@ -191,14 +191,13 @@ def main():
    
     # kwargs for multiple arguments
     kargs = vars(ap.parse_args())
-    #thr_arg = threading.Thread(target=stream_feed, kwargs=(["cam_id"],["frame_count"],))
+    #args = vars(ap.parse_args())
+    
     thr_arg = threading.Thread(target=stream_feed, kwargs={'cam_id':cam_id,'frame_count':frame_count})
+    
+    #   thr_arg = threading.Thread(target=generate, args=(args["cam_id"],))
     #thr_arg = threading.Thread(target=stream_feed, kwargs=(args{'cam_id':cam_id,'frame_count':frame_count}))
     
-    #thread1 = th
-    #thr_arg = threading.Thread(target=stream_feed, args=(["cam_id"],["frame_count"],))
-    #data_dict = {'cam_id':cam_id, 'frame_count':frame_count}
-    #thr_arg = threading.Thread(target=stream_feed, kwargs=params)
     thr_arg.daemon = True
     thr_arg.start()
     
@@ -206,8 +205,6 @@ def main():
     # as new edits arise, instead refresh page 
     #app.run(host=args["ip"], port=args["port"], debug=True,
     #    threaded=True, use_reloader=False)
-    #data_dict = {'cam_id':cam_id, 'frame_count':frame_count}
-    #thr1 = threading.Thread(target=stream_feed, kwargs=my_dict)
 
     app.run(host= '0.0.0.0',debug=True, threaded=True)
 
@@ -215,8 +212,5 @@ def main():
 if __name__ == '__main__':
     # run main
     main()
-
-
-
 
 
