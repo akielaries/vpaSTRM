@@ -1,9 +1,14 @@
 # Introduction
-WIP repo using opencv, flask and ngrok with python to stream feeds of RTSP 
-based cameras specifically to monitor the DISCOVER test site for the NSF Demo.
+WIP repo using opencv, flask and ngrok with python to stream feeds
+of RTSP based cameras with future implementation of GUI in the works.
+
+> :warning: *This repo is forked from [here](https://github.com/DiscoverCCRI/ip_cam) and serves
+as a "new version" also developed by [me](https://github.com/akielaries), building off of the application
+used for the DiscoverCCRI research study. This project will be open source and welcomes contributors.*
+
+---
 
 Note: Will also be working on some implementations in C++. For now see some examples on providing basic feed.
-
 
 # Dependencies
 ---
