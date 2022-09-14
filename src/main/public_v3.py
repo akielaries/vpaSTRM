@@ -61,7 +61,6 @@ stream_feed():
     generate() - should do all of our streaming work. 
 
 """
-"""
 def stream_feed(cam_id, frame_count):
     global output_frame, thr_lock
 
@@ -99,7 +98,6 @@ def stream_feed(cam_id, frame_count):
         print('ERR:     COULD NOT OPEN STREAM')
     
     return cam_id, frame_count
-"""
 
 """
 generate():
