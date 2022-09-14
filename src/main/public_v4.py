@@ -54,9 +54,9 @@ def generate(cam_id):
         with t_lock:
             # # Capture frame-by-frame
             #success, frame = capture.read()  # read the camera frame
-            if not success:
-                break
-            elif output_frame is None:
+            #if not success:
+            #    break
+            if output_frame is None:
                 continue
 
             else:
@@ -79,6 +79,8 @@ def index():
     return render_template('index.html')
 
 def main():
+    cam_id = 0
+    frame_count = 0
     """
     initialize the output frame and a lock used to ensure thread-safe
     exchanges of the output frames (useful when multiple browsers/tabs are viewing the stream)
@@ -86,13 +88,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("-c", "--cam_id", type=int,
         help="# of cams we want to stream/display")
-    ap.add_argument("-f", "--frame-count", type=int, default=32, 
+    ap.add_argument("-f", "--frame_count", type=int, default=32, 
         help="# of frames used to construct the background model")
 
     args = vars(ap.parse_args())
 
-    thread_o = threading.Thread(target=stream_feed, args=(args["frame_count"],))
-    #thread_o = threading.Thread(target=stream_feed, kwargs={'cam_id':cam_id,'frame_count':frame_count})
+    #thread_o = threading.Thread(target=stream_feed, args=(args["frame_count"],))
+    thread_o = threading.Thread(target=stream_feed, kwargs={'cam_id':cam_id,'frame_count':frame_count})
     #thread_t = threading.Thread(target=)
 
 

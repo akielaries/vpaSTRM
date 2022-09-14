@@ -191,7 +191,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("-c", "--cam_id", type=int, 
         help="# of cams we want to stream/display")
-    ap.add_argument("-f", "--frame-count", type=int, default=32,
+    ap.add_argument("-f", "--frame_count", type=int, default=32,
         help="# of frames used to construct the background model")
    
     # kwargs for multiple arguments
@@ -200,7 +200,7 @@ def main():
     
     #thr_arg = threading.Thread(target=stream_feed, kwargs={'cam_id':cam_id,'frame_count':frame_count})
     
-    thr_arg = threading.Thread(target=generate, args=(args["cam_id"],))
+    #thr_arg = threading.Thread(target=generate, args=(args["cam_id"],))
     #thr_arg = threading.Thread(target=stream_feed, kwargs=(args{'cam_id':cam_id,'frame_count':frame_count}))
     
     thr_arg.daemon = True
