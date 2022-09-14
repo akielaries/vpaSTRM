@@ -61,11 +61,14 @@ def generate(cam_id):
                 continue
 
             else:
-                ret, buffer = cv2.imencode('.jpg', output_frame)
-                output_frame = buffer.tobytes()
+                #ret, buffer = cv2.imencode('.jpg', output_frame)
+                #(flag, buffer) = cv2.imencode(".jpg", output_frame)
+                convert_to_bytes = cv2.imencode('.jpg', output_frame)[1].tobytes()
+                # flag = buffer.tobytes()
+                # flag = buffer.tobytes()
                 # concat frame one by one and show result
                 yield (b'--frame\r\n'
-                    b'Content-Type: image/jpeg\r\n\r\n' + output_frame + b'\r\n')
+                    b'Content-Type: image/jpeg\r\n\r\n' + convert_to_bytes + b'\r\n')
 
 @app.route('/video_feed/<string:id>/', methods=["GET"])
 def video_feed(id):
@@ -81,7 +84,7 @@ def index():
 
 def main():
     cam_id = 0
-    #frame_count = 0
+    frame_count = 0
     """
     initialize the output frame and a lock used to ensure thread-safe
     exchanges of the output frames (useful when multiple browsers/tabs are viewing the stream)
@@ -93,7 +96,7 @@ def main():
     ap.add_argument("-f", "--frame_count", type=int, default=32, 
         help="# of frames used to construct the background model")
 
-    args = vars(ap.parse_args())
+    kwargs = vars(ap.parse_args())
 
     #thread_o = threading.Thread(target=stream_feed, args=(args["frame_count"],))
     thread_o = threading.Thread(target=stream_feed, kwargs={'cam_id':cam_id,'frame_count':frame_count})
