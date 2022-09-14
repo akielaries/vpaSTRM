@@ -61,6 +61,7 @@ stream_feed():
     generate() - should do all of our streaming work. 
 
 """
+"""
 def stream_feed(cam_id, frame_count):
     global output_frame, thr_lock
 
@@ -98,6 +99,7 @@ def stream_feed(cam_id, frame_count):
         print('ERR:     COULD NOT OPEN STREAM')
     
     return cam_id, frame_count
+"""
 
 """
 generate():
@@ -111,20 +113,23 @@ issues:
 def generate(cam_id):
     # grab global references to the output frame and lock variables
     global output_frame, thr_lock
-    
-    #stream = parse_cams(cam_id)
+    cam = parse_cams(cam_id)
+    capture = cv2.VideoCapture(cam)
 
     # loop over frames from the output stream
     while True:
         # wait until the lock is acquired
         with thr_lock:
+            # read camera frames
+            ret, frame = capture.read()
             # check if the output frame is available
             if output_frame is None:
                 continue
  
             # encode the frame in JPEG format
             (flag, encoded_img) = cv2.imencode(".jpg", output_frame)
- 
+            flag = buffer.tobytes()
+
             # ensure the frame was successfully encoded
             if not flag:
                 continue
@@ -133,8 +138,8 @@ def generate(cam_id):
         #yield(b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + 
         #    bytearray(encoded_img) + b'\r\n')
         # concate frame one by one and show result
-        yield (b'--frame\r\n' 
-            b'Content-Type: image/jpeg\r\n\r\n' + encoded_img + b'\r\n')
+            yield (b'--frame\r\n' 
+                b'Content-Type: image/jpeg\r\n\r\n' + encoded_img + b'\r\n')
 
     return cam_id, output_frame
 
@@ -190,12 +195,12 @@ def main():
         help="# of frames used to construct the background model")
    
     # kwargs for multiple arguments
-    kargs = vars(ap.parse_args())
-    #args = vars(ap.parse_args())
+    #kargs = vars(ap.parse_args())
+    args = vars(ap.parse_args())
     
-    thr_arg = threading.Thread(target=stream_feed, kwargs={'cam_id':cam_id,'frame_count':frame_count})
+    #thr_arg = threading.Thread(target=stream_feed, kwargs={'cam_id':cam_id,'frame_count':frame_count})
     
-    #   thr_arg = threading.Thread(target=generate, args=(args["cam_id"],))
+    thr_arg = threading.Thread(target=generate, args=(args["cam_id"],))
     #thr_arg = threading.Thread(target=stream_feed, kwargs=(args{'cam_id':cam_id,'frame_count':frame_count}))
     
     thr_arg.daemon = True
