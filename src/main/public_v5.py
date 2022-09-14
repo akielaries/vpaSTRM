@@ -38,32 +38,34 @@ def stream_feed(cam_id, frame_count):
     if capture.isOpened():
         while True:
             ret_val, frame = capture.read()
-            cam = imutils.resize(frame, 720)
+            frame = imutils.resize(frame, 720)
             with t_lock:
-                output_frame = cam.copy()
-
-#    return cam_id, output_frame
+                output_frame = frame.copy()
+        
+    return cam_id, output_frame
 """
 <----LEAVE OFF HERE---->
 """
 def generate(cam_id):
     global output_frame, t_lock
-    #cam = parse_cams(cam_id)
-    #capture =  cv2.VideoCapture(cam)
+    cam = parse_cams(cam_id)
+    capture =  cv2.VideoCapture(cam)
 
     while True:
         with t_lock:
-            # # Capture frame-by-frame
-            #success, frame = capture.read()  # read the camera frame
-            #if not success:
-            #    break
-            if output_frame is None:
+            # Capture frame-by-frame
+            success, frame = capture.read()  # read the camera frame
+            if not success:
+                break
+            
+            elif output_frame is None:
                 continue
 
             else:
-                #ret, buffer = cv2.imencode('.jpg', output_frame)
+                ret, buffer = cv2.imencode('.jpg', output_frame)
                 #(flag, buffer) = cv2.imencode(".jpg", output_frame)
-                convert_to_bytes = cv2.imencode('.jpg', output_frame)[1].tobytes()
+                #convert_to_bytes = cv2.imencode('.jpg', output_frame)[1].tobytes()
+                convert_to_bytes = buffer.tobytes()
                 # flag = buffer.tobytes()
                 # flag = buffer.tobytes()
                 # concat frame one by one and show result
@@ -72,7 +74,6 @@ def generate(cam_id):
 
 @app.route('/video_feed/<string:id>/', methods=["GET"])
 def video_feed(id):
-
     """Video streaming route. Put this in the src attribute of an img tag."""
     return Response(generate(id),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
