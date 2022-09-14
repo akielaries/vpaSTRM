@@ -29,7 +29,7 @@ def parse_cams(id):
 
     return cameras[int(id)]
 
-def stream_feed(cam_id, frame_count):#frame_count):
+def stream_feed(cam_id, frame_count):
     global output_frame, t_lock
 
     cam = parse_cams(cam_id)
@@ -45,8 +45,10 @@ def stream_feed(cam_id, frame_count):#frame_count):
             else:
                 continue
     return cam_id, output_frame
-
-def generate(cam_id):
+"""
+<----LEAVE OFF HERE---->
+"""
+def generate(cam_id, ):
     global output_frame, t_lock
     #cam = parse_cams(cam_id)
     #capture =  cv2.VideoCapture(cam)
