@@ -3,7 +3,6 @@ similar to previous versions of our stream implementations
 this time we are not using threading, creating a function to 
 parse our cameras to assign URL extensions based off of, and 
 render our stream using the index.html template scene in /tempaltes
-
 The biggest issue with this is latency and buffering issues.
 """
 
@@ -53,4 +52,3 @@ def index():
 
 if __name__ == '__main__':
     app.run()
-
