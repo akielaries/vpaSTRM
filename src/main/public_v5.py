@@ -42,7 +42,7 @@ def stream_feed(cam_id, frame_count):
             with t_lock:
                 output_frame = cam.copy()
 
-    return cam_id, output_frame
+#    return cam_id, output_frame
 """
 <----LEAVE OFF HERE---->
 """
