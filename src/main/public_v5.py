@@ -24,8 +24,8 @@ output_frame = None
 t_lock = threading.Lock()
 
 def parse_cams(id):
-    cameras = ['rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2',
-               'rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2']
+    cameras = ['rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2',
+               'rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2']
 
     return cameras[int(id)]
 
@@ -38,17 +38,15 @@ def stream_feed(cam_id, frame_count):
     if capture.isOpened():
         while True:
             ret_val, frame = capture.read()
-            if frame.shape:
-                frame = cv2.resize(frame, (720, 420))
-                with t_lock:
-                    output_frame = frame.copy()
-            else:
-                continue
+            cam = imutils.resize(frame, 720)
+            with t_lock:
+                output_frame = cam.copy()
+
     return cam_id, output_frame
 """
 <----LEAVE OFF HERE---->
 """
-def generate(cam_id, ):
+def generate(cam_id):
     global output_frame, t_lock
     #cam = parse_cams(cam_id)
     #capture =  cv2.VideoCapture(cam)
@@ -86,7 +84,7 @@ def index():
 
 def main():
     cam_id = 0
-    frame_count = 0
+    frame_count = output_frame
     """
     initialize the output frame and a lock used to ensure thread-safe
     exchanges of the output frames (useful when multiple browsers/tabs are viewing the stream)
