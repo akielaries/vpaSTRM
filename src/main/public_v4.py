@@ -29,7 +29,7 @@ def parse_cams(id):
 
     return cameras[int(id)]
 
-def stream_feed(cam_id, frame_count):
+def stream_feed(cam_id, frame_count):#frame_count):
     global output_frame, t_lock
 
     cam = parse_cams(cam_id)
@@ -44,6 +44,7 @@ def stream_feed(cam_id, frame_count):
                     output_frame = frame.copy()
             else:
                 continue
+    return cam_id, output_frame
 
 def generate(cam_id):
     global output_frame, t_lock
@@ -80,12 +81,13 @@ def index():
 
 def main():
     cam_id = 0
-    frame_count = 0
+    #frame_count = 0
     """
     initialize the output frame and a lock used to ensure thread-safe
     exchanges of the output frames (useful when multiple browsers/tabs are viewing the stream)
     """
     ap = argparse.ArgumentParser()
+
     ap.add_argument("-c", "--cam_id", type=int,
         help="# of cams we want to stream/display")
     ap.add_argument("-f", "--frame_count", type=int, default=32, 
