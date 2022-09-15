@@ -7,10 +7,13 @@ The biggest issue with this is latency and buffering issues.
 """
 
 from flask import Flask, render_template, Response
+from flask_ngrok import run_with_ngrok
 import cv2
 
+# for regular flask app
 app = Flask(__name__)
-
+# for flask app proxied to public URL generated w/ ngrok
+run_with_ngrok(app)
 
 def parse_cams(id):
     cameras = ['rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2',
