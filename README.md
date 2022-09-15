@@ -135,3 +135,9 @@ see: ```ip_cam/src/test_stream_v1.py```
     ``` <br>
     
 ![example4](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/ngrok_session.png)
+
+
+ZoneMinder
+
+install deb:
+https://zoneminder.readthedocs.io/en/stable/installationguide/debian.html
