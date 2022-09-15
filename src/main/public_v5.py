@@ -20,7 +20,7 @@ initialize the output frame and a lock used to ensure thread-safe
 exchanges of the output frames (useful when multiple browsers/tabs are viewing the stream)
 """
 output_frame = None
-thr_lock = threading.Lock()
+t_lock = threading.Lock()
  
 # initialize a flask object
 app = Flask(__name__)
@@ -38,6 +38,7 @@ def parse_cams(id):
                'rtsp://admin:password123@disc-cam3.iot.nau.edu:554/2']
 
     return cameras[int(id)]
+    print(id)
 
 """
 stream_feed():
@@ -61,6 +62,7 @@ stream_feed():
 def stream_feed(cam_id, frame_count):
     global output_frame, t_lock
 
+    # tuple, may need to do index of cam_id
     cam = parse_cams(cam_id)
     capture =  cv2.VideoCapture(cam)
     
@@ -145,8 +147,9 @@ def index():
     return
 """
 def main():
-    cam_id = 0
-    frame_count = output_frame
+    cam_id = [0, 1]
+    frame_count = 0
+
     """
     initialize the output frame and a lock used to ensure thread-safe
     exchanges of the output frames (useful when multiple browsers/tabs are viewing the stream)
@@ -158,19 +161,28 @@ def main():
     ap.add_argument("-f", "--frame_count", type=int, default=32, 
         help="# of frames used to construct the background model")
 
+    print(frame_count)
+
     kwargs = vars(ap.parse_args())
+    print(kwargs)
 
     #thread_o = threading.Thread(target=stream_feed, args=(args["frame_count"],))
-    thread_o = threading.Thread(target=stream_feed, kwargs={'cam_id':cam_id,'frame_count':frame_count})
+    thread_o = threading.Thread(target=stream_feed, kwargs={'cam_id':cam_id[0],'frame_count':frame_count})
+    thread_t = threading.Thread(target=stream_feed, kwargs={'cam_id':cam_id[1],'frame_count':frame_count})
     #thread_t = threading.Thread(target=)
 
 
     thread_o.daemon = True
+    thread_t.daemon = True
     thread_o.start()
+    thread_t.start()
 
     app.run(host= '0.0.0.0',debug=True, threaded=True)
-
+    print(kwargs)
+    print(frame_count)
 
 if __name__ == '__main__':
     # run main
     main()
+
+
