@@ -1,6 +1,6 @@
 """
 similar to previous versions of our stream implementations 
-this time we are not using threading, creating a function to 
+this time we are using threading, creating a function to 
 parse our cameras to assign URL extensions based off of, and 
 render our stream using the index.html template scene in /tempaltes
 
