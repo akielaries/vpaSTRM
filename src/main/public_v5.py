@@ -176,7 +176,8 @@ def main():
     thread_t.daemon = True
     thread_o.start()
     thread_t.start()
-
+    # clone application and try specifying different port for different stream
+    # location
     app.run(host= '0.0.0.0',debug=True, threaded=True)
     print(kwargs)
     print(frame_count)
