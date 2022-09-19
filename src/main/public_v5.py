@@ -148,34 +148,38 @@ def index():
 """
 def main():
     cam_id = [0, 1]
-    frame_count = 0
+    # frame_count = 0
 
     """
     initialize the output frame and a lock used to ensure thread-safe
     exchanges of the output frames (useful when multiple browsers/tabs are viewing the stream)
     """
-    ap = argparse.ArgumentParser()
+    #ap = argparse.ArgumentParser()
 
-    ap.add_argument("-c", "--cam_id", type=int,
-        help="# of cams we want to stream/display")
-    ap.add_argument("-f", "--frame_count", type=int, default=32, 
-        help="# of frames used to construct the background model")
+    #ap.add_argument("-c", "--cam_id", type=int,
+    #    help="# of cams we want to stream/display")
+    #ap.add_argument("-f", "--frame_count", type=int, default=32, 
+    #    help="# of frames used to construct the background model")
 
-    print(frame_count)
+    #print(frame_count)
 
-    kwargs = vars(ap.parse_args())
-    print(kwargs)
+    #kwargs = vars(ap.parse_args())
+    #print(kwargs)
 
     #thread_o = threading.Thread(target=stream_feed, args=(args["frame_count"],))
-    thread_o = threading.Thread(target=stream_feed, kwargs={'cam_id':cam_id[0],'frame_count':frame_count})
-    thread_t = threading.Thread(target=stream_feed, kwargs={'cam_id':cam_id[1],'frame_count':frame_count})
+    
+    thread_o = threading.Thread(target=stream_feed, args=(cam_id))
+
+    #thread_o = threading.Thread(target=stream_feed, kwargs={'cam_id':cam_id[0],'frame_count':frame_count})
+    #thread_t = threading.Thread(target=stream_feed, kwargs={'cam_id':cam_id[1],'frame_count':frame_count})
+    
     #thread_t = threading.Thread(target=)
 
 
     thread_o.daemon = True
-    thread_t.daemon = True
+    #thread_t.daemon = True
     thread_o.start()
-    thread_t.start()
+    #thread_t.start()
     # clone application and try specifying different port for different stream
     # location
     app.run(host= '0.0.0.0',debug=True, threaded=True)
