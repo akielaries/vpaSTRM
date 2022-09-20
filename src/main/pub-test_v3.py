@@ -8,6 +8,8 @@ The biggest issue with this is latency and buffering issues.
 
 from flask import Flask, render_template, Response
 from ray.util.multiprocessing import Pool
+# for multiprocessing
+import ray
 import cv2
 
 # for regular flask app
@@ -20,6 +22,7 @@ def parse_cams(id):
 
     return cameras[int(id)]
 
+@ray.remote
 def gen_frames(cam_id):
 
     cam = parse_cams(cam_id)
@@ -43,7 +46,7 @@ def gen_frames(cam_id):
 def video_feed(id):
 
     """Video streaming route. Put this in the src attribute of an img tag."""
-    return Response(gen_frames(id),
+    return Response(gen_frames.remote(id),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
@@ -52,8 +55,10 @@ def index():
     return render_template('index.html')
 
 
-def main():
-    app.run()
+#def main():
+#    app.run()
 
 if __name__ == '__main__':
-    main()
+    app.run()
+
+
