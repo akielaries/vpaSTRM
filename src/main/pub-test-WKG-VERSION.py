@@ -7,6 +7,7 @@ The biggest issue with this is latency and buffering issues.
 """
 
 from flask import Flask, render_template, Response
+from ray.util.multiprocessing import Pool
 import cv2
 
 # for regular flask app
@@ -53,3 +54,4 @@ def index():
 
 if __name__ == '__main__':
     app.run()
+
