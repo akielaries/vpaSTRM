@@ -1,9 +1,10 @@
 from flask import Flask, render_template, Response
 from thread import CameraStream
 import cv2
+
 app = Flask(__name__)
 
-cap = CameraStream().start()
+#cap = CameraStream().start()
 
 def parse_cams(id):
     cameras = ['rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2',
@@ -17,7 +18,9 @@ def index():
     return render_template('index.html')
 
 
-def gen_frame():
+def gen_frame(cam_id):
+    cam_num = parse_cams(cam_id)
+    cap = CameraStream(cam_num).start()
     """Video streaming generator function."""
     while cap:
         frame = cap.read()
