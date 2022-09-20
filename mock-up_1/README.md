@@ -12,4 +12,4 @@ These codes have been the biggest hinderence and are due to encoding issues
 possibly specific to FFMPEG. Will try getting around this with using 
 Gstreamer with OpenCV instead of the FFMPEG dependency.
 
-
+![example](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/mockup-1.1.png)
