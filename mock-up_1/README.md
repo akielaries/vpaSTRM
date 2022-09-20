@@ -12,4 +12,24 @@ These codes have been the biggest hinderence and are due to encoding issues
 possibly specific to FFMPEG. Will try getting around this with using 
 Gstreamer with OpenCV instead of the FFMPEG dependency.
 
+when building openCV from src 
+
+```
+# Install minimal prerequisites (Ubuntu 18.04 as reference)
+sudo apt update && sudo apt install -y cmake g++ wget unzip
+
+# Download and unpack sources
+wget -O opencv.zip https://github.com/opencv/opencv/archive/4.x.zip
+unzip opencv.zip
+
+# Create build directory
+mkdir -p build && cd build
+
+# Configure
+cmake  ../opencv-4.x -DWITH_GSTREAMER=ON
+
+# Build
+cmake --build .
+```
+
 ![example](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/mockup-1.1.png)
