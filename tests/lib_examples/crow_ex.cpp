@@ -6,10 +6,11 @@
 #include "crow.h"
 
 int main() {
-    crow::demo_app app;
+    crow::SimpleApp app;
+
     CROW_ROUTE(app, "/")([]{
         return "demo app using crow cpp framework";
-    })
+    });
 
     app.port(18080).multithreaded().run();
 }
