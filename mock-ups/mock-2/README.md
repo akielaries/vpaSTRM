@@ -4,6 +4,12 @@
 > :warning: This assumes are connected to the NAU VPN and
 have necessary dependencies installed (openCV-python, Flask)
 
+This mock-up version has two programs, one for turret cam 0 and 1. They should both 
+get executed at the same time via the user and will display our results on localhost
+127.0.0.1:5000 and 127.0.0.1:5001 respectively. The idea is to have a new program for 
+each camera and perhaps increment the port number by 1. All programs are able to utilize
+the same index.html but since both programs are required to run simultaneously, we cannot
+populate the same IP and PORT.
 
 ```
 git clone git@github.com:DiscoverCCRI/ip_cam.git
