@@ -44,3 +44,4 @@ cmake --build .
 ```
 
 ![example](https://github.com/DiscoverCCRI/ip_cam/blob/main/imgs/mockup-1.1.png)
+
