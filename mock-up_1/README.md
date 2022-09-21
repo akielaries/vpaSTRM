@@ -1,4 +1,18 @@
 # mock-up v1
+
+### To run
+> :warning: This assumes: 
+    - are connected to the NAU VPN
+    - you have all dependencies installed 
+        * openCV-python
+        * Flask
+
+```
+git clone git@github.com:DiscoverCCRI/ip_cam.git
+cd /mock-up_1
+python3 stream.py
+```
+
 In this test I found some resources on threading and using a 
 class, offloaded operations onto the thread.py file and generation
 and encoding operation onto the stream.py file. Of course is still 
