@@ -1,7 +1,7 @@
 # mock-up v1
 
 ### To run
-> :warning: This assumes are connected to the NAU VPN and
+> :warning: This assumes you are connected to the NAU VPN and
 have necessary dependencies installed (openCV-python, Flask)
 
 ```
