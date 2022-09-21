@@ -1,32 +1,13 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <title>Multi-Cam RTSP Stream</title>
-</head>
-<body>
-<div class="container">
-    <div class="row">
-
-        <div class="col-lg-7">
-            <h3 class="mt-5">Multi-Cam RTSP Stream</h3>
-            <img src="{{ url_for('video_feed', id='0') }}" width="100%">
-            <img src="{{ url_for('video_feed', id='1') }}" width="100%">
-        </div>
-
-
-    </div>
-</div>
-</body>
+<html>
+  <head>
+      <title>RTSP stream</title>
+  </head>
+  <body>
+    <h1>IP cam stream via RTSP</h1>
+    <h3>ANNKE L51DM (Discover Test-Site)</h3>
+    <!--
+    <h4> --ip <host ip> --port <host port></h4>
+    -->
+    <img src="{{ url_for('video_feed') }}">
+  </body>
 </html>
-
-
-
-

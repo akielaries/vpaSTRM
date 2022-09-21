@@ -150,7 +150,7 @@ if __name__ == '__main__':
     # as new edits arise, instead refresh page 
     #app.run(host=args["ip"], port=args["port"], debug=True,
     #    threaded=True, use_reloader=False)
-    app.run(host= '0.0.0.0',debug=True)
+    app.run(host= '0.0.0.0',port=5001, debug=True)
 
 # release the video stream pointer
 capture.release()

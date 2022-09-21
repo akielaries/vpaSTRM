@@ -29,7 +29,7 @@ RTSP format for l51dm cameras :
     - rtsp://user:pass@IPADDRESS:554/channel
         * 554 = default RTSP port
 """
-capture_obj = 'rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2'
+capture_obj = 'rtsp://admin:password123@disc-cam1.iot.nau.edu:554/2'
 capture = cv2.VideoCapture(capture_obj)
 
 """
@@ -150,7 +150,7 @@ if __name__ == '__main__':
     # as new edits arise, instead refresh page 
     #app.run(host=args["ip"], port=args["port"], debug=True,
     #    threaded=True, use_reloader=False)
-    app.run(host= '0.0.0.0',debug=True)
+    app.run(host= '0.0.0.0', port=5000, debug=True)
 
 # release the video stream pointer
 capture.release()
