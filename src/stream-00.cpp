@@ -3,7 +3,7 @@
 #include <iostream>
 
 using namespace std;
-// using namespace cv;
+using namespace cv;
 
 int main (int, char**) {
     cv::VideoCapture cvap;
@@ -13,15 +13,17 @@ int main (int, char**) {
     const std::string strm_addr = 
         "rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2";
     // open vid strm and confirm
-    if (!vcap.open(strm_addr)) {
+    if (!cvap.open(strm_addr)) {
         cout << "Error opening video stream" << endl;
         return -1;
     }
+
     for (;;) {
-        if (!vcap.read(image)) {
+        if (!cvap.read(image)) {
             cout << "No Frame" << endl;
             waitKey();
         }
+
         imshow("Output Window", image);
         if (waitKey(1) >= 0) break;
     }
