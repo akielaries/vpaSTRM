@@ -12,7 +12,7 @@
 // FUNCTION PROTOTYPES
 //--------------------------------------------------------
 void printing();
-void moving_and_sleeping();
+void move_sleep();
 void colouring();
 
 
@@ -34,18 +34,61 @@ void printing() {
     printw("Print numbers w/ 'printw()' : %d %f \n\n", num_int, num_dub);
 }
 
+
+//--------------------------------------------------------
+// FUNCTION move_sleep
+// print the alphabet in both upper/lowercase decrementing
+// one space down and across for each iteration
+//
+//--------------------------------------------------------
+void move_sleep() {
+    // row = 15 for heading
+    int row = 15;
+    int col = 0;
+
+    // set cursor hide using 0
+    curs_set(0);
+    // traverse upper case letters
+    for (char c = 65; c <= 90; c++){
+        // move to current position
+        move(row++, col++);
+        // print char
+        addch(c);
+        refresh();
+        // NAP FOR MILLISECONDS; pause for .1 seconds
+        napms(100);
+    }
+
+    row = 15;
+    col = 3;
+    for (char c = 97; c <= 122; c++){
+        mvaddch(row++, col++, c);
+        refresh();
+        napms(100);
+    }
+    curs_set(1);
+    addch('\n');
+
+}
+
+
 //--------------------------------------------------------
 // FUNCTION main
 //--------------------------------------------------------
 int main(void) {
     initscr();
 
-    addstr("-----------------\n| This is our GUI        |\n|(Graphical User Interface)|\n-----------------\n\n");
+    printw("\n ----------------------------- \n \
+            \n |This is our GUI            | \n \
+            \n |(Graphical User Interface) | \n \
+            \n |                           | \n \
+            \n ----------------------------- \n");
+    
     refresh();
 
     printing();
 
-    //moving_and_sleeping();
+    move_sleep();
 
     //colouring();
 
