@@ -26,8 +26,9 @@ void printing() {
     addstr("Print statement w/ 'addstr'\n\n");
     refresh();
 
-    addstr("Print char w/ 'addch' : \n\n");
+    addstr("Print char w/ 'addch' : ");
     addch('i');
+    printw("\n\n");
     refresh();
     
     printw("Print numbers w/ 'printw()' : %d %f \n\n", num_int, num_dub);
