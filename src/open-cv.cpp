@@ -11,7 +11,7 @@ int main (int, char**) {
 
     // works on D-Linke CDS-932L
     const std::string strm_addr = 
-        "rtsp://admin:password123@192.168.1.176:554/2";
+        "rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2";
     // open vid strm and confirm
     if (!vcap.open(strm_addr)) {
         cout << "Error opening video stream" << endl;
