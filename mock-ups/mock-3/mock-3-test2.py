@@ -1,6 +1,7 @@
 import cv2
 import time
 import multiprocessing as mp
+from flask import Response, Flask, render_template
 
 class Camera():
     
@@ -70,6 +71,15 @@ class Camera():
         
         return cv2.resize(frame,None,fx=percent,fy=percent) 
 
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+
+@app.route("/cam1")
+def video_feed():
+    return Response( ,mimetype = "multipart/x-mixed-replace; boundary=frame")
 
 def main():
     cam = Camera("rtsp://admin:password123@disc-cam2.iot.nau.edu:554/2")
