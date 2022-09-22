@@ -1,6 +1,9 @@
 /*
  * basic program from tutorial on setting up ncurses
+ * Will be using this as a prototype to build off of
+ *
  * compile with: gcc ncurses_ex.c -lncurses -o main 
+ *
  */
 #include<ncurses.h>
 #include<stdlib.h>
@@ -17,8 +20,8 @@ void colouring();
 // FUNCTION printing
 //--------------------------------------------------------
 void printing() {
-    int num_int = 17
-    double num_dub = 171.17
+    int num_int = 17;
+    double num_dub = 171.17;
 
     addstr("Print statement w/ 'addstr'\n\n");
     refresh();
@@ -39,7 +42,7 @@ int main(void) {
     addstr("-----------------\n| This is our GUI        |\n|(Graphical User Interface)|\n-----------------\n\n");
     refresh();
 
-    //printing();
+    printing();
 
     //moving_and_sleeping();
 
