@@ -21,7 +21,7 @@ implementations!
 
 > :warning: *This repo is forked from [here](https://github.com/DiscoverCCRI/ip_cam) and serves
 as a "new version" also developed by [me](https://github.com/akielaries), building off of the application
-used for the DiscoverCCRI research study. This project will be open source and welcomes contributors.*
+used for the DiscoverCCRI research study. This project welcomes contributors!*
 ---
 
 
@@ -56,3 +56,8 @@ cmake --build.
 make -j4
 ```
 
+Check your opencv2 files are in /usr/include and not
+/usr/local/include. If they are stored in the latter, simply run 
+```
+sudo mv -r /usr/local/include/opencv4/opencv2/ /usr/include/
+```
