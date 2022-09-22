@@ -19,7 +19,7 @@ heavily encouraged to contribute or use parts of this project for their own
 implementations!
 
 
-> :warning: *This repo is forked from [here](https://github.com/DiscoverCCRI/ip_cam) and serves
+> :warning: *This repo is forked and detached from [here](https://github.com/DiscoverCCRI/ip_cam) and serves
 as a "new version" also developed by [me](https://github.com/akielaries), building off of the application
 used for the DiscoverCCRI research study. This project welcomes contributors!*
 ---
