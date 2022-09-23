@@ -35,6 +35,7 @@ implementations.
 - research using GTK with C
 - Research using curses (terminal-based GUI)
 - hash out the issues with buffering on our test cams
+- instead of FFMPEG try with GStreamer
 
 # Dependencies
 
