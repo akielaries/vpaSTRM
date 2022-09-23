@@ -40,13 +40,22 @@ implementations.
 # Dependencies
 
 ### OpenCV
-Can be quite a process to install so I will offer two methods of installation,
-I was able to get the dependency working using the method below. 
+Can be quite a process to install and also requires dependencies in itself
+so I will offer two methods of installation, I was able to get the lib 
+working using the method below. 
 
 > :warning: GStreamer can be used in place of FFMPEG, which will be enable by
 default.
 
 ```
+# install dependencies
+$ sudo apt-get install build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev python3-dev python3-numpy libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-dev python3-pip python3-numpy
+
+# GStreamer
+$ sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+$ sudo apt-get install gstreamer1.0-plugins
+$ sudo apt-get install gstreamer1.0-gl
+
 # Clone the repository
 $ git clone git@github.com:opencv/opencv.git
 
