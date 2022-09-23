@@ -117,6 +117,7 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D PYTHON_EXECUTABLE=$(which python2) \
 -D BUILD_opencv_python2=OFF \
 -D PYTHON3_EXECUTABLE=$(which python3) \
+-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
 -D PYTHON3_INCLUDE_DIR=$(python3 -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
 -D PYTHON3_PACKAGES_PATH=$(python3 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") \
 -D WITH_GSTREAMER=ON \
