@@ -121,7 +121,9 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D PYTHON3_PACKAGES_PATH=$(python3 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") \
 -D WITH_GSTREAMER=ON \
 -D WITH_FFMPEG=ON \
+-D HAVE_FFMPEG=ON \
 -D WITH_GTK=ON \
+-D BUILD_SHARED_LIBS=OFF \
 -D BUILD_TIFF=ON \
  ..
 
