@@ -39,7 +39,41 @@ implementations.
 
 # Dependencies
 
-OpenCV
+### OpenCV
+Can be quite a process to install so I will offer two methods of installation,
+I was able to get the dependency working using method 1. I 
+
+> :warning: GStreamer can be used in place of FFMPEG which will be enable by
+default
+
+#### Method 1
+```
+# Clone the repository
+$ git clone git@github.com:opencv/opencv.git
+
+$ cd opencv
+
+# create build dir and enter
+$ mkdir build && cd build
+
+# Configure
+$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
+-D CMAKE_INSTALL_PREFIX=/usr/include \
+-D OPENCV_GENERATE_PKGCONFIG=ON \
+-D BUILD_EXAMPLES=OFF \
+-D INSTALL_PYTHON_EXAMPLES=OFF \
+-D INSTALL_C_EXAMPLES=OFF \
+-D PYTHON_EXECUTABLE=$(which python2) \
+-D BUILD_opencv_python2=OFF \
+-D PYTHON3_EXECUTABLE=$(which python3) \
+-D PYTHON3_INCLUDE_DIR=$(python3 -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
+-D PYTHON3_PACKAGES_PATH=$(python3 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") \
+-D WITH_GSTREAMER=ON \ 
+-D BUILD_TIFF=ON ..
+
+# Build (spread load accross 4 core, use appropriately)
+$ make-j4
+```
 
 ```
 # Install minimal prerequisites (Ubuntu 18.04 as reference)
