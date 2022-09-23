@@ -51,7 +51,50 @@ default.
 # install dependencies
 $ sudo apt-get install build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev python3-dev python3-numpy libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-dev python3-pip python3-numpy
 
+# FFMPEG 
+sudo apt-get -y install \
+  autoconf \
+  automake \
+  build-essential \
+  cmake \
+  git-core \
+  libass-dev \
+  libfreetype6-dev \
+  libgnutls28-dev \
+  libsdl2-dev \
+  libtool \
+  libva-dev \
+  libvdpau-dev \
+  libvorbis-dev \
+  libxcb1-dev \
+  libxcb-shm0-dev \
+  libxcb-xfixes0-dev \
+  meson \
+  ninja-build \
+  pkg-config \
+  texinfo \
+  wget \
+  yasm \
+  zlib1g-dev
+  
 # GStreamer
+sudo apt-get -y install \
+  libgstreamer1.0-dev \
+  libgstreamer-plugins-base1.0-dev \
+  libgstreamer-plugins-bad1.0-dev \
+  gstreamer1.0-plugins-base \
+  gstreamer1.0-plugins-good \
+  gstreamer1.0-plugins-bad \
+  gstreamer1.0-plugins-ugly \
+  gstreamer1.0-libav \
+  gstreamer1.0-tools \
+  gstreamer1.0-x \
+  gstreamer1.0-alsa \
+  gstreamer1.0-gl \
+  gstreamer1.0-gtk3 \
+  gstreamer1.0-qt5 \
+  gstreamer1.0-pulseaudio
+  
 $ sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
 $ sudo apt-get install gstreamer1.0-plugins
 $ sudo apt-get install gstreamer1.0-gl
@@ -65,20 +108,21 @@ $ cd opencv
 $ mkdir build && cd build
 
 # Configure
-$ cmake -D CMAKE_BUILD_TYPE=RELEASE \ 
--D CMAKE_INSTALL_PREFIX=/usr/include \ 
--D OPENCV_GENERATE_PKGCONFIG=ON \ 
--D BUILD_EXAMPLES=OFF \ 
--D INSTALL_PYTHON_EXAMPLES=OFF \ 
--D INSTALL_C_EXAMPLES=OFF \ 
--D PYTHON_EXECUTABLE=$(which python2) \ 
--D BUILD_opencv_python2=OFF \ 
--D PYTHON3_EXECUTABLE=$(which python3) \ 
--D PYTHON3_INCLUDE_DIR=$(python3 -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \ 
--D PYTHON3_PACKAGES_PATH=$(python3 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") \ 
--D WITH_GSTREAMER=ON \ 
--D WITH_GTK=ON \ 
--D BUILD_TIFF=ON \ 
+$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
+-D CMAKE_INSTALL_PREFIX=/usr/include \
+-D OPENCV_GENERATE_PKGCONFIG=ON \
+-D BUILD_EXAMPLES=OFF \
+-D INSTALL_PYTHON_EXAMPLES=OFF \
+-D INSTALL_C_EXAMPLES=OFF \
+-D PYTHON_EXECUTABLE=$(which python2) \
+-D BUILD_opencv_python2=OFF \
+-D PYTHON3_EXECUTABLE=$(which python3) \
+-D PYTHON3_INCLUDE_DIR=$(python3 -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
+-D PYTHON3_PACKAGES_PATH=$(python3 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") \
+-D WITH_GSTREAMER=ON \
+-D WITH_FFMPEG = ON \
+-D WITH_GTK=ON \
+-D BUILD_TIFF=ON \
  ..
 
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
