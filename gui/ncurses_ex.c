@@ -8,17 +8,16 @@
 #include<ncurses.h>
 #include<stdlib.h>
 
-//--------------------------------------------------------
+//-----------------------------------------------------------------------------
 // FUNCTION PROTOTYPES
-//--------------------------------------------------------
+//-----------------------------------------------------------------------------
 void printing();
 void move_sleep();
-void colouring();
+void display_color();
 
-
-//--------------------------------------------------------
+//-----------------------------------------------------------------------------
 // FUNCTION printing
-//--------------------------------------------------------
+//-----------------------------------------------------------------------------
 void printing() {
     int num_int = 17;
     double num_dub = 171.17;
@@ -35,12 +34,11 @@ void printing() {
 }
 
 
-//--------------------------------------------------------
+//-----------------------------------------------------------------------------
 // FUNCTION move_sleep
 // print the alphabet in both upper/lowercase decrementing
 // one space down and across for each iteration
-//
-//--------------------------------------------------------
+//-----------------------------------------------------------------------------
 void move_sleep() {
     // row = 15 for heading
     int row = 15;
@@ -72,6 +70,26 @@ void move_sleep() {
 }
 
 
+//-----------------------------------------------------------------------------
+// FUNCTION display_color
+// display some text with some colors
+//-----------------------------------------------------------------------------
+void display_color() {
+    if (has_colors()) {
+        if (start_color() == OK) {
+            init_pair(0, COLOR_MAGENTA);
+            init_pair(1, COLOR_CYAN);
+    
+            // to add color to text, enclose in attrset/attroff block
+            attrset(COLOR_PAIR(0));
+            addstr("Printing some color");
+            attroff(COLOR_PAIR(0));
+
+
+        }
+    }
+}
+
 //--------------------------------------------------------
 // FUNCTION main
 //--------------------------------------------------------
@@ -90,7 +108,7 @@ int main(void) {
 
     move_sleep();
 
-    //colouring();
+    display_color();
 
     addstr("\npress any key to exit...");
     refresh();
