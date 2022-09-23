@@ -41,12 +41,11 @@ implementations.
 
 ### OpenCV
 Can be quite a process to install so I will offer two methods of installation,
-I was able to get the dependency working using method 1. I 
+I was able to get the dependency working using the method below. 
 
-> :warning: GStreamer can be used in place of FFMPEG which will be enable by
-default
+> :warning: GStreamer can be used in place of FFMPEG, which will be enable by
+default.
 
-#### Method 1
 ```
 # Clone the repository
 $ git clone git@github.com:opencv/opencv.git
@@ -73,22 +72,6 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 
 # Build (spread load accross 4 core, use appropriately)
 $ make-j4
-```
-
-```
-# Install minimal prerequisites (Ubuntu 18.04 as reference)
-sudo apt update && sudo apt install -y cmake g++ wget unzip
-# Download and unpack sources
-wget -O opencv.zip https://github.com/opencv/opencv/archive/4.x.zip
-unzip opencv.zip
-# Create build directory
-mkdir -p build && cd build
-# Configure
-cmake ../opencv-4.x -D BUILD_TIFF=ON
-# Build 
-cmake --build.
-# Make (spread load accross all cores)
-make -j4
 ```
 
 Check your opencv2 files are in /usr/include and not
