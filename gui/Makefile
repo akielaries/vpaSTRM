@@ -4,11 +4,11 @@ SFLAGS		= -lncurses
 VPATH 		= /$(realpath $(CURDIR)/../src/core/):/$(realpath $(CURDIR)/../src/libs/)
 PROJDIR		= $(realpath $(CURDIR)/..)
 # SRCDIR 		:= $(shell find $(PROJDIR)/src -name '*.c')
-SRC			= ncurses_ex.c
+SRC			= ncurses-001.c
 BUILDDIR 	= $(PROJDIR)/build
 BINS		= main
 # Do something about object files
-OBJS		= ncurses_ex.o
+OBJS		= ncurses-001.o
 TARGET 		= main
 VERBOSE 	= TRUE
 

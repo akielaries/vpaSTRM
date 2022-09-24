@@ -14,6 +14,7 @@
 void printing();
 void move_sleep();
 void display_color();
+void mock_menu();
 
 //-----------------------------------------------------------------------------
 // FUNCTION printing
@@ -76,32 +77,57 @@ void move_sleep() {
 //-----------------------------------------------------------------------------
 void display_color() {
     if (has_colors()) {
+        
         if (start_color() == OK) {
-            init_pair(0, COLOR_MAGENTA);
-            init_pair(1, COLOR_CYAN);
+            init_pair(1, COLOR_MAGENTA, COLOR_YELLOW);
+            init_pair(2, COLOR_CYAN, COLOR_GREEN);
     
             // to add color to text, enclose in attrset/attroff block
-            attrset(COLOR_PAIR(0));
-            addstr("Printing some color");
-            attroff(COLOR_PAIR(0));
+            attrset(COLOR_PAIR(1));
+            addstr("Printing some color\n");
+            refresh();
+            attroff(COLOR_PAIR(1));
 
-
+            attrset(COLOR_PAIR(2) | A_BOLD);
+            addstr("Printing more color\n");
+            refresh();
+            attroff(COLOR_PAIR(2));
         }
+        
+        else {
+            addstr("Cannot start function\n");
+            refresh();
+        } 
+    }
+    
+    else {
+        addstr("Not compatible with display_color()\n");
+        refresh();
     }
 }
 
-//--------------------------------------------------------
-// FUNCTION main
-//--------------------------------------------------------
-int main(void) {
-    initscr();
 
+//-----------------------------------------------------------------------------
+// FUNCTION mock_menu
+// display some text with some colors
+//-----------------------------------------------------------------------------
+void mock_menu() {
+    // print an ugly hardcoded menu 
     printw("\n ----------------------------- \n \
             \n |This is our GUI            | \n \
             \n |(Graphical User Interface) | \n \
             \n |                           | \n \
             \n ----------------------------- \n");
-    
+}
+
+//-----------------------------------------------------------------------------
+// FUNCTION main
+//-----------------------------------------------------------------------------
+int main(void) {
+    initscr();
+
+    mock_menu();
+
     refresh();
 
     printing();
