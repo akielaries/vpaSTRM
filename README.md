@@ -7,7 +7,7 @@ C and C++. The goal is to use FFMPEG in conjunction
 with OpenCV. The use of Python will be made useful 
 again for potential cases of statistical analysis, 
 machine learning, and other ideas involving data
-visualization. 
+visualization (quick and easy). 
 
 End result will include a functioning package allowing users to utilize 
 this application in whatever way they see fit. This project heavily encourages
