@@ -1,4 +1,13 @@
 /*
+ * F : format
+ * D : duration
+ * R : resolution
+ * A : audio channels
+ * D : decoding frames into .pgm format
+ *
+ * Overall purpose of this was to ensure ffmpeg + deopendencies were installed
+ * correctly.
+ *
  * http://ffmpeg.org/doxygen/trunk/index.html
  *
  * Main components
@@ -10,13 +19,6 @@
  * Packet - are the data (kind of slices of the stream data) to be decoded as raw frames.
  * Frame - a decoded raw frame (to be encoded or filtered).
  *
- * Overall purpose of this was to ensure ffmpeg + deopendencies were installed
- * correctly AS WELL AS return information about :
- *      - format
- *      - duration
- *      - resolution
- *      - audio channels
- *      - frame decoding into .pgm format
  */
 
 #include <libavcodec/avcodec.h>

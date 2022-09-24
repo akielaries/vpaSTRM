@@ -8,10 +8,12 @@ LIBFLAGS	= -lavcodec -lavformat -lswresample -lswscale -lavutil
 VPATH 		= /$(realpath $(CURDIR)/../src/core/):/$(realpath $(CURDIR)/../src/libs/)
 
 PROJDIR		= $(realpath $(CURDIR))
-SRC 		= $(shell find $(PROJDIR)/src -name '*.c')
 SRCDIR		= $(PROJDIR)/$(SRC)
+#SRC 		= $(shell find $(PROJDIR)/src -name '*.c')
+SRC			= $(PROJDIR)/src/vid
 LIBDIR		= $(PROJDIR)/include
 OBJDIR		= $(PROJDIR)/bin
+OBJS		= fdrad-001.o
 BUILDDIR 	= $(PROJDIR)/build
 
 
@@ -24,5 +26,5 @@ run:
 	./${TARGET}
 
 clean:
-	rm -f $(SRCDIR/*.o) $(TARGET) *~
+	rm -f ${TARGET} ${OBJS}
 
