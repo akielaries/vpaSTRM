@@ -95,9 +95,6 @@ sudo apt-get -y install \
   gstreamer1.0-qt5 \
   gstreamer1.0-pulseaudio
   
-$ sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
-$ sudo apt-get install gstreamer1.0-plugins
-$ sudo apt-get install gstreamer1.0-gl
 
 # Clone the repository
 $ git clone git@github.com:opencv/opencv.git
@@ -111,23 +108,30 @@ $ mkdir build && cd build
 $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D CMAKE_INSTALL_PREFIX=/usr/local \
 -D OPENCV_GENERATE_PKGCONFIG=ON \
--D BUILD_EXAMPLES=OFF \
+-D BUILD_EXAMPLES=ON \
 -D INSTALL_PYTHON_EXAMPLES=ON \
 -D INSTALL_C_EXAMPLES=ON \
 -D PYTHON_EXECUTABLE=$(which python2) \
 -D BUILD_opencv_python2=OFF \
 -D PYTHON3_EXECUTABLE=$(which python3) \
 -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
--D PYTHON3_INCLUDE_DIR=$(python3 -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
--D PYTHON3_PACKAGES_PATH=$(python3 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") \
 -D WITH_GSTREAMER=ON \
 -D WITH_FFMPEG=ON \
 -D HAVE_FFMPEG=ON \
 -D WITH_GTK=ON \
--D BUILD_SHARED_LIBS=ON \
 -D WITH_QT=ON \
 -D WITH_OPENGL=ON \
 -D BUILD_TIFF=ON \
+-D BUILD_opencv_apps=OFF \
+-D BUILD_SHARED_LIBS=OFF \
+-D OPENCV_FFMPEG_SKIP_BUILD_CHECK=ON \
+-D ENABLE_PRECOMPILED_HEADERS=OFF \
+-D FORCE_VTK=ON \
+-D WITH_TBB=ON \
+-D WITH_GDAL=ON \
+-D WITH_XINE=ON \
+-D FFMPEG_LIBDIR="/usr/bin" \
+-D FFMPEG_INCLUDE_DIRS="/usr/bin" \
  ..
 
 # Build (use -j flag responsibly)
