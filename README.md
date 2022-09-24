@@ -38,4 +38,4 @@ implementations.
 - instead of FFMPEG try with GStreamer
 
 # Installing Dependencies
-> :warning: **Please view [DEPENDENCIES.md](https://github.com/akielaries/rgaSTRM/blob/main/DEPENDENCIES.md)**
+> :warning: **Please view [DEPENDENCIES.md](https://github.com/akielaries/rgaSTRM/blob/main/docs/DEPENDENCIES.md)**
