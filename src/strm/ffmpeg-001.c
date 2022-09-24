@@ -9,6 +9,14 @@
  *        and DECoded (from Packet to Frame).
  * Packet - are the data (kind of slices of the stream data) to be decoded as raw frames.
  * Frame - a decoded raw frame (to be encoded or filtered).
+ *
+ * Overall purpose of this was to ensure ffmpeg + deopendencies were installed
+ * correctly AS WELL AS return information about :
+ *      - format
+ *      - duration
+ *      - resolution
+ *      - audio channels
+ *      - frame decoding into .pgm format
  */
 
 #include <libavcodec/avcodec.h>
