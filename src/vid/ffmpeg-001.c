@@ -192,7 +192,7 @@ int main(int argc, const char *argv[])
       if (response < 0)
         break;
       // stop it, otherwise we'll be saving hundreds of frames
-      if (--how_many_packets_to_process <= 0) break;
+      //if (--how_many_packets_to_process <= 0) break;
     }
     // https://ffmpeg.org/doxygen/trunk/group__lavc__packet.html#ga63d5a489b419bd5d45cfd09091cbcbc2
     av_packet_unref(pPacket);
@@ -253,7 +253,7 @@ static int decode_packet(AVPacket *pPacket, AVCodecContext *pCodecContext, AVFra
       );
 
       char frame_filename[1024];
-      snprintf(frame_filename, sizeof(frame_filename), "%s-%d.pgm", "frame", pCodecContext->frame_number);
+      snprintf(frame_filename, sizeof(frame_filename), "../../cv-tests/output/radix-sort_inf-iters/%s-%d.pgm", "frame", pCodecContext->frame_number);
       // Check if the frame is a planar YUV 4:2:0, 12bpp
       // That is the format of the provided .mp4 file
       // RGB formats will definitely not give a gray image
