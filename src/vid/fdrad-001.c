@@ -47,6 +47,9 @@ static void save_gray_frame(unsigned char *buf, int wrap, int xsize, int ysize,
         char *filename);
 
 int main(int argc, const char *argv[]) {
+
+    log_file_ptr = fopen("logs/TEST-LOG-001.txt", "w");
+
     if (argc < 2) {
         printf("You need to specify a media file.\n");
         return -1;
@@ -241,9 +244,9 @@ static void logging(const char *format, ...) {
     va_start(args, format);
     //FILE *file_ptr;
     //char log_file[] = "logs/TEST-LOG-001.txt";
-    log_file_ptr = fopen("logs/TEST-LOG-001.txt", "w");
+    //log_file_ptr = fopen("logs/TEST-LOG-001.txt", "w");
     if (log_file_ptr) {
-        va_start(args2, format);
+        //va_start(args2, format);
         va_copy(args2, args);
         vfprintf(log_file_ptr, format, args2);
         //fprintf(log_file_ptr, "\n");
@@ -256,7 +259,7 @@ static void logging(const char *format, ...) {
     va_end(args);
 
     //fprintf(stderr, "\n");
-    fclose(log_file_ptr);
+    //fclose(log_file_ptr);
 
     //fclose(file_ptr);
 }
