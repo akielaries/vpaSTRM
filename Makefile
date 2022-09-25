@@ -31,7 +31,7 @@ BUILDDIR 	= $(PROJDIR)/build
 # compiled binary
 TARGET 		= transform-002
 # store compiled binary in /bin/run
-STORE_BIN	= $(addprefix $(TARGET)/, $(BIN))
+STORE_BIN	= $(addprefix $(BIN)/, $(TARGET))
 
 
 all: compile run 
@@ -42,7 +42,7 @@ compile:
 
 
 run:
-	./${STORE_BIN}${ARGS} 
+	./bin/run/transform-002 ${ARGS} 
 
 
 clean:

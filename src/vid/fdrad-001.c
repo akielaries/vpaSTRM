@@ -255,7 +255,7 @@ static int decode_packet(AVPacket *pPacket, AVCodecContext *pCodecContext, AVFra
       );
 
       char frame_filename[1024];
-      snprintf(frame_filename, sizeof(frame_filename), "../../cv-tests/output/radix-sort_inf-iters/%s-%d.pgm", "frame", pCodecContext->frame_number);
+      snprintf(frame_filename, sizeof(frame_filename), "../../cv-data/output/tests/%s-%d.pgm", "frame", pCodecContext->frame_number);
       // Check if the frame is a planar YUV 4:2:0, 12bpp
       // That is the format of the provided .mp4 file
       // RGB formats will definitely not give a gray image
