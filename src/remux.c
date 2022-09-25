@@ -1,8 +1,9 @@
 // based on https://ffmpeg.org/doxygen/trunk/remuxing_8c-example.html
 #include <libavutil/timestamp.h>
 #include <libavformat/avformat.h>
+#include "../include/remux.h"
 
-int main(int argc, char **argv)
+int remux(int argc, char **argv)
 {
   AVFormatContext *input_format_context = NULL, *output_format_context = NULL;
   AVPacket packet;

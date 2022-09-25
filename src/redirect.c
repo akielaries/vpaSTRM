@@ -4,7 +4,7 @@
  * and call some functions
  */
 
-#include "../../include/init-001.h"
+#include "../../include/redirect.h"
 #include <stdio.h>
 
 enum{SUCCESS, FAIL, STR_NUM = 6};
