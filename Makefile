@@ -13,7 +13,7 @@ CFLAGS 		= -Wall -Wextra -g
 LFLAGS		= -lavcodec -lavformat -lswresample -lswscale -lavutil
 
 SRCDIR		= $(PROJDIR)/src/vid
-SRC 		= $(shell find $(PROJDIR)/src/vid -name '*.c')
+SRC 		= $(shell find $(PROJDIR)/src/ -name '*.c')
 LIBDIR		= $(PROJDIR)/include
 
 # directory where object files will be stored
