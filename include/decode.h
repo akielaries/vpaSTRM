@@ -10,7 +10,7 @@ static int decode_packet(AVPacket *pPacket,
             AVCodecContext *pCodecContext, 
             AVFrame *pFrame);
 
-static void save_gray_frame(unsigned char *buf, 
+static void grayscaled_frame(unsigned char *buffer, 
             int wrap, 
             int xsize,
             int ysize, 
