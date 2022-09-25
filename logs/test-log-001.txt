@@ -1,6 +1,0 @@
-Redirecting a standard stream to the text file. 
-These 5 lines of text will be redirectedso many things you can do if you understand the 
-concept, fundamental idea - try this one! 
---------------DONE-------------------------- 
-(null) 
-(null) 

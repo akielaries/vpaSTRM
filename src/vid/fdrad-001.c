@@ -25,6 +25,10 @@
 
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
@@ -226,20 +230,36 @@ int main(int argc, const char *argv[]) {
 static void logging(const char *format, ...) {
     va_list args;
     //FILE *file_ptr;
-    
-    //log_file = "../../logs/TEST-LOG-001.txt";
+    char log_file[] = "logs/TEST-LOG-001.txt";
 
-    //freopen(log_file, "w+", stdout);
-
-    fprintf(stderr, "LOG: ");
-    va_start(args, format);
-    vfprintf(stderr, format, args);
-    va_end(args);
-    fprintf(stderr, "\n");
-    
+    for (int index = 0; index < args; index++) {
+        if (freopen(log_file, "w", stderr) == NULL) {
+            printf("<---ERROR LOGGING TO FILES--->");
+        }
+        else {
+            fprintf(stderr, "LOG: ");
+            va_start(args, format);
+            vfprintf(stderr, format, args);
+            va_end(args);
+            fprintf(stderr, "\n");
+            fclose(stderr);
+        }
+    }
     //fclose(file_ptr);
+}
+
+/*
+void redirect(void (*f)(void), char *file) {
+    int fd = open(file, O_CREAT | O_TRUN | O_WRONLY, 0644);
+    int savefd = dup(1);
+    dup2(fd, 1);
+    f();
+    dup2(savefd, 1);
+    close(df);
+    close(savefd);
 
 }
+*/
 
 static int decode_packet(AVPacket *pPacket, AVCodecContext *pCodecContext, AVFrame *pFrame)
 {
