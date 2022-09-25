@@ -3,50 +3,49 @@
 vpath %.c src
 vpath %.o src
 
+# define our project director
+PROJDIR     = $(realpath $(CURDIR))
+
 CC 			= gcc
-TARGET 		= transform
 VERBOSE 	= TRUE
 
 CFLAGS 		= -Wall -Wextra -g
-LIBFLAGS	= -lavcodec -lavformat -lswresample -lswscale -lavutil
-
-PROJDIR		= $(realpath $(CURDIR))
+LFLAGS		= -lavcodec -lavformat -lswresample -lswscale -lavutil
 
 SRCDIR		= $(PROJDIR)/src/vid
-#SRC 		= $(shell find $(PROJDIR)/src -name '*.c')
-#SRC			= $(PROJDIR)/src/vid/fdrad-001.c
-SRC			= $(SRCDIR)/ *.c
+SRC 		= $(shell find $(PROJDIR)/src/vid -name '*.c')
 LIBDIR		= $(PROJDIR)/include
 
 # directory where object files will be stored
 OBJDIR		= $(PROJDIR)/bin
 # create objects from respective .c files
-OBJS		= fdrad-001.o
+# OBJS		= fdrad-001.o
 # add object directory as prefix to our created object files
-OBJS_PRE	= $(addprefix $(OBJDIR)/, $(OBJS))
+# OBJS_PRE	= $(addprefix $(OBJDIR)/, $(OBJS))
 
 # directory to store main executable
 BIN			= $(OBJDIR)/run
 # DNE For now
 BUILDDIR 	= $(PROJDIR)/build
 
+# compiled binary
+TARGET 		= transform-002
+# store compiled binary in /bin/run
+STORE_BIN	= $(addprefix $(TARGET)/, $(BIN))
+
 
 all: compile run 
 
 
-compile: ${OBJS_PRE}
-	#${CC} ${CFLAGS} ${SRC} ${LIBFLAGS} -o ${TARGET} 
-	${CC} ${CFLAGS} ${LIBFLAGS} -o ${TARGET} ${OBJS_PRE}
-
-	$(OBJDIR)/%.o : %.c 
-		${CC} -c ${CFLAGS} $< -o $@
+compile: 
+	${CC} ${CLFAGS} ${SRC} ${LFLAGS} -o ${STORE_BIN}
 
 
 run:
-	./${TARGET}
+	./${STORE_BIN}${ARGS} 
 
 
 clean:
-	rm -f ${TARGET} ${OBJS}
+	rm -f ${STORE_BIN} ${OBJS}
 
 
