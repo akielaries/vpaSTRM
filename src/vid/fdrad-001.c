@@ -232,18 +232,16 @@ static void logging(const char *format, ...) {
     //FILE *file_ptr;
     char log_file[] = "logs/TEST-LOG-001.txt";
 
-    for (int index = 0; index < args; index++) {
-        if (freopen(log_file, "w", stderr) == NULL) {
-            printf("<---ERROR LOGGING TO FILES--->");
-        }
-        else {
-            fprintf(stderr, "LOG: ");
-            va_start(args, format);
-            vfprintf(stderr, format, args);
-            va_end(args);
-            fprintf(stderr, "\n");
-            fclose(stderr);
-        }
+    if (freopen(log_file, "w", stderr) == NULL) {
+        printf("<---ERROR LOGGING TO FILES--->");
+    }
+    else {
+        fprintf(stderr, "LOG: ");
+        va_start(args, format);
+        vfprintf(stderr, format, args);
+        va_end(args);
+        fprintf(stderr, "\n");
+        fclose(stderr);
     }
     //fclose(file_ptr);
 }
