@@ -255,7 +255,10 @@ static int decode_packet(AVPacket *pPacket, AVCodecContext *pCodecContext, AVFra
       );
 
       char frame_filename[1024];
-      snprintf(frame_filename, sizeof(frame_filename), "../../cv-data/output/tests/%s-%d.pgm", "frame", pCodecContext->frame_number);
+      // our saved file name should be from the POV of the root dir which the
+      // makefile and shell script to compile/run this project are located
+      snprintf(frame_filename, sizeof(frame_filename), "cv-data/output/tests/%s-%d.pgm", 
+              "frame", pCodecContext->frame_number);
       // Check if the frame is a planar YUV 4:2:0, 12bpp
       // That is the format of the provided .mp4 file
       // RGB formats will definitely not give a gray image

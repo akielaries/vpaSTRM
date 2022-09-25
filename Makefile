@@ -50,5 +50,6 @@ run:
 
 clean:
 	rm -f ${STORE_BIN} ${OBJS}
+	cd cv-data/output/tests && rm *.pgm
 
 
