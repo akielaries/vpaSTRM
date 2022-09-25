@@ -42,7 +42,10 @@ compile:
 
 
 run:
-	./bin/run/transform-002 ${ARGS} 
+	# ./bin/run/transform-002 ${ARGS} 
+	# use var as an argument parser type function for our
+	# compile-run.sh script
+	./bin/run/transform-002 ${var}
 
 
 clean:
