@@ -12,7 +12,8 @@
  *
  * Main components
  *
- * Format (Container) - a wrapper, providing sync, metadata and muxing (multiplexing) for the streams.
+ * Format (Container) - a wrapper, providing sync, metadata and muxing 
+ *                      (multiplexing) for the streams.
  * Stream   - a continuous stream (audio or video) of data over time.
  * Codec    - defines how data are enCOded (from Frame to Packet)
  *          and DECoded (from Packet to Frame).
@@ -222,14 +223,22 @@ int main(int argc, const char *argv[]) {
   return 0;
 }
 
-static void logging(const char *fmt, ...)
-{
+static void logging(const char *format, ...) {
     va_list args;
-    fprintf( stderr, "LOG: " );
-    va_start( args, fmt );
-    vfprintf( stderr, fmt, args );
-    va_end( args );
-    fprintf( stderr, "\n" );
+    //FILE *file_ptr;
+    
+    //log_file = "../../logs/TEST-LOG-001.txt";
+
+    //freopen(log_file, "w+", stdout);
+
+    fprintf(stderr, "LOG: ");
+    va_start(args, format);
+    vfprintf(stderr, format, args);
+    va_end(args);
+    fprintf(stderr, "\n");
+    
+    //fclose(file_ptr);
+
 }
 
 static int decode_packet(AVPacket *pPacket, AVCodecContext *pCodecContext, AVFrame *pFrame)

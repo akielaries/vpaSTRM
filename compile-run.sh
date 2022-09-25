@@ -5,6 +5,6 @@
 make compile 
 
 # run but with arguments passed in
-./bin/run/transform-002 "$@"
+./bin/run/transforms-001 "$@"
 
 

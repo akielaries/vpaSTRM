@@ -39,7 +39,7 @@ int main(void) {
 
     char *str[STR_NUM] = {
         "Redirecting a standard stream to the text file.",
-        "These 5 lines of text will be redirected"
+        "These 5 lines of text will be redirected", 
         "so many things you can do if you understand the",
         "concept, fundamental idea - try this one!",
         "--------------DONE--------------------------"
