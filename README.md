@@ -1,9 +1,11 @@
 # Introduction
-WIP repo aiming to stream feeds from RTSP based IP
-cameras. Previously implemented in Python, this 
-version aims to improve performance and usability 
-and will be primarily focused on implementations in
-C, and C++ for computer vision related tasks. 
+WIP repo aiming to 
+
+Previously implemented in Python for streaming 
+RTSP based IP cameras, this version aims to improve 
+performance and usability and will be primarily 
+focused on implementations in C and C++ for computer 
+vision related tasks (openCV C API is outdated). 
 
 The goal is to wrap certain functionaities of FFMPEG, in conjunction 
 with OpenCV + friendly UI to manipulate video files in various ways.
