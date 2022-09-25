@@ -35,8 +35,10 @@
 #include <string.h>
 #include <inttypes.h>
 
+static FILE *log_file_ptr;
+
 // print out the steps and errors
-static void logging(const char *fmt, ...);
+static void logging(const char *format, ...);
 // decode packets into frames
 static int decode_packet(AVPacket *pPacket, AVCodecContext *pCodecContext, 
         AVFrame *pFrame);
@@ -227,22 +229,35 @@ int main(int argc, const char *argv[]) {
   return 0;
 }
 
-static void logging(const char *format, ...) {
-    va_list args;
-    //FILE *file_ptr;
-    char log_file[] = "logs/TEST-LOG-001.txt";
 
-    if (freopen(log_file, "w", stderr) == NULL) {
-        printf("<---ERROR LOGGING TO FILES--->");
+//static FILE *log_file_ptr;
+
+//log_file_ptr = fopen("logs/TEST-LOG-001.txt", "w");
+
+static void logging(const char *format, ...) {
+    //static FILE *log_file_ptr;
+    
+    va_list args, args2;
+    va_start(args, format);
+    //FILE *file_ptr;
+    //char log_file[] = "logs/TEST-LOG-001.txt";
+    log_file_ptr = fopen("logs/TEST-LOG-001.txt", "w");
+    if (log_file_ptr) {
+        va_start(args2, format);
+        va_copy(args2, args);
+        vfprintf(log_file_ptr, format, args2);
+        //fprintf(log_file_ptr, "\n");
+        va_end(args2);
     }
-    else {
-        fprintf(stderr, "LOG: ");
-        va_start(args, format);
-        vfprintf(stderr, format, args);
-        va_end(args);
-        fprintf(stderr, "\n");
-        fclose(stderr);
-    }
+    fprintf(stderr, "LOG: ");
+    //va_start(args, format);
+    vfprintf(stderr, format, args);
+    //fprintf(stderr, "\n");
+    va_end(args);
+
+    //fprintf(stderr, "\n");
+    fclose(log_file_ptr);
+
     //fclose(file_ptr);
 }
 
