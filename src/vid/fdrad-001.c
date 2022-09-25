@@ -12,12 +12,13 @@
  *
  * Main components
  *
- * Format (Container) - a wrapper, providing sync, metadata and muxing for the streams.
- * Stream - a continuous stream (audio or video) of data over time.
- * Codec - defines how data are enCOded (from Frame to Packet)
- *        and DECoded (from Packet to Frame).
- * Packet - are the data (kind of slices of the stream data) to be decoded as raw frames.
- * Frame - a decoded raw frame (to be encoded or filtered).
+ * Format (Container) - a wrapper, providing sync, metadata and muxing (multiplexing) for the streams.
+ * Stream   - a continuous stream (audio or video) of data over time.
+ * Codec    - defines how data are enCOded (from Frame to Packet)
+ *          and DECoded (from Packet to Frame).
+ * Packet   - are the data (kind of slices of the stream data) to be decoded 
+ *          as raw frames.
+ * Frame    - a decoded raw frame (to be encoded or filtered).
  *
  */
 
@@ -32,36 +33,46 @@
 // print out the steps and errors
 static void logging(const char *fmt, ...);
 // decode packets into frames
-static int decode_packet(AVPacket *pPacket, AVCodecContext *pCodecContext, AVFrame *pFrame);
+static int decode_packet(AVPacket *pPacket, AVCodecContext *pCodecContext, 
+        AVFrame *pFrame);
 // save a frame into a .pgm file
-static void save_gray_frame(unsigned char *buf, int wrap, int xsize, int ysize, char *filename);
+static void save_gray_frame(unsigned char *buf, int wrap, int xsize, int ysize, 
+        char *filename);
 
-int main(int argc, const char *argv[])
-{
-  if (argc < 2) {
-    printf("You need to specify a media file.\n");
-    return -1;
-  }
+int main(int argc, const char *argv[]) {
+    if (argc < 2) {
+        printf("You need to specify a media file.\n");
+        return -1;
+    }
   
-  logging("initializing all the containers, codecs and protocols.");
+    logging("initializing all the containers, codecs and protocols.");
 
-  // AVFormatContext holds the header information from the format (Container)
-  // Allocating memory for this component
-  // http://ffmpeg.org/doxygen/trunk/structAVFormatContext.html
-  AVFormatContext *pFormatContext = avformat_alloc_context();
-  if (!pFormatContext) {
+    /*
+     * AVFormatContext holds the header information from the format (Container)
+     * Allocating memory for this component
+     * http://ffmpeg.org/doxygen/trunk/structAVFormatContext.html
+     */
+    
+    AVFormatContext *pFormatContext = avformat_alloc_context();
+    if (!pFormatContext) {
     logging("ERROR could not allocate memory for Format Context");
     return -1;
-  }
+    }
 
-  logging("opening the input file (%s) and loading format (container) header", argv[1]);
-  // Open the file and read its header. The codecs are not opened.
-  // The function arguments are:
-  // AVFormatContext (the component we allocated memory for),
-  // url (filename),
-  // AVInputFormat (if you pass NULL it'll do the auto detect)
-  // and AVDictionary (which are options to the demuxer)
-  // http://ffmpeg.org/doxygen/trunk/group__lavf__decoding.html#ga31d601155e9035d5b0e7efedc894ee49
+    logging("opening the input file (%s) and loading format (container) header", 
+          argv[1]);
+    
+    /*
+     * Open the file and read its header. The codecs are not opened.
+     * The function arguments are:
+     * AVFormatContext (the component we allocated memory for),
+     * url (filename),
+     * AVInputFormat (if you pass NULL it'll do the auto detect)
+     * and AVDictionary (which are options to the demuxer)
+     * http://ffmpeg.org/doxygen/trunk/group__lavf__decoding.
+     * html#ga31d601155e9035d5b0e7efedc894ee49
+    */
+
   if (avformat_open_input(&pFormatContext, argv[1], NULL, NULL) != 0) {
     logging("ERROR could not open the file");
     return -1;
@@ -70,7 +81,9 @@ int main(int argc, const char *argv[])
   // now we have access to some information about our file
   // since we read its header we can say what format (container) it's
   // and some other information related to the format itself.
-  logging("format %s, duration %lld us, bit_rate %lld", pFormatContext->iformat->name, pFormatContext->duration, pFormatContext->bit_rate);
+  logging("format %s, duration %lld us, bit_rate %lld", 
+          pFormatContext->iformat->name, 
+          pFormatContext->duration, pFormatContext->bit_rate);
 
   logging("finding stream info from format");
   // read Packets from the Format to get stream information
