@@ -33,6 +33,7 @@ BUILDDIR 	= $(PROJDIR)/build
 TARGET 		= convert-001
 # store compiled binary in /bin/run
 STORE_BIN	= $(addprefix $(BIN)/, $(TARGET))
+LOG_FILES 	= $(shell find $(PROJDIR)/logs/ -name '*.txt')
 
 
 all: compile run 
@@ -53,4 +54,6 @@ clean:
 	rm -f ${STORE_BIN} ${OBJS}
 	cd cv-data/output/tests && rm *.pgm
 
+clean-logs:
+	rm -f ${LOG_FILES}
 

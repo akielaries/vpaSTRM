@@ -46,11 +46,12 @@ static void save_gray_frame(unsigned char *buf, int wrap, int xsize, int ysize,
 
 int main(int argc, const char *argv[]) {
 
-    log_file_ptr = fopen("logs/TEST-LOG-001.txt", "w");
+    //log_file_ptr = fopen("logs/TEST-LOG-001.txt", "w");
 
     if (argc < 2) {
         printf("You need to specify a media file.\n");
-        return -1;
+        // return -1;
+        return 2;
     }
   
     logging("initializing all the containers, codecs and protocols.");
