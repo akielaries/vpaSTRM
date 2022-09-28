@@ -35,17 +35,24 @@
 #include <string.h>
 #include <inttypes.h>
 
+FILE *fp;
+// keep track of session
+static int SESSION_NUM;
+
 // print out the steps and errors
-static void logging(FILE *file_ptr, const char *format, ...);
+static void logging(char* file_name, const char *format, ...);
+#define LOGGING(...) logging(__FILE__, __LINE__,__VA_ARGS__)
+
 // decode packets into frames
 static int decode_packet(AVPacket *pPacket, AVCodecContext *pCodecContext, 
         AVFrame *pFrame);
+
 // save a frame into a .pgm file
 static void save_gray_frame(unsigned char *buf, int wrap, int xsize, int ysize, 
         char *filename);
 
+
 int main(int argc, const char *argv[]) {
-    FILE *file_ptr = fopen("logs/TEST-LOG-001.txt", "w");
     //log_file_ptr = fopen("logs/TEST-LOG-001.txt", "w");
 
     if (argc < 2) {
@@ -233,6 +240,31 @@ int main(int argc, const char *argv[]) {
 }
 
 
+/*
+ * function to print the current time to our log files
+ */
+char* timestamp() {
+    int size = 0;
+    time_t time_iter;
+    char *buffer;
+
+    time_iter = time(NULL);
+    
+    // retrieve current time
+    char *time_str = asctime(localtime(&time_iter));
+    // this deletes the carriage return \n
+    time_str[strlen(time_str) - 1] = 0;
+
+    // square braces
+    size = strlen(time_str) + 1 + 2;
+    buffer = (char*)malloc(size);
+
+    memset(buffer, 0x0, size);
+    snprintf(buffer, size, "[%s]", time_str);
+
+    return buffer;
+}
+
 //static FILE *log_file_ptr;
 
 //log_file_ptr = fopen("logs/TEST-LOG-001.txt", "w");
@@ -242,7 +274,39 @@ int main(int argc, const char *argv[]) {
  *
  * <---------- FIX DUMP TO LOG ---------->
  */
-static void logging(FILE *file_ptr, const char *format, ...) {
+static void logging(char* file_name, int line, const char *format, ...) {
+    va_list list;
+    char *ptr_p, *ptr_r;
+    int switch_arg;
+
+    /* use this for checking if the file exists and appending or writing
+     * accordingly
+    if(SESSION_TRACKER > 0)
+      fp = fopen ("log.txt","a+");
+    else
+      fp = fopen ("log.txt","w");
+    */
+    fp = fopen("../logs/TEST-LOG-001.txt", "w");
+    fprintf(fp, "%s", timestamp()); 
+    fprintf(fp, "[%s][line: %d] ", filename, line);
+    
+    va_start(list, format);
+
+    for (ptr_p = format; *ptr_p; ++ptr_p) {
+        if (*ptr_p != '%') 
+            fputc(*ptr_p, fp);
+
+        else {
+            switch (*++ptr_p) {
+            
+                case 's':{
+
+                }
+            }
+        }
+    }
+
+    /* leaving because I might use this still
     va_list args_file, args_stdout;
     
     fprintf(stderr, "LOG: ");
@@ -260,7 +324,7 @@ static void logging(FILE *file_ptr, const char *format, ...) {
     va_end(args_stdout);
 
     fprintf(stderr, "\n");
-
+    */
     /*
     va_list args;
     fprintf( stderr, "LOG: " );
