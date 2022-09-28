@@ -1,7 +1,7 @@
-.SUFFIXES:
-.SUFFIXES: .c .o
-vpath %.c src
-vpath %.o src
+#.SUFFIXES:
+#.SUFFIXES: .c .o
+#vpath %.c src
+#vpath %.o src
 
 # define our project director
 PROJDIR     = $(realpath $(CURDIR))
@@ -12,7 +12,7 @@ VERBOSE 	= TRUE
 CFLAGS 		= -Wall -Wextra -g
 LFLAGS		= -lavcodec -lavformat -lswresample -lswscale -lavutil
 
-SRCDIR		= $(PROJDIR)/src/vid
+SRCDIR		= $(PROJDIR)/src/
 #SRC 		= $(shell find $(PROJDIR)/src/ -name '*.c')
 SRC			= $(SRCDIR)/fdrad-001.c
 LIBDIR		= $(PROJDIR)/include
@@ -44,7 +44,6 @@ compile:
 
 
 run:
-	# ./bin/run/transform-002 ${ARGS} 
 	# use var as an argument parser type function for our
 	# compile-run.sh script
 	./bin/run/convert-001 ${var}
@@ -52,8 +51,17 @@ run:
 
 clean:
 	rm -f ${STORE_BIN} ${OBJS}
-	cd cv-data/output/tests && rm *.pgm
+	# cd cv-data/output/tests && rm *.pgm
+
+
+clean-imgs:
+	rm cv-data/output/tests/*.pgm
 
 clean-logs:
+	rm -f ${LOG_FILES}
+
+clean-all: 
+	rm -f ${STORE_BIN} ${OBJS}
+	rm -f cd-data/output/tests/*.pgm
 	rm -f ${LOG_FILES}
 

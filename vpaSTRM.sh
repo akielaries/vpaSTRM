@@ -7,6 +7,11 @@ make compile
 # run but with arguments passed in and 
 # write errors and normal output to log file
 
-#./bin/run/convert-001"$@" #2>logs/ERROR-001.txt 1>logs/TEST_LOG-001.txt
-./bin/run/convert-001 2>logs/ERROR-001.txt 1>logs/TEST_LOG-001.txt
+
+# run bin, display to console AND write to .txt file
+#./bin/run/convert-001 "$@" | tee logs/STDOUT-001.txt
+./bin/run/convert-001 "$@" 
+
+# run bin, display stderr and stdout to seperate files
+
 

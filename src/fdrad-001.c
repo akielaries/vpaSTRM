@@ -51,7 +51,7 @@ int main(int argc, const char *argv[]) {
     if (argc < 2) {
         printf("You need to specify a media file.\n");
         // return -1;
-        return 2;
+        return -1;
     }
   
     logging("initializing all the containers, codecs and protocols.");
@@ -228,7 +228,6 @@ int main(int argc, const char *argv[]) {
   av_packet_free(&pPacket);
   av_frame_free(&pFrame);
   avcodec_free_context(&pCodecContext);
-  fclose(log_file_ptr);
   return 0;
 }
 
