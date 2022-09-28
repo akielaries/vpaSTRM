@@ -2,9 +2,6 @@
  * implementation of functions related to logging our data
  */
 #include "../include/log-001.h"
-#include <stdio.h>
-#include <stdarg.h>
-#include <stdlib.h>
 
 /*
  * Function that takes care of logging with variadic function. When called
