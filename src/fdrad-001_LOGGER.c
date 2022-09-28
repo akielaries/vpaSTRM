@@ -285,7 +285,7 @@ static void logging(char* file_name, int line, const char *format, ...) {
     else
       fp = fopen ("log.txt","w");
     */
-    fp = fopen("../logs/TEST-LOG-001.txt", "w");
+    fp = fopen("../logs/TEST-LOG-001.txt", "a+");
     fprintf(fp, "%s", timestamp()); 
     fprintf(fp, "[%s][line: %d] ", file_name, line);
     

@@ -1,1 +1,258 @@
 [Wed Sep 28 02:27:13 2022][fdrad-001_LOGGER.c][line: 232] releasing all the resources
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 64] initializing all the containers, codecs and protocols.
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 78] opening the input file (../cv-data/input/small_bunny_1080p_60fps.mp4) and loading format (container) header
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 100] format mov,mp4,m4a,3gp,3g2,mj2, duration lld us, bit_rate lld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 104] finding stream info from format
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 132] AVStream->time_base before open coded 1/15360
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 133] AVStream->r_frame_rate before open coded 60/1
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 134] AVStream->start_time ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 135] AVStream->duration ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 137] finding the proper decoder (CODEC)
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 159] Video Codec: resolution 1920 x 1080
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 165] 	Codec h264 ID 27 bit_rate lld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 132] AVStream->time_base before open coded 1/48000
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 133] AVStream->r_frame_rate before open coded 0/0
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 134] AVStream->start_time ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 135] AVStream->duration ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 137] finding the proper decoder (CODEC)
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 161] Audio Codec: 6 channels, sample rate 48000
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 165] 	Codec aac ID 86018 bit_rate lld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 1 (type=c, size=73 bytes, format=100339) pts 0 key_frame 0 [DTS 1]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 2 (type=c, size=66 bytes, format=7484) pts 0 key_frame 256 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 3 (type=c, size=66 bytes, format=14764) pts 0 key_frame 512 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 4 (type=c, size=66 bytes, format=7058) pts 0 key_frame 768 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 5 (type=c, size=80 bytes, format=37353) pts 0 key_frame 1024 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 6 (type=c, size=66 bytes, format=8678) pts 0 key_frame 1280 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 7 (type=c, size=66 bytes, format=17160) pts 0 key_frame 1536 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 8 (type=c, size=66 bytes, format=7624) pts 0 key_frame 1792 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 9 (type=c, size=80 bytes, format=44236) pts 0 key_frame 2048 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 10 (type=c, size=66 bytes, format=9522) pts 0 key_frame 2304 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 11 (type=c, size=66 bytes, format=5917) pts 0 key_frame 2560 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 12 (type=c, size=80 bytes, format=29872) pts 0 key_frame 2816 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 13 (type=c, size=66 bytes, format=6367) pts 0 key_frame 3072 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 14 (type=c, size=66 bytes, format=11038) pts 0 key_frame 3328 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 15 (type=c, size=66 bytes, format=6670) pts 0 key_frame 3584 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 16 (type=c, size=80 bytes, format=27801) pts 0 key_frame 3840 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 17 (type=c, size=66 bytes, format=6211) pts 0 key_frame 4096 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 18 (type=c, size=66 bytes, format=13124) pts 0 key_frame 4352 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 19 (type=c, size=66 bytes, format=5224) pts 0 key_frame 4608 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 20 (type=c, size=80 bytes, format=21799) pts 0 key_frame 4864 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 21 (type=c, size=80 bytes, format=7916) pts 0 key_frame 5120 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 22 (type=c, size=73 bytes, format=118405) pts 0 key_frame 5376 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 23 (type=c, size=66 bytes, format=514) pts 0 key_frame 5632 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 24 (type=c, size=66 bytes, format=1668) pts 0 key_frame 5888 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 25 (type=c, size=66 bytes, format=1968) pts 0 key_frame 6144 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 26 (type=c, size=80 bytes, format=6652) pts 0 key_frame 6400 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 27 (type=c, size=66 bytes, format=2451) pts 0 key_frame 6656 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 28 (type=c, size=66 bytes, format=4228) pts 0 key_frame 6912 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 29 (type=c, size=66 bytes, format=2660) pts 0 key_frame 7168 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 30 (type=c, size=80 bytes, format=13221) pts 0 key_frame 7424 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 31 (type=c, size=66 bytes, format=2538) pts 0 key_frame 7680 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 32 (type=c, size=66 bytes, format=4344) pts 0 key_frame 7936 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 33 (type=c, size=66 bytes, format=2237) pts 0 key_frame 8192 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 34 (type=c, size=80 bytes, format=13379) pts 0 key_frame 8448 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 35 (type=c, size=66 bytes, format=2589) pts 0 key_frame 8704 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 36 (type=c, size=66 bytes, format=5144) pts 0 key_frame 8960 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 37 (type=c, size=66 bytes, format=2903) pts 0 key_frame 9216 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 38 (type=c, size=80 bytes, format=17675) pts 0 key_frame 9472 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 39 (type=c, size=66 bytes, format=2861) pts 0 key_frame 9728 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 40 (type=c, size=66 bytes, format=3974) pts 0 key_frame 9984 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 41 (type=c, size=66 bytes, format=2769) pts 0 key_frame 10240 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 42 (type=c, size=80 bytes, format=15602) pts 0 key_frame 10496 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 43 (type=c, size=66 bytes, format=2973) pts 0 key_frame 10752 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 44 (type=c, size=66 bytes, format=4244) pts 0 key_frame 11008 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 45 (type=c, size=66 bytes, format=2806) pts 0 key_frame 11264 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 46 (type=c, size=80 bytes, format=15954) pts 0 key_frame 11520 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 47 (type=c, size=66 bytes, format=3334) pts 0 key_frame 11776 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 48 (type=c, size=66 bytes, format=5329) pts 0 key_frame 12032 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 49 (type=c, size=66 bytes, format=3273) pts 0 key_frame 12288 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 50 (type=c, size=80 bytes, format=20391) pts 0 key_frame 12544 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 51 (type=c, size=66 bytes, format=3001) pts 0 key_frame 12800 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 52 (type=c, size=66 bytes, format=6938) pts 0 key_frame 13056 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 53 (type=c, size=66 bytes, format=3211) pts 0 key_frame 13312 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 54 (type=c, size=80 bytes, format=18976) pts 0 key_frame 13568 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 55 (type=c, size=66 bytes, format=3076) pts 0 key_frame 13824 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 56 (type=c, size=66 bytes, format=4609) pts 0 key_frame 14080 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 57 (type=c, size=66 bytes, format=2655) pts 0 key_frame 14336 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 58 (type=c, size=80 bytes, format=22867) pts 0 key_frame 14592 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 59 (type=c, size=66 bytes, format=3095) pts 0 key_frame 14848 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 60 (type=c, size=66 bytes, format=4188) pts 0 key_frame 15104 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 61 (type=c, size=66 bytes, format=2712) pts 0 key_frame 15360 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 62 (type=c, size=80 bytes, format=17627) pts 0 key_frame 15616 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 63 (type=c, size=66 bytes, format=3053) pts 0 key_frame 15872 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 64 (type=c, size=66 bytes, format=7225) pts 0 key_frame 16128 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 65 (type=c, size=66 bytes, format=3510) pts 0 key_frame 16384 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 66 (type=c, size=80 bytes, format=20818) pts 0 key_frame 16640 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 67 (type=c, size=66 bytes, format=3546) pts 0 key_frame 16896 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 68 (type=c, size=66 bytes, format=5117) pts 0 key_frame 17152 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 69 (type=c, size=66 bytes, format=3299) pts 0 key_frame 17408 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 406] Frame 70 (type=c, size=80 bytes, format=20112) pts 0 key_frame 17664 [DTS 0]
+[Wed Sep 28 02:31:10 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 71 (type=c, size=66 bytes, format=3149) pts 0 key_frame 17920 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 72 (type=c, size=66 bytes, format=5029) pts 0 key_frame 18176 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 73 (type=c, size=66 bytes, format=2404) pts 0 key_frame 18432 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 74 (type=c, size=80 bytes, format=24264) pts 0 key_frame 18688 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 75 (type=c, size=66 bytes, format=3037) pts 0 key_frame 18944 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 76 (type=c, size=66 bytes, format=4876) pts 0 key_frame 19200 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 77 (type=c, size=66 bytes, format=3428) pts 0 key_frame 19456 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 78 (type=c, size=80 bytes, format=21639) pts 0 key_frame 19712 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 79 (type=c, size=66 bytes, format=3403) pts 0 key_frame 19968 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 80 (type=c, size=66 bytes, format=5128) pts 0 key_frame 20224 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 81 (type=c, size=66 bytes, format=3499) pts 0 key_frame 20480 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 82 (type=c, size=80 bytes, format=20067) pts 0 key_frame 20736 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 83 (type=c, size=66 bytes, format=3368) pts 0 key_frame 20992 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 84 (type=c, size=66 bytes, format=4878) pts 0 key_frame 21248 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 85 (type=c, size=66 bytes, format=2976) pts 0 key_frame 21504 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 86 (type=c, size=80 bytes, format=22805) pts 0 key_frame 21760 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 87 (type=c, size=66 bytes, format=3327) pts 0 key_frame 22016 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 88 (type=c, size=66 bytes, format=5015) pts 0 key_frame 22272 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 89 (type=c, size=66 bytes, format=3372) pts 0 key_frame 22528 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 90 (type=c, size=80 bytes, format=19403) pts 0 key_frame 22784 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 91 (type=c, size=66 bytes, format=3095) pts 0 key_frame 23040 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 92 (type=c, size=66 bytes, format=6828) pts 0 key_frame 23296 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 93 (type=c, size=66 bytes, format=3343) pts 0 key_frame 23552 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 94 (type=c, size=80 bytes, format=18937) pts 0 key_frame 23808 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 95 (type=c, size=66 bytes, format=3356) pts 0 key_frame 24064 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 96 (type=c, size=66 bytes, format=4645) pts 0 key_frame 24320 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 97 (type=c, size=66 bytes, format=3180) pts 0 key_frame 24576 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 98 (type=c, size=80 bytes, format=18269) pts 0 key_frame 24832 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 99 (type=c, size=66 bytes, format=3538) pts 0 key_frame 25088 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 100 (type=c, size=66 bytes, format=4888) pts 0 key_frame 25344 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 101 (type=c, size=66 bytes, format=2358) pts 0 key_frame 25600 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 102 (type=c, size=80 bytes, format=22254) pts 0 key_frame 25856 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 103 (type=c, size=66 bytes, format=3018) pts 0 key_frame 26112 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 104 (type=c, size=66 bytes, format=3711) pts 0 key_frame 26368 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 105 (type=c, size=66 bytes, format=2954) pts 0 key_frame 26624 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 106 (type=c, size=80 bytes, format=18568) pts 0 key_frame 26880 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 107 (type=c, size=66 bytes, format=2646) pts 0 key_frame 27136 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 108 (type=c, size=66 bytes, format=3769) pts 0 key_frame 27392 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 109 (type=c, size=66 bytes, format=2584) pts 0 key_frame 27648 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 110 (type=c, size=80 bytes, format=12180) pts 0 key_frame 27904 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 111 (type=c, size=66 bytes, format=2356) pts 0 key_frame 28160 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 112 (type=c, size=66 bytes, format=3965) pts 0 key_frame 28416 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 113 (type=c, size=66 bytes, format=2448) pts 0 key_frame 28672 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 114 (type=c, size=80 bytes, format=11631) pts 0 key_frame 28928 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 115 (type=c, size=66 bytes, format=2585) pts 0 key_frame 29184 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 116 (type=c, size=66 bytes, format=3432) pts 0 key_frame 29440 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 117 (type=c, size=66 bytes, format=2601) pts 0 key_frame 29696 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 221] AVPacket->pts ld
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 406] Frame 118 (type=c, size=80 bytes, format=6483) pts 0 key_frame 29952 [DTS 0]
+[Wed Sep 28 02:31:11 2022][fdrad-001_LOGGER.c][line: 232] releasing all the resources
