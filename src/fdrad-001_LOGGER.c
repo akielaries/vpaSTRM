@@ -35,7 +35,9 @@
 #include <string.h>
 #include <inttypes.h>
 
-FILE *fp;
+// pointer for output log file
+FILE *log_out;
+
 // keep track of session
 static int SESSION_NUM;
 
@@ -285,15 +287,15 @@ static void logging(char* file_name, int line, const char *format, ...) {
     else
       fp = fopen ("log.txt","w");
     */
-    fp = fopen("../logs/TEST-LOG-001.txt", "a+");
-    fprintf(fp, "%s", timestamp()); 
-    fprintf(fp, "[%s][line: %d] ", file_name, line);
+    log_out = fopen("../logs/TEST-LOG-001.txt", "a+");
+    fprintf(log_out, "%s", timestamp()); 
+    fprintf(log_out, "[%s][line: %d] ", file_name, line);
     
     va_start(list, format);
 
     for (ptr_p = format; *ptr_p; ++ptr_p) {
         if (*ptr_p != '%') 
-            fputc(*ptr_p, fp);
+            fputc(*ptr_p, log_out);
 
         else {
             switch (*++ptr_p) {
@@ -301,13 +303,13 @@ static void logging(char* file_name, int line, const char *format, ...) {
                 // string
                 case 's':
                     ptr_r = va_arg(list, char *);
-                    fprintf(fp, "%s", ptr_r);
+                    fprintf(log_out, "%s", ptr_r);
                     continue;
                 
                 // integer
                 case 'd':
                     switch_arg = va_arg(list, int);
-                    fprintf(fp, "%d", switch_arg);
+                    fprintf(log_out, "%d", switch_arg);
                     continue;
 
                 default:
@@ -316,8 +318,8 @@ static void logging(char* file_name, int line, const char *format, ...) {
         }
     }
     va_end(list);
-    fputc('\n', fp);
-    fclose(fp);
+    fputc('\n', log_out);
+    fclose(log_out);
 
     /* leaving because I might use this still
     va_list args_file, args_stdout;
