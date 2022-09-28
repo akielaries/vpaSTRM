@@ -30,7 +30,7 @@ BIN			= $(OBJDIR)/run
 BUILDDIR 	= $(PROJDIR)/build
 
 # compiled binary
-TARGET 		= transform-001
+TARGET 		= convert-001
 # store compiled binary in /bin/run
 STORE_BIN	= $(addprefix $(BIN)/, $(TARGET))
 
@@ -46,7 +46,7 @@ run:
 	# ./bin/run/transform-002 ${ARGS} 
 	# use var as an argument parser type function for our
 	# compile-run.sh script
-	./bin/run/transform-002 ${var}
+	./bin/run/convert-001 ${var}
 
 
 clean:
