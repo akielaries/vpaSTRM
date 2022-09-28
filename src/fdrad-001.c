@@ -35,8 +35,6 @@
 #include <string.h>
 #include <inttypes.h>
 
-FILE *log_file_ptr;
-
 // print out the steps and errors
 static void logging(const char *format, ...);
 // decode packets into frames
