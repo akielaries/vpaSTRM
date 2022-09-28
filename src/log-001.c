@@ -32,6 +32,7 @@ static void logging(const char *format, ...) {
     vfprintf(stderr, format, args);
     fprintf(stderr, "\n");
     va_end(args);
+    
 
     // fprintf(stderr, "\n");
     // fclose(log_file_ptr);

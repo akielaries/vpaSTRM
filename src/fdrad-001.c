@@ -36,7 +36,7 @@
 #include <inttypes.h>
 
 // print out the steps and errors
-static void logging(const char *format, ...);
+static void logging(FILE *file_ptr, const char *format, ...);
 // decode packets into frames
 static int decode_packet(AVPacket *pPacket, AVCodecContext *pCodecContext, 
         AVFrame *pFrame);
@@ -45,7 +45,7 @@ static void save_gray_frame(unsigned char *buf, int wrap, int xsize, int ysize,
         char *filename);
 
 int main(int argc, const char *argv[]) {
-
+    FILE *file_ptr = fopen("logs/TEST-LOG-001.txt", "w");
     //log_file_ptr = fopen("logs/TEST-LOG-001.txt", "w");
 
     if (argc < 2) {
@@ -228,6 +228,7 @@ int main(int argc, const char *argv[]) {
   av_packet_free(&pPacket);
   av_frame_free(&pFrame);
   avcodec_free_context(&pCodecContext);
+  fclose(file_ptr);
   return 0;
 }
 
@@ -241,14 +242,36 @@ int main(int argc, const char *argv[]) {
  *
  * <---------- FIX DUMP TO LOG ---------->
  */
-static void logging(const char *format, ...) {
+static void logging(FILE *file_ptr, const char *format, ...) {
+    va_list args_file, args_stdout;
+    
+
+
+    /*
     va_list args;
     fprintf( stderr, "LOG: " );
     va_start( args, format );
     vfprintf( stderr, format, args );
     va_end( args );
     fprintf( stderr, "\n" );
-    
+    */
+}
+
+void teeprintf(FILE *file_ptr, const char *format, ...) {
+    va_list args_fd, args_stdout;
+    va_start(args_fd, format);
+    va_start(args_stdout, format);
+
+    vfprintf(file_ptr, format, args_fd);
+    vfprintf(stdout, format, args_stdout);
+
+    // flush output buffer of our stream
+    fflush(file_ptr);
+    fflush(stdout);
+
+    va_end(args_fd);
+    va_end(args_stdout);
+
 }
 
 /*
