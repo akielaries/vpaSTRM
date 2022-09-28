@@ -245,7 +245,21 @@ int main(int argc, const char *argv[]) {
 static void logging(FILE *file_ptr, const char *format, ...) {
     va_list args_file, args_stdout;
     
+    fprintf(stderr, "LOG: ");
 
+    va_start(args_file, format);
+    va_start(args_stdout, format);
+
+    vfprintf(file_ptr, format, args_file);
+    vfprintf(stderr, format, args_stdout);
+
+    fflush(file_ptr);
+    fflush(stderr);
+
+    va_end(args_file);
+    va_end(args_stdout);
+
+    fprintf(stderr, "\n");
 
     /*
     va_list args;
@@ -257,6 +271,7 @@ static void logging(FILE *file_ptr, const char *format, ...) {
     */
 }
 
+/*
 void teeprintf(FILE *file_ptr, const char *format, ...) {
     va_list args_fd, args_stdout;
     va_start(args_fd, format);
@@ -273,7 +288,7 @@ void teeprintf(FILE *file_ptr, const char *format, ...) {
     va_end(args_stdout);
 
 }
-
+*/
 /*
 void redirect(void (*f)(void), char *file) {
     int fd = open(file, O_CREAT | O_TRUN | O_WRONLY, 0644);
