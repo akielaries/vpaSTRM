@@ -115,7 +115,7 @@ void frame_pgm(unsigned char *buffer,
         fwrite(buffer + y_index * wrap, 1, xsize, gs_output);
     }
     // close file
-    fclose(gs_output);
+    fclose(pgm_file);
 }
 
 void save_ppm(AV_frame *p_frame, 
@@ -148,7 +148,14 @@ void save_ppm(AV_frame *p_frame,
      */
     fprintf(ppm_file, "P6\n%d %d\n%d\n", width, height, BITS_SIZE);
     
-
+    // write our data using y index
+    for (y_index; y_index < height; y_index++) {
+        fwrite(p_frame->data[0] + y_index * p_frame->linesize[0], 1, 
+                width * 3, 
+                ppm_file);
+    }
+    // close file
+    fclose(ppm_file);
 
 }
 
