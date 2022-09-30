@@ -80,11 +80,12 @@ int decode_packet(AV_packet *p_packet,
     return 0;
 }
 
+/* <----- These functions may be moved to their own save.c +.h files----->*/
 
 /*
  * DESCRIBE THIS
  */
-void frame_pgm(unsigned char *buffer, 
+void save_pgm(unsigned char *buffer, 
                 int wrap,
                 int xsize,
                 int ysize,
@@ -156,7 +157,6 @@ void save_ppm(AV_frame *p_frame,
     }
     // close file
     fclose(ppm_file);
-
 }
 
 
