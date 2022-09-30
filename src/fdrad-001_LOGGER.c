@@ -313,7 +313,7 @@ static void logging(char* file_name, int line, const char *format, ...) {
                     continue;
 
                 default:
-                    fputc(*ptr_p, fp);
+                    fputc(*ptr_p, log_out);
             }
         }
     }
