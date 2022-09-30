@@ -3,6 +3,8 @@
  * grayscaled images
  */
 
+#include <libavcodec/avcodec.h>
+#include <libavformat/avformat.h>
 #include <stdlib.h>
 #include <stdio.h>
 
