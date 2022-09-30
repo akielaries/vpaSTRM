@@ -5,6 +5,8 @@
 
 #include "../include/decode-001.h"
 
+#define BITS_SIZE 255
+
 /*
  * DESCRIBE THIS FUNCTION
  */
@@ -89,8 +91,8 @@ void frame_pgm(unsigned char *buffer,
                 char *filename) {
     /*
      * initialize variables
-     * FILE     : pointer for our grayscaled output file (.pgm)
-     * y_index  : int, when writing line by line, iterate by the size of
+     * FILE         : pointer for our grayscaled output file (.pgm)
+     * y_index      : int, when writing line by line, iterate by the size of
      *          the y axis
      */
     FILE *pgm_file;
@@ -102,7 +104,7 @@ void frame_pgm(unsigned char *buffer,
      * Portable Graymap Format -> 
      * https://en.wikipedia.org/wiki/Netpbm_format#PGM_example
      */
-    fprintf(, ""P5\n%d %d\n%d\n", xsize, ysize, 255");
+    fprintf(pgm_file, ""P5\n%d %d\n%d\n", xsize, ysize, BITS_SIZE");
 
     // write data line by line using ysize as target
     for (y_index; y_index < ysize; y_index++) {
@@ -116,12 +118,37 @@ void frame_pgm(unsigned char *buffer,
     fclose(gs_output);
 }
 
-void save_ppm(AV_frame * p_frame, 
+void save_ppm(AV_frame *p_frame, 
                 int width,
                 int height,
                 int i_frame) {
+    /*
+     * initialize variables
+     * FILE         : pointer for our portable pixmap format file (.ppm)
+     * sized_file   :
+     * y_index      :
+     */
     // file ptr for ppm
-    FILE *
+    FILE *ppm_file;
+    char sized_file[32];
+    int y_index = 0;
+
+    // open our file to write
+    sprintf(sized_file, "frame%d.ppm", i_frame);
+    ppm_file = fopen(sized_file, "wb");
+
+    if (ppm_file == NULL) {
+        return;
+    }
+
+    /* 
+     * write header for our file
+     * Portable Pixmap Format ->
+     * https://en.wikipedia.org/wiki/Netpbm#PPM_example
+     */
+    fprintf(ppm_file, "P6\n%d %d\n%d\n", width, height, BITS_SIZE);
+    
+
 
 }
 
