@@ -427,7 +427,8 @@ static int decode_packet(AVPacket *pPacket, AVCodecContext *pCodecContext, AVFra
       // Other YUV image may do so, but untested, so give a warning
       if (pFrame->format != AV_PIX_FMT_YUV420P)
       {
-        LOGGING("Warning: the generated file may not be a grayscale image, but could e.g. be just the R component if the video format is RGB");
+        LOGGING("Warning: the generated file may not be a grayscale image, but \
+                could e.g. be just the R component if the video format is RGB");
       }
       // save a grayscale frame into a .pgm file
       save_gray_frame(pFrame->data[0], pFrame->linesize[0], pFrame->width, pFrame->height, frame_filename);
