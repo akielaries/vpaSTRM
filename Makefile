@@ -14,7 +14,7 @@ LFLAGS		= -lavcodec -lavformat -lswresample -lswscale -lavutil
 
 SRCDIR		= $(PROJDIR)/src/
 #SRC 		= $(shell find $(PROJDIR)/src/ -name '*.c')
-SRC			= $(SRCDIR)/fdrad-001.c
+SRC			= $(SRCDIR)/fdrad-001_LOGGER.c
 LIBDIR		= $(PROJDIR)/include
 
 # directory where object files will be stored
