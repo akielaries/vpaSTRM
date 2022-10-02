@@ -1,4 +1,5 @@
 /*
+ * WRITE + FORMAT
  * This file contains some functions to save our inputs to a variety of 
  * different picture formats.
  *
@@ -6,9 +7,13 @@
  * PPM - PORTABLE PIX MAP 
  */
 
+/*<--HEADERS-->*/
+#include <stdio.h>
+#include <stdlib.h>
+#include "../../include/WFMT-001.h"
 
 /*
- * DESCRIBE THIS
+ * TODO DESCRIBE THIS
  */
 void save_pgm(unsigned char *buffer,
                 int wrap,
@@ -44,7 +49,9 @@ void save_pgm(unsigned char *buffer,
     fclose(pgm_file);
 }
 
-
+/*
+ * TODO DESCRIBE THIS
+ */
 void save_ppm(AV_frame *p_frame,
                 int width,
                 int height,

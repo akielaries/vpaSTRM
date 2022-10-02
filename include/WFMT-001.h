@@ -3,8 +3,8 @@
  * picture file formats
  */
 
-#ifndef SAVE001_h
-#define SAVE001_H
+#ifndef WFMT001_h
+#define WFMT001_H
 
 /*
  * converts image to a PGM file (Portable Gray Map), a grayscale
