@@ -4,7 +4,16 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <string.h>
+#include <inttypes.h>
+
 #include "../../include/LOG-001.h"
+
+// pointer for output log file
+FILE *log_out;
+
+// keep track of session
+static int SESSION_NUM;
 
 /*
  * function to print the current time to our log files

@@ -60,7 +60,7 @@ int decode_packet(AV_packet *p_packet,
             // our saved file name should be from the POV of the root dir which the
             // makefile and shell script to compile/run this project are located
             snprintf(frame_file, sizeof(frame_file), 
-                    "../cv-data/output/tests/%s-%d.pgm",
+                    "../../cv-data/output/tests/%s-%d.pgm",
                     "frame", p_codec->frame_num);
             /*
              * Check if the frame is a planar YUV 4:2:0, 12bpp

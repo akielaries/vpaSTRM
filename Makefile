@@ -13,8 +13,8 @@ CFLAGS 		= -Wall -Wextra -g
 LFLAGS		= -lavcodec -lavformat -lswresample -lswscale -lavutil
 
 SRCDIR		= $(PROJDIR)/src/
-#SRC 		= $(shell find $(PROJDIR)/src/ -name '*.c')
-SRC			= $(SRCDIR)/fdrad-001_LOGGER.c
+SRC 		= $(shell find $(PROJDIR)/src/v001 -name '*.c')
+#SRC			= $(SRCDIR)/fdrad-001_LOGGER.c
 LIBDIR		= $(PROJDIR)/include
 
 # directory where object files will be stored
@@ -30,7 +30,7 @@ BIN			= $(OBJDIR)/run
 BUILDDIR 	= $(PROJDIR)/build
 
 # compiled binary
-TARGET 		= convert-001
+TARGET 		= vpaSTRM-001
 # store compiled binary in /bin/run
 STORE_BIN	= $(addprefix $(BIN)/, $(TARGET))
 LOG_FILES 	= $(shell find $(PROJDIR)/logs/ -name '*.txt')

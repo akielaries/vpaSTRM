@@ -32,12 +32,42 @@
  */
 
 /*
- * <--Figure out what to do about importing libs, many files rely off the of -->
- * <--the same libs -->
+ * import libs
  */
+#include "../../include/DEC-001.h"
+#include "../../include/LOG-001.h"
+#include <libavcodec/avcodec.h>
+#include <libavformat/avformat.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <inttypes.h>
 
-int main() {
+/*
+ * THIS MAIN FUNCTION WILL CHANGE AS DEVELOPMENT PROGRESSES. 
+ * EVENTUALLY I WANT MAIN TO BE IN ITS OWN FILE AND CALLING
+ * OTHER "DRIVER" FILES BASED ON ARGUMENTS. FOR NOW, THIS 
+ * WILL SERVE FINE FOR THE CURRENT VIDEO->PICTURE 
+ * CONVERSION
+ */
+int main(int argc, const char *argv[]) {
     /* TODO */
+    
+    if (argc < 2) {
+        printf("ERR: SPECIFY VIDEO FILE.\n");
+        // return -1;
+        return -1;
+    }
+
+    LOGGING("initializing all the containers, codecs and protocols.");
+
+
+
     return 0;
 }
 

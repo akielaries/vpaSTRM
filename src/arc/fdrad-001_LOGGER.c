@@ -287,7 +287,7 @@ static void logging(char* file_name, int line, const char *format, ...) {
     else
       fp = fopen ("log.txt","w");
     */
-    log_out = fopen("../logs/TEST-LOG-001.txt", "a+");
+    log_out = fopen("../../logs/TEST-LOG-001.txt", "a+");
     fprintf(log_out, "%s", timestamp()); 
     fprintf(log_out, "[%s][line: %d] ", file_name, line);
     
@@ -417,9 +417,12 @@ static int decode_packet(AVPacket *pPacket, AVCodecContext *pCodecContext, AVFra
       );
 
       char frame_filename[1024];
-      // our saved file name should be from the POV of the root dir which the
-      // makefile and shell script to compile/run this project are located
-      snprintf(frame_filename, sizeof(frame_filename), "../cv-data/output/tests/%s-%d.pgm", 
+
+      /*
+       * our saved file name should be from the POV of the root dir which the
+       * makefile and shell script to compile/run this project are located
+       */
+      snprintf(frame_filename, sizeof(frame_filename), "../../cv-data/output/tests/%s-%d.pgm", 
               "frame", pCodecContext->frame_number);
       // Check if the frame is a planar YUV 4:2:0, 12bpp
       // That is the format of the provided .mp4 file
