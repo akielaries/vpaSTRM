@@ -60,7 +60,7 @@ int main(int argc, const char *argv[]) {
     
     if (argc < 2) {
         printf("ERR: SPECIFY VIDEO FILE.\n");
-        return 17;
+        return -1;
     }
 
     LOGGING("initializing all the containers, codecs and protocols.");
