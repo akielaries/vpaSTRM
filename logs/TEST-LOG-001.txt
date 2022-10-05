@@ -258,3 +258,7 @@
 [Wed Oct  5 00:16:05 2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v001/main-001.c][line: 66] initializing all the containers, codecs and protocols.
 [Wed Oct  5 00:18:45 2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v001/main-001.c][line: 66] initializing all the containers, codecs and protocols.
 [Wed Oct  5 00:18:55 2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v001/main-001.c][line: 66] initializing all the containers, codecs and protocols.
+[Wed Oct  5 00:20:55 2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v001/main-001.c][line: 66] initializing all the containers, codecs and protocols.
+[Wed Oct  5 00:54:54 2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v001/main-001.c][line: 66] initializing all the containers, codecs and protocols.
+[Wed Oct  5 00:54:54 2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v001/main-001.c][line: 80] opening the input file (../../cv-data/input/small_bunny_1080p_60fps.mp4) and loading format (container) header
+[Wed Oct  5 00:54:54 2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v001/main-001.c][line: 94] ERROR could not open the file
