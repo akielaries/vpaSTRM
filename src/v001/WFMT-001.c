@@ -10,7 +10,11 @@
 /*<--HEADERS-->*/
 #include <stdio.h>
 #include <stdlib.h>
+#include <libavformat/avformat.h>
+
 #include "../../include/WFMT-001.h"
+
+#define BITS_SIZE 255
 
 /*
  * TODO DESCRIBE THIS
@@ -35,7 +39,7 @@ void save_pgm(unsigned char *buffer,
      * Portable Graymap Format ->
      * https://en.wikipedia.org/wiki/Netpbm_format#PGM_example
      */
-    fprintf(pgm_file, ""P5\n%d %d\n%d\n", xsize, ysize, BITS_SIZE");
+    fprintf(pgm_file, "P5\n%d %d\n%d\n", xsize, ysize, BITS_SIZE);
 
     // write data line by line using ysize as target
     for (y_index; y_index < ysize; y_index++) {
@@ -43,7 +47,7 @@ void save_pgm(unsigned char *buffer,
          * write to file using functions params and outputing to
          * define file
          */
-        fwrite(buffer + y_index * wrap, 1, xsize, gs_output);
+        fwrite(buffer + y_index * wrap, 1, xsize, pgm_file);
     }
     // close file
     fclose(pgm_file);
@@ -52,7 +56,7 @@ void save_pgm(unsigned char *buffer,
 /*
  * TODO DESCRIBE THIS
  */
-void save_ppm(AV_frame *p_frame,
+void save_ppm(AVFrame *p_frame,
                 int width,
                 int height,
                 int i_frame) {

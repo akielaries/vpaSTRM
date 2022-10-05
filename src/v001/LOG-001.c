@@ -5,7 +5,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <string.h>
-#include <inttypes.h>
+#include <time.h>
 
 #include "../../include/LOG-001.h"
 
@@ -59,7 +59,7 @@ void logging(char* file_name, int line, const char *format, ...) {
     else
       fp = fopen ("log.txt","w");
     */
-    log_out = fopen("../logs/TEST-LOG-001.txt", "a+");
+    log_out = fopen("logs/TEST-LOG-001.txt", "a+");
     fprintf(log_out, "%s", timestamp());
     fprintf(log_out, "[%s][line: %d] ", file_name, line);
 

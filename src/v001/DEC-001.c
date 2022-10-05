@@ -5,17 +5,19 @@
 
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
+
 #include "../../include/DEC-001.h"
 #include "../../include/LOG-001.h"
+#include "../../include/WFMT-001.h"
 
 #define BITS_SIZE 255
 
 /*
  * DESCRIBE THIS FUNCTION
  */
-int decode_packet(AV_packet *p_packet,
-                AV_codec *p_codec,
-                AV_frame *p_frame) {
+int decode_packet(AVPacket *p_packet,
+                AVCodecContext *p_codec,
+                AVFrame *p_frame) {
     // Supply raw packet data as input to a decoder
     // https://ffmpeg.org/doxygen/trunk/group__lavc__decoding.html
     // #ga58bc4bf1e0ac59e27362597e467efff3
@@ -33,7 +35,7 @@ int decode_packet(AV_packet *p_packet,
         * https://ffmpeg.org/doxygen/trunk/group__lavc__decoding
         * html#ga11e6542c4e66d3028668788a1a74217c
         */
-        response = avcodec_receive_frame(p_codec, p_prame);
+        response = avcodec_receive_frame(p_codec, p_frame);
         if (response == AVERROR(EAGAIN) || response == AVERROR_EOF) {
             break;
         } 
@@ -47,7 +49,7 @@ int decode_packet(AV_packet *p_packet,
         if (response >= 0) {
             LOGGING(
                 "Frame %d (type=%c, size=%d bytes, format=%d) pts %d key_frame %d [DTS %d]",
-                p_codec->frame_num,
+                p_codec->frame_number,
                 av_get_picture_type_char(p_frame->pict_type),
                 p_frame->pkt_size,
                 p_frame->format,
@@ -60,8 +62,8 @@ int decode_packet(AV_packet *p_packet,
             // our saved file name should be from the POV of the root dir which the
             // makefile and shell script to compile/run this project are located
             snprintf(frame_file, sizeof(frame_file), 
-                    "../../cv-data/output/tests/%s-%d.pgm",
-                    "frame", p_codec->frame_num);
+                    "cv-data/output/tests/%s-%d.pgm",
+                    "frame", p_codec->frame_number);
             /*
              * Check if the frame is a planar YUV 4:2:0, 12bpp
              * That is the format of the provided .mp4 file

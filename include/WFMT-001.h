@@ -10,7 +10,7 @@
  * converts image to a PGM file (Portable Gray Map), a grayscale
  * 2-dimensional image
  */
-void frame_pgm(unsigned char *buffer,
+void save_pgm(unsigned char *buffer,
             int wrap,
             int xsize,
             int ysize,
@@ -20,7 +20,7 @@ void frame_pgm(unsigned char *buffer,
  * saves our frames to a PPM file (Portable Pixmap Format), uses
  * text to store information about our image
  */
-void save_ppm(AV_frame * p_frame,
+void save_ppm(AVFrame * p_frame,
             int width,
             int height,
             int i_frame);
