@@ -2,14 +2,11 @@
  * function declaration for logging data 
  */
 
-#include <stdio.h>
-#include <stdarg.h>
-#include <stdlib.h>
-
 #ifndef LOG001_h
 #define LOG001_H
 
-static void logging(const char *format, ...);
+void logging(char* file_name, int line, const char *format, ...);
+#define LOGGING(...) logging(__FILE__, __LINE__,__VA_ARGS__)
 
 #endif
 
