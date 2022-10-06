@@ -54,8 +54,8 @@ $ cd vpaSTRM
 # Run the test examples found in cv-tests/input to verify install
 $ ./vpaSTRM.sh cv-data/input/small_bunny_1080p_60fps.mp4
 ```
-Enter the vpaSTRM folder and run the software against and length video file and expect
-a surplus of PGM (Portable Gray Map) image files. v0.0.1 has limited functionality but
+Enter the vpaSTRM folder and run the software against video file of any length and expect
+a surplus of PGM (Portable Gray Map) image files. v1.0.0 has limited functionality but
 future versions will build off of this version as it serves as the "core."
 
 # Ideas
