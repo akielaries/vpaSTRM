@@ -13,7 +13,7 @@ CFLAGS 		= -Wall -Wextra -g
 LFLAGS		= -lavcodec -lavformat -lswresample -lswscale -lavutil
 
 SRCDIR		= $(PROJDIR)/src/
-SRC 		= $(shell find $(PROJDIR)/src/v001 -name '*.c')
+SRC 		= $(shell find $(PROJDIR)/src/v100 -name '*.c')
 #SRC			= $(SRCDIR)/fdrad-001_LOGGER.c
 LIBDIR		= $(PROJDIR)/include
 
@@ -30,7 +30,7 @@ BIN			= $(OBJDIR)/run
 BUILDDIR 	= $(PROJDIR)/build
 
 # compiled binary
-TARGET 		= vpaSTRM-001
+TARGET 		= vpaSTRM-100
 # store compiled binary in /bin/run
 STORE_BIN	= $(addprefix $(BIN)/, $(TARGET))
 LOG_FILES 	= $(shell find $(PROJDIR)/logs/ -name '*.txt')

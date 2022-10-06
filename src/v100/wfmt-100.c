@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include <libavformat/avformat.h>
 
-#include "../../include/WFMT-001.h"
+#include "../../include/wfmt-100.h"
 
 #define BITS_SIZE 255
 

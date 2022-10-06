@@ -34,8 +34,8 @@
 /*
  * import libs
  */
-#include "../../include/DEC-001.h"
-#include "../../include/LOG-001.h"
+#include "../../include/dec-100.h"
+#include "../../include/log-100.h"
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
 #include <sys/types.h>
