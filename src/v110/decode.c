@@ -17,9 +17,13 @@
 int decode_packet(AVPacket *p_packet,
                 AVCodecContext *p_codec,
                 AVFrame *p_frame) {
-    // Supply raw packet data as input to a decoder
-    // https://ffmpeg.org/doxygen/trunk/group__lavc__decoding.html
-    // #ga58bc4bf1e0ac59e27362597e467efff3
+
+    // timing our function
+    /*
+     * Supply raw packet data as input to a decoder
+     * https://ffmpeg.org/doxygen/trunk/group__lavc__decoding.html
+     * #ga58bc4bf1e0ac59e27362597e467efff3
+     */
     int response = avcodec_send_packet(p_codec, p_packet);
 
     if (response < 0) {
@@ -70,8 +74,7 @@ int decode_packet(AVPacket *p_packet,
              * Other YUV image may do so, but untested, so give a warning
              */
             if (p_frame->format != AV_PIX_FMT_YUV420P) {
-                LOGGING("WARNING: THE GENERATED FILE MAY NOT BE GRAYSCALE BUT \
-                        THE 'R' COMPONENT IF THE FILE FORMAT IS RBG!");
+                LOGGING("WARNING: THE GENERATED FILE MAY NOT BE GRAYSCALE BUT THE 'R' COMPONENT IF THE FILE FORMAT IS RBG!");
             }
             // save a grayscale frame into a .pgm file
             save_pgm(p_frame->data[0], 
