@@ -47,7 +47,7 @@ char* timestamp() {
  *
  * <---------- FIX DUMP TO LOG ---------->
  */
-void logging(char* file_name, int line, const char *format, ...) {
+void logging(char* file_name, int line, char *format, ...) {
     va_list list;
     char *ptr_p, *ptr_r;
     int switch_arg;
