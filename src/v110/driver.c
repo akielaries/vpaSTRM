@@ -92,6 +92,7 @@ int main(int argc, const char *argv[]) {
     */
     if (avformat_open_input(&pFormatContext, argv[1], NULL, NULL) != 0) {
         LOGGING("ERROR could not open the file");
+        /* <-- 😤 --> */ 
         return 17;
     }
 
