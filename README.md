@@ -58,6 +58,26 @@ Enter the vpaSTRM folder and run the software against video file of any length a
 a surplus of PGM (Portable Gray Map) image files. v1.0.0 has limited functionality but
 future versions will build off of this version as it serves as the "core."
 
+
+# Clean Up
+For now I recommend running this in the root directory of this package. This allows for easier cleanup
+if using this straight from the source. See below on some various ways to cleanup your files after running!
+
+```
+# remove all generated files when compiling and running
+$ make clean-all
+
+# remove all log files
+$ make clean-logs
+
+# remove all generated image files
+$ make clean-imgs
+
+# remove bins + images
+$ make clean
+```
+
+
 # Ideas
 Some cases of python for quick and dirty prototyping for basic
 functionalities before implementing in C. Future cases of
