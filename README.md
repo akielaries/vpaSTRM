@@ -1,5 +1,5 @@
 # Introduction
-Welcome to v0.0.1 of vpaSTRM! So far it is very simple and limited but 
+Welcome to v1.0.0 of vpaSTRM! So far it is very simple and limited but 
 stay tuned for more!
 Previously implemented in Python for streaming RTSP based IP cameras, 
 this version aims to start from the ground up improving performance 
@@ -14,12 +14,34 @@ as a "new version" also developed by [me](https://github.com/akielaries), buildi
 built for the DiscoverCCRI research study. This project welcomes contributors!!*
 ---
 
+# Functionality
+- specify video file 
+  - so far only .mp4 has been tested
+  - mov,mp4,m4a,3gp,3g2,mj2 + more will be functional 
+- decode algorithm parses the passed in h264/265 video into series of frames  
+- decoded packets are saved to .pgm (Portable Gray Map) to size of 2MB
+
+NOTE: this algorithm is 'dynamic' in a way and uses this formula:
+```
+r = f(d)
+
+r = result output of frames
+f = Frames Per Second (FPS) of video file
+d = duration of video file must be an integer as partial frames won't be counted
+```
+
 # Dependencies
 ```
 # Run updates
 $ sudo apt-get update -y
 
-# install libav related libs, comes with FFMPEG (what this project heavily relies on)
+# install libavcodec, decode/encode video and audio
+$ sudo apt-get install -y libavcodec-dev
+
+# install libavformat
+sudo apt-get install -y libavformat-dev
+
+# OR install all libav related libs, comes with FFMPEG (what this project heavily relies on)
 $ sudo apt-get install ffmpeg
 ```
 
@@ -32,8 +54,8 @@ $ cd vpaSTRM
 # Run the test examples found in cv-tests/input to verify install
 $ ./vpaSTRM.sh cv-data/input/small_bunny_1080p_60fps.mp4
 ```
-Enter the vpaSTRM folder and run the software against and length video file and expect
-a surplus of PGM (Portable Gray Map) image files. v0.0.1 has limited functionality but
+Enter the vpaSTRM folder and run the software against video file of any length and expect
+a surplus of PGM (Portable Gray Map) image files. v1.0.0 has limited functionality but
 future versions will build off of this version as it serves as the "core."
 
 # Ideas
@@ -51,16 +73,6 @@ project. Developers implementing their own solution to a similar problem are als
 heavily encouraged to contribute or use parts of this project for their own
 implementations!
 
-- think of different py libs to implement GUI, PyQt, Tkinter, etc
-- maybe implement my own, if going for speed and effeciency lets write it in C!
-- modularize what ever the final result is for the demo into something usable
-for an application. 
-- if we are using C, research how to a C-based GUI can talk with our existing python
-implementations.
-- research using GTK with C
-- Research using curses (terminal-based GUI)
-- hash out the issues with buffering on our test cams
-- instead of FFMPEG try with GStreamer
-
-# Installing Dependencies
-> :warning: **Please view [DEPENDENCIES.md](https://github.com/akielaries/rgaSTRM/blob/main/docs/DEPENDENCIES.md)**
+- Py libs for GUI implementation: PyQt, Tkinter, etc
+- C libs for GUI implementation: GTK, Ncurses
+- Optional functionalities using GStreamer
