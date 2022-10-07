@@ -7,7 +7,7 @@
 #include <string.h>
 #include <time.h>
 
-#include "../../include/log-100.h"
+#include "../../include/log.h"
 
 // pointer for output log file
 FILE *log_out;

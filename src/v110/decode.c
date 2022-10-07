@@ -5,10 +5,9 @@
 
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
-
-#include "../../include/dec-100.h"
-#include "../../include/log-100.h"
-#include "../../include/wfmt-100.h"
+#include "../../include/decode.h"
+#include "../../include/log.h"
+#include "../../include/wfmt.h"
 
 #define BITS_SIZE 255
 
