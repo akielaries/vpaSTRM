@@ -6,6 +6,17 @@ this version aims to start from the ground up improving performance
 and usability and will be primarily focused on implementations in 
 C, C++ for computer vision related tasks (openCV C API is outdated). 
 
+There a multiple branches in this repository. The stable one being v1.x,
+an will be updated on a rolling basis that will include some minor changes 
+and feature improvements as well as large changes including brand new features,
+new funcionality and of course more fun algorithms to play with :). 
+
+```
+v1.x : stable, updated on volitile basis
+v1.0.0 : stable, archived release. Major versions will have their own branch. 
+v1.x-dev : development branch, updated daily but sometimes left in broken condition. 
+```
+
 The goal is to wrap certain functionaities of FFMPEG, in conjunction 
 with OpenCV + friendly UI to manipulate video files in various ways.
 
@@ -77,6 +88,15 @@ $ make clean-imgs
 $ make clean
 ```
 
+
+# Contribute
+Checkout some of the documentation located in docs/ on how to submit a pull request, what it should contain,
+etc. All contributors are welcome and I hope this project is easily digestible. This project could use
+students, industry-based individuals, with knowledge of computer vision, systems/low-level programming, 
+knowledge and passion for image processing related algorithms, codecs, + more! This project has no limitations
+and welcomes all suggestions.
+
+and some basic knowledge of 
 
 # Ideas
 Some cases of python for quick and dirty prototyping for basic
