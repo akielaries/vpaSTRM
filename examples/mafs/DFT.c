@@ -2,8 +2,7 @@
 #include <stdio.h>
  
 // Function to calculate the DFT
-void calculateDFT(int len)
-{
+void calculateDFT(int len) {
     int xn[len];
     float Xr[len];
     float Xi[len];
@@ -36,9 +35,8 @@ void calculateDFT(int len)
     }
 }
  
-// Driver Code
-int main()
-{
+
+int main() {
     int len = 0;
     printf("Enter the length of "
            "the sequence: ");

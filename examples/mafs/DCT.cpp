@@ -28,8 +28,7 @@ using namespace std;
 const int m = 8, n = 8;
 
 // Function to find discrete cosine transform and print it
-int dctTransform(int matrix[][n])
-{
+int dctTransform(int matrix[][n]) {
     int i, j, k, l;
 
     // dct will store the discrete cosine transform
@@ -76,8 +75,7 @@ int dctTransform(int matrix[][n])
 }
 
 // Driver code
-int main()
-{
+int main() {
     int matrix[m][n] = { { 255, 255, 255, 255, 255, 255, 255, 255 },
                          { 255, 255, 255, 255, 255, 255, 255, 255 },
                          { 255, 255, 255, 255, 255, 255, 255, 255 },
@@ -89,5 +87,4 @@ int main()
     dctTransform(matrix);
     return 0;
 }
-
 

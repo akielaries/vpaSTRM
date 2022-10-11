@@ -80,16 +80,30 @@ void logging(char* file_name, int line, char *format, ...) {
     else
       fp = fopen ("log.txt","w");
     */
+    /*
     time_t rawtime;
     struct tm * timeinfo;
     char buffer [64];
     time (&rawtime);
     timeinfo = localtime (&rawtime);
+    
+    char filename[255];
+    struct tm* tm;
+    time_t rawtime;
+    rawtime = time(0);
+    tm = localtime(&rawtime);
+    sprintf(filename, 
+            "../../logs/TEST-LOG-110_%02d%02d%04d", 
+            tm->tm_mon+1,
+            tm->tm_mday, 
+            tm->tm_year+1900);
+    */
+    // strftime(buffer, 64, "/logs/TEST-LOG-110_%x_%X.txt", timeinfo);
 
-    strftime(buffer, 64, "logs/TEST-LOG-001_%x_%X.txt", timeinfo);
-
-    log_out = fopen(buffer, "w+");
-    //log_out = fopen("logs/TEST-LOG-001.txt", "w+");
+    // log_out = fopen(buffer, "w+");
+    log_out = fopen("logs/TEST-LOG-001.txt", "w");
+    // logfile = 
+    // log_out = fopen(logfile, "w");
     fprintf(log_out, "%s", timestamp());
     fprintf(log_out, "[%s][line: %d] ", file_name, line);
 

@@ -3,8 +3,7 @@
  
 // Function to calculate the inverse
 // discrete fourier transformation
-void calculate_IDFT(int len)
-{
+void calculate_IDFT(int len) {
     int x[len];
     float Xr[len];
     float Xi[len];
@@ -36,9 +35,7 @@ void calculate_IDFT(int len)
     printf("\n-----------x[n]------------\n\n");
 }
  
-// Driver Code
-int main()
-{
+int main() {
     int len = 0;
     printf("Enter the length of "
            "the sequence: ");
