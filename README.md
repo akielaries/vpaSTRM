@@ -88,8 +88,6 @@ $ make clean-imgs
 $ make clean
 ```
 
-
-<<<<<<< HEAD
 # Contribute
 Checkout some of the documentation located in docs/ on how to submit a pull request, what it should contain,
 etc. All contributors are welcome and I hope this project is easily digestible. This project could use
@@ -97,10 +95,7 @@ students, industry-based individuals, with knowledge of computer vision, systems
 knowledge and passion for image processing related algorithms, codecs, + more! This project has no limitations
 and welcomes all suggestions.
 
-and some basic knowledge of 
 
-=======
->>>>>>> v1.x-dev
 # Ideas
 Some cases of python for quick and dirty prototyping for basic
 functionalities before implementing in C. Future cases of
