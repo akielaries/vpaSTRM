@@ -70,8 +70,8 @@ int stampfile() {
  */
 void logging(char* file_name, int line, char *format, ...) {
     va_list list;
-    char *ptr_p, *ptr_r;
-    int switch_arg;
+    char *ptr_p, *ptr_s;
+    int i;
 
     /* use this for checking if the file exists and appending or writing
      * accordingly
@@ -80,30 +80,21 @@ void logging(char* file_name, int line, char *format, ...) {
     else
       fp = fopen ("log.txt","w");
     */
-    /*
-    time_t rawtime;
-    struct tm * timeinfo;
-    char buffer [64];
-    time (&rawtime);
-    timeinfo = localtime (&rawtime);
-    
-    char filename[255];
-    struct tm* tm;
-    time_t rawtime;
-    rawtime = time(0);
-    tm = localtime(&rawtime);
-    sprintf(filename, 
-            "../../logs/TEST-LOG-110_%02d%02d%04d", 
-            tm->tm_mon+1,
-            tm->tm_mday, 
-            tm->tm_year+1900);
-    */
-    // strftime(buffer, 64, "/logs/TEST-LOG-110_%x_%X.txt", timeinfo);
 
-    // log_out = fopen(buffer, "w+");
-    log_out = fopen("logs/TEST-LOG-001.txt", "w");
-    // logfile = 
-    // log_out = fopen(logfile, "w");
+    // char *test_file = ("logs/TEST-LOG-001%s.txt", timestamp());
+    // this hardcodes a limit on length of file
+    // char log_out[64];
+    // struct tm *stamp;
+    // time_t current = time(NULL);
+    // stamp = gmtime(&current);
+    // strftime(log_out, sizeof(log_out), "logs/TEST-LOG-001_%Y-%m-%d_%H:%M:%S.txt", stamp);
+
+    //log_out = fopen("logs/TEST-LOG-001%s.txt", timestamp(), "w");
+    log_out = fopen("logs/TEST-LOG-001.txt", "a+");
+
+    // log_out = fopen(test_file, "w+");
+    // fopen(log_out, "w+");
+
     fprintf(log_out, "%s", timestamp());
     fprintf(log_out, "[%s][line: %d] ", file_name, line);
 
@@ -112,24 +103,28 @@ void logging(char* file_name, int line, char *format, ...) {
     for (ptr_p = format; *ptr_p; ++ptr_p) {
         if (*ptr_p != '%')
             fputc(*ptr_p, log_out);
+            // sprintf(ptr_p, log_out);
 
         else {
             switch (*++ptr_p) {
 
                 // string
                 case 's':
-                    ptr_r = va_arg(list, char *);
-                    fprintf(log_out, "%s", ptr_r);
+                    ptr_s = va_arg(list, char *);
+                    fprintf(log_out, "%s", ptr_s);
+                    // sprintf(log_out, "%s", ptr_r);
                     continue;
 
                 // integer
                 case 'd':
-                    switch_arg = va_arg(list, int);
-                    fprintf(log_out, "%d", switch_arg);
+                    i = va_arg(list, int);
+                    fprintf(log_out, "%d", i);
+                    // sprintf(log_out, "%d", switch_arg);
                     continue;
 
                 default:
                     fputc(*ptr_p, log_out);
+                    // sprintf(ptr_p, log_out);
             }
         }
     }
