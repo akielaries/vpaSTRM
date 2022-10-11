@@ -7,7 +7,7 @@
 #include <string.h>
 #include <time.h>
 
-#include "../../include/log-100.h"
+#include "../../include/log.h"
 
 // pointer for output log file
 FILE *log_out;
@@ -39,6 +39,27 @@ char* timestamp() {
 
     return buffer;
 }
+/*
+int stampfile() {
+    time_t rawtime;
+    char buffer[255];
+    time(&rawtime);
+
+    sprintf(buffer,"logs/TEST-LOG-001_%s",ctime(&rawtime) );
+    
+    char *p = buffer;
+    
+    for (; *p; ++p) {
+        if (*p == ' ')
+                *p = '_';
+    }
+    
+    printf("%s",buffer);
+    fopen(buffer,"w");
+
+    return 0;
+}
+*/
 
 
 /*
@@ -47,7 +68,7 @@ char* timestamp() {
  *
  * <---------- FIX DUMP TO LOG ---------->
  */
-void logging(char* file_name, int line, const char *format, ...) {
+void logging(char* file_name, int line, char *format, ...) {
     va_list list;
     char *ptr_p, *ptr_r;
     int switch_arg;
@@ -59,7 +80,30 @@ void logging(char* file_name, int line, const char *format, ...) {
     else
       fp = fopen ("log.txt","w");
     */
-    log_out = fopen("logs/TEST-LOG-001.txt", "a+");
+    /*
+    time_t rawtime;
+    struct tm * timeinfo;
+    char buffer [64];
+    time (&rawtime);
+    timeinfo = localtime (&rawtime);
+    
+    char filename[255];
+    struct tm* tm;
+    time_t rawtime;
+    rawtime = time(0);
+    tm = localtime(&rawtime);
+    sprintf(filename, 
+            "../../logs/TEST-LOG-110_%02d%02d%04d", 
+            tm->tm_mon+1,
+            tm->tm_mday, 
+            tm->tm_year+1900);
+    */
+    // strftime(buffer, 64, "/logs/TEST-LOG-110_%x_%X.txt", timeinfo);
+
+    // log_out = fopen(buffer, "w+");
+    log_out = fopen("logs/TEST-LOG-001.txt", "w");
+    // logfile = 
+    // log_out = fopen(logfile, "w");
     fprintf(log_out, "%s", timestamp());
     fprintf(log_out, "[%s][line: %d] ", file_name, line);
 

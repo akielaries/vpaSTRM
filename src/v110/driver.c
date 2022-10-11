@@ -34,8 +34,8 @@
 /*
  * import libs
  */
-#include "../../include/dec-100.h"
-#include "../../include/log-100.h"
+#include "../../include/decode.h"
+#include "../../include/log.h"
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
 #include <sys/types.h>
@@ -65,7 +65,7 @@ int main(int argc, const char *argv[]) {
 
     LOGGING("initializing all the containers, codecs and protocols.");
 
-        /*
+    /*
      * AVFormatContext holds the header information from the format (Container)
      * Allocating memory for this component
      * http://ffmpeg.org/doxygen/trunk/structAVFormatContext.html
@@ -92,6 +92,7 @@ int main(int argc, const char *argv[]) {
     */
     if (avformat_open_input(&pFormatContext, argv[1], NULL, NULL) != 0) {
         LOGGING("ERROR could not open the file");
+        /* <-- 😤 --> */ 
         return 17;
     }
 
@@ -114,7 +115,8 @@ int main(int argc, const char *argv[]) {
      * the AVFormatContext
      * and options contains options for codec corresponding to i-th stream.
      * On return each dictionary will be filled with options that were not found.
-     * https://ffmpeg.org/doxygen/trunk/group__lavf__decoding.html#gad42172e27cddafb81096939783b157bb
+     * https://ffmpeg.org/doxygen/trunk/group__lavf__decoding.html
+     * #gad42172e27cddafb81096939783b157bb
      */
     if (avformat_find_stream_info(pFormatContext,  NULL) < 0) {
         LOGGING("ERROR could not get the stream info");
@@ -126,7 +128,7 @@ int main(int argc, const char *argv[]) {
      * it's the codec (audio or video)
      * http://ffmpeg.org/doxygen/trunk/structAVCodec.html
      */
-    AVCodec *pCodec = NULL;
+    const AVCodec *pCodec = NULL;
     /*
      * this component describes the properties of a codec used by the stream i
      * https://ffmpeg.org/doxygen/trunk/structAVCodecParameters.html
@@ -155,7 +157,7 @@ int main(int argc, const char *argv[]) {
 
         LOGGING("finding the proper decoder (CODEC)");
 
-        AVCodec *pLocalCodec = NULL;
+        const AVCodec *pLocalCodec = NULL;
             
         /*
          * finds the registered decoder for a codec ID
@@ -165,7 +167,7 @@ int main(int argc, const char *argv[]) {
         pLocalCodec = avcodec_find_decoder(pLocalCodecParameters->codec_id);
             
         if (pLocalCodec==NULL) {
-            LOGGING("ERROR unsupported codec!");
+            LOGGING("ERROR (CODEC) : unsupported codec!");
             // In this example if the codec is not found we just skip it
             continue;
         }
@@ -185,7 +187,8 @@ int main(int argc, const char *argv[]) {
         
         else if (pLocalCodecParameters->codec_type == AVMEDIA_TYPE_AUDIO) {
             LOGGING("Audio Codec: %d channels, sample rate %d", 
-                    pLocalCodecParameters->channels, 
+                    // pLocalCodecParameters->channels, 
+                    pLocalCodecParameters->ch_layout,
                     pLocalCodecParameters->sample_rate);
         }
         
@@ -197,14 +200,15 @@ int main(int argc, const char *argv[]) {
     }
 
     if (video_stream_index == -1) {
-        LOGGING("File %s does not contain a video stream!", argv[1]);
+        LOGGING("ERROR (STREAM): File %s does not contain a video stream!", argv[1]);
         return -1;
     }
 
     // https://ffmpeg.org/doxygen/trunk/structAVCodecContext.html
     AVCodecContext *pCodecContext = avcodec_alloc_context3(pCodec);
     if (!pCodecContext) {
-        LOGGING("failed to allocated memory for AVCodecContext");
+        //LOGGING("failed to allocated memory for AVCodecContext");
+        LOGGING("ERROR (CODEC) : failed to allocated memory for context");
         return -1;
     }
 
@@ -214,7 +218,8 @@ int main(int argc, const char *argv[]) {
      * gac7b282f51540ca7a99416a3ba6ee0d16
      */
     if (avcodec_parameters_to_context(pCodecContext, pCodecParameters) < 0) {
-        LOGGING("failed to copy codec params to codec context");
+        //LOGGING("failed to copy codec params to codec context");
+        LOGGING("ERROR (CODEC) : failed to copy parameters to context");
         return -1;
     }
 
@@ -224,26 +229,27 @@ int main(int argc, const char *argv[]) {
      * ga11f785a188d7d9df71621001465b0f1d
      */
     if (avcodec_open2(pCodecContext, pCodec, NULL) < 0) {
-        LOGGING("failed to open codec through avcodec_open2");
+        LOGGING("ERROR (CODEC) : failed to open with avcodec_open2");
         return -1;
     }
 
     // https://ffmpeg.org/doxygen/trunk/structAVFrame.html
     AVFrame *pFrame = av_frame_alloc();
     if (!pFrame) {
-        LOGGING("failed to allocate memory for AVFrame");
+        LOGGING("ERROR (FRAME) : failed to allocate memory for AVFrame");
         return -1;
     }
 
     // https://ffmpeg.org/doxygen/trunk/structAVPacket.html
     AVPacket *pPacket = av_packet_alloc();
     if (!pPacket) {
-        LOGGING("failed to allocate memory for AVPacket");
+        LOGGING("ERROR (PACKET) : failed to allocate memory for AVPacket");
         return -1;
     }
 
     int response = 0;
-    int how_many_packets_to_process = 8;
+    /* <------ ASK FOR THIS AS A PARAMETER ------> */
+    // int how_many_packets_to_process = 8;
 
     /*
      * fill the Packet with data from the Stream
@@ -256,8 +262,9 @@ int main(int argc, const char *argv[]) {
             LOGGING("AVPacket->pts %" PRId64, pPacket->pts);
             response = decode_packet(pPacket, pCodecContext, pFrame);
             
-            if (response < 0)
+            if (response < 0) {
                 break;
+            }
         // stop it, otherwise we'll be saving hundreds of frames
         //if (--how_many_packets_to_process <= 0) break;
 
@@ -269,7 +276,8 @@ int main(int argc, const char *argv[]) {
 
         av_packet_unref(pPacket);
     }
-    LOGGING("releasing all the resources");
+    // LOGGING("releasing all the resources");
+    LOGGING("\n <-------DUMPING-------> \n");
     
     avformat_close_input(&pFormatContext);
     av_packet_free(&pPacket);
