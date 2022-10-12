@@ -55,11 +55,27 @@
  * WILL SERVE FINE FOR THE CURRENT VIDEO->PICTURE 
  * CONVERSION
  */
-int main(int argc, const char *argv[]) {
+int main(int argc, char *argv[]) {
     /* TODO */
     
-    if (argc < 2) {
-        printf("ERR: SPECIFY VIDEO FILE.\n");
+    /*
+     * think about moving this to another file and how? 
+     * on the CLI : 
+     * e.g. ./vpaSTRM -d movie.mp4 -o pgm
+     *      - argv[0] = ./vpaSTRM
+     *          - running the compiled binary
+     *      - argv[1] = -d
+     *          - flags defined possibly as chars
+     *      - argv[2] = movie.mp4
+     *          - relies off argv[1] 
+     */
+
+    //if (argc < 2) {
+    //    printf("ERR: SPECIFY VIDEO FILE.\n");
+    //    return -1;
+    //}
+    if (argv[1] == NULL) {
+        printf("ERR: SPECIFY VIDEO FILE\n");
         return -1;
     }
 
