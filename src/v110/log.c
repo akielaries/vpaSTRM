@@ -16,6 +16,22 @@ FILE *log_out;
 static int SESSION_NUM;
 
 /*
+ * function to remove spaces from a given string
+ */
+void rm_spc(char *str) {
+    int str_count = 0;
+    int str_iter = 0;
+    
+    // traverse passed in string
+    for (str_iter; str[str_iter]; str_iter++) {
+        if (str[str_iter] != ' ') {
+            str[str_count++] = str[str_iter];
+        }
+    }
+    str[str_count] = '\0';
+}
+
+/*
  * function to print the current time to our log files
  */
 char* timestamp() {
@@ -34,8 +50,10 @@ char* timestamp() {
     size = strlen(time_str) + 1 + 2;
     buffer = (char*)malloc(size);
 
+    time_fmt = rm_spc(time_str);
+
     memset(buffer, 0x0, size);
-    snprintf(buffer, size, "[%s]", time_str);
+    snprintf(buffer, size, "[%s]", time_fmt);
 
     return buffer;
 }
@@ -111,14 +129,14 @@ void logging(char* file_name, int line, char *format, ...) {
                 // string
                 case 's':
                     ptr_s = va_arg(list, char *);
-                    fprintf(log_out, "%s", ptr_s);
+                    fprintf(log_out, "%s DBG0", ptr_s);
                     // sprintf(log_out, "%s", ptr_r);
                     continue;
 
                 // integer
                 case 'd':
                     i = va_arg(list, int);
-                    fprintf(log_out, "%d", i);
+                    fprintf(log_out, "%d DBG1", i);
                     // sprintf(log_out, "%d", switch_arg);
                     continue;
 

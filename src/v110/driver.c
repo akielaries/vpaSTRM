@@ -47,6 +47,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <inttypes.h>
+#include <time.h>
 
 /*
  * THIS MAIN FUNCTION WILL CHANGE AS DEVELOPMENT PROGRESSES. 
@@ -58,6 +59,10 @@
 int main(int argc, char *argv[]) {
     /* TODO */
     
+    // time the function
+    clock_t t;
+    t = clock();
+
     /*
      * think about moving this to another file and how? 
      * on the CLI : 
@@ -300,6 +305,15 @@ int main(int argc, char *argv[]) {
     av_frame_free(&pFrame);
     avcodec_free_context(&pCodecContext);
 
+    printf("\n<----------------------------------------------------------->\n");
+    
+    // end time 
+    t = clock() - t;
+    // return time in seconds
+    double final_time = ((double)t) / CLOCKS_PER_SEC;
+    printf("Elapsed Time: %f seconds\n", final_time);
+
+    printf("response: %d", response);
     return 0;
 
 }
