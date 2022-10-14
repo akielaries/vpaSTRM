@@ -8,6 +8,7 @@
 #include <time.h>
 #include <ctype.h>
 #include "../../include/log.h"
+#include "../../include/util.h"
 
 // pointer for output log file
 FILE *log_out;
@@ -35,7 +36,7 @@ void rm_spc(char *str) {
  * function that takes in a string and replaces spaces with underscores
  */
 
-int rep_spc(char *str) {
+void rep_spc(char *str) {
     int str_iter = 0;
 
     // traverse string
