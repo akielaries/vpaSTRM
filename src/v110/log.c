@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-
+#include <ctype.h>
 #include "../../include/log.h"
 
 // pointer for output log file
@@ -32,6 +32,23 @@ void rm_spc(char *str) {
 }
 
 /*
+ * function that takes in a string and replaces spaces with underscores
+ */
+
+int rep_spc(char *str) {
+    int str_iter = 0;
+
+    // traverse string
+    while (str[str_iter]) {
+        // if index is a whitespace value replace with underscore
+        if (isspace((unsigned char)str[str_iter])) {
+            str[str_iter] = '_';
+        }
+        str_iter++;
+    }
+}
+
+/*
  * function to print the current time to our log files
  */
 char* timestamp() {
@@ -50,8 +67,9 @@ char* timestamp() {
     size = strlen(time_str) + 1 + 2;
     buffer = (char*)malloc(size);
 
-    rm_spc(time_str);
-
+    // rm_spc(time_str);
+    rep_spc(time_str);
+    
     memset(buffer, 0x0, size);
     snprintf(buffer, size, "[%s]", time_str);
 

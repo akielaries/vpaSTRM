@@ -60,6 +60,6 @@ clean-logs:
 
 clean-all: 
 	rm -f ${STORE_BIN} ${OBJS}
-	rm -f cd-data/output/tests/*.pgm
+	rm -f cv-data/output/tests/*.pgm
 	rm -f ${LOG_FILES}
 
