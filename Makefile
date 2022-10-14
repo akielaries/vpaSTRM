@@ -51,8 +51,6 @@ run:
 
 clean:
 	rm -f ${STORE_BIN} ${OBJS}
-	# cd cv-data/output/tests && rm *.pgm
-
 
 clean-imgs:
 	rm cv-data/output/tests/*.pgm
@@ -62,6 +60,6 @@ clean-logs:
 
 clean-all: 
 	rm -f ${STORE_BIN} ${OBJS}
-	rm -f cd-data/output/tests/*.pgm
+	rm -f cv-data/output/tests/*.pgm
 	rm -f ${LOG_FILES}
 

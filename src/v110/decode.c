@@ -17,8 +17,6 @@
 int decode_packet(AVPacket *p_packet,
                 AVCodecContext *p_codec,
                 AVFrame *p_frame) {
-
-    // timing our function
     /*
      * Supply raw packet data as input to a decoder
      * https://ffmpeg.org/doxygen/trunk/group__lavc__decoding.html
@@ -62,8 +60,15 @@ int decode_packet(AVPacket *p_packet,
             );
  
             char frame_file[1024];
-            // our saved file name should be from the POV of the root dir which the
-            // makefile and shell script to compile/run this project are located
+            
+            /* 
+             * our saved file name should be from the POV of the root dir which the
+             * makefile and shell script to compile/run this project are located
+             *
+             * change the below snprintf to allow for change based on flags. 
+             * this will piggyback off of the flag deciding what format to save
+             * the decoded files to. pgm, ppm, jpg, etc...
+             */
             snprintf(frame_file, sizeof(frame_file), 
                     "cv-data/output/tests/%s-%d.pgm",
                     "frame", p_codec->frame_number);

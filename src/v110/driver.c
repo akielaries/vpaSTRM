@@ -47,6 +47,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <inttypes.h>
+#include <time.h>
 
 /*
  * THIS MAIN FUNCTION WILL CHANGE AS DEVELOPMENT PROGRESSES. 
@@ -55,11 +56,31 @@
  * WILL SERVE FINE FOR THE CURRENT VIDEO->PICTURE 
  * CONVERSION
  */
-int main(int argc, const char *argv[]) {
+int main(int argc, char *argv[]) {
     /* TODO */
     
-    if (argc < 2) {
-        printf("ERR: SPECIFY VIDEO FILE.\n");
+    // time the function
+    clock_t t;
+    t = clock();
+
+    /*
+     * think about moving this to another file and how? 
+     * on the CLI : 
+     * e.g. ./vpaSTRM -d movie.mp4 -o pgm
+     *      - argv[0] = ./vpaSTRM
+     *          - running the compiled binary
+     *      - argv[1] = -d
+     *          - flags defined possibly as chars
+     *      - argv[2] = movie.mp4
+     *          - relies off argv[1] 
+     */
+
+    //if (argc < 2) {
+    //    printf("ERR: SPECIFY VIDEO FILE.\n");
+    //    return -1;
+    //}
+    if (argv[1] == NULL) {
+        printf("ERR: SPECIFY VIDEO FILE\n");
         return -1;
     }
 
@@ -284,6 +305,15 @@ int main(int argc, const char *argv[]) {
     av_frame_free(&pFrame);
     avcodec_free_context(&pCodecContext);
 
+    printf("\n<----------------------------------------------------------->\n");
+    
+    // end time 
+    t = clock() - t;
+    // return time in seconds
+    double final_time = ((double)t) / CLOCKS_PER_SEC;
+    printf("Elapsed Time: %f seconds\n", final_time);
+
+    printf("response: %d", response);
     return 0;
 
 }
