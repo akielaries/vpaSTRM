@@ -17,39 +17,6 @@ FILE *log_out;
 static int SESSION_NUM;
 
 /*
- * function to remove spaces from a given string
- */
-void rm_spc(char *str) {
-    int str_count = 0;
-    int str_iter = 0;
-    
-    // traverse passed in string
-    for (str_iter; str[str_iter]; str_iter++) {
-        if (str[str_iter] != ' ') {
-            str[str_count++] = str[str_iter];
-        }
-    }
-    str[str_count] = '\0';
-}
-
-/*
- * function that takes in a string and replaces spaces with underscores
- */
-
-void rep_spc(char *str) {
-    int str_iter = 0;
-
-    // traverse string
-    while (str[str_iter]) {
-        // if index is a whitespace value replace with underscore
-        if (isspace((unsigned char)str[str_iter])) {
-            str[str_iter] = '_';
-        }
-        str_iter++;
-    }
-}
-
-/*
  * function to print the current time to our log files
  */
 char* timestamp() {
@@ -76,28 +43,6 @@ char* timestamp() {
 
     return buffer;
 }
-/*
-int stampfile() {
-    time_t rawtime;
-    char buffer[255];
-    time(&rawtime);
-
-    sprintf(buffer,"logs/TEST-LOG-001_%s",ctime(&rawtime) );
-    
-    char *p = buffer;
-    
-    for (; *p; ++p) {
-        if (*p == ' ')
-                *p = '_';
-    }
-    
-    printf("%s",buffer);
-    fopen(buffer,"w");
-
-    return 0;
-}
-*/
-
 
 /*
  * Function that takes care of logging with variadic function. When called
@@ -112,12 +57,12 @@ void logging(char* file_name, int line, char *format, ...) {
 
     /* use this for checking if the file exists and appending or writing
      * accordingly
-    if(SESSION_TRACKER > 0)
+     *
+    if(SESSION_NUM > 0)
       fp = fopen ("log.txt","a+");
     else
       fp = fopen ("log.txt","w");
     */
-
     // char *test_file = ("logs/TEST-LOG-001%s.txt", timestamp());
     // this hardcodes a limit on length of file
     // char log_out[64];
@@ -125,10 +70,16 @@ void logging(char* file_name, int line, char *format, ...) {
     // time_t current = time(NULL);
     // stamp = gmtime(&current);
     // strftime(log_out, sizeof(log_out), "logs/TEST-LOG-001_%Y-%m-%d_%H:%M:%S.txt", stamp);
-
     //log_out = fopen("logs/TEST-LOG-001%s.txt", timestamp(), "w");
-    log_out = fopen("logs/TEST-LOG-001.txt", "a+");
+    //log_out = fopen("logs/TEST-LOG-001.txt", "a+");
+    // log_file = ("logs/TEST-LOG-110%s.txt", timestamp());
 
+    // buffer of 256
+    char buffer[0x100];
+
+    snprintf(buffer, sizeof(buffer), "logs/LOG-%s.txt", timestamp());
+
+    log_out = fopen(buffer, "w+");
     // log_out = fopen(test_file, "w+");
     // fopen(log_out, "w+");
 

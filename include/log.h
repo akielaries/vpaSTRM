@@ -2,8 +2,8 @@
  * function declaration for logging data 
  */
 
-#ifndef LOG001_h
-#define LOG001_H
+#ifndef LOG_H
+#define LOG_H
 
 char* timestamp();
 

@@ -4,7 +4,7 @@
  *
  */
 
-#ifndef MATHSCONSTS_h
+#ifndef MATHSCONSTS_H
 #define MATHSCONSTS_H
 
 #ifndef MATHS_E

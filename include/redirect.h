@@ -2,7 +2,7 @@
  * function declaration for logging data 
  */
 
-#ifndef REDIRECT_h
+#ifndef REDIRECT_H
 #define REDIRECT_H
 
 void print_str(char **str);
