@@ -35,7 +35,6 @@ char* timestamp() {
     size = strlen(time_str) + 1 + 2;
     buffer = (char*)malloc(size);
 
-    // rm_spc(time_str);
     rep_spc(time_str);
     
     memset(buffer, 0x0, size);
