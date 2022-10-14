@@ -50,10 +50,10 @@ char* timestamp() {
     size = strlen(time_str) + 1 + 2;
     buffer = (char*)malloc(size);
 
-    time_fmt = rm_spc(time_str);
+    rm_spc(time_str);
 
     memset(buffer, 0x0, size);
-    snprintf(buffer, size, "[%s]", time_fmt);
+    snprintf(buffer, size, "[%s]", time_str);
 
     return buffer;
 }
