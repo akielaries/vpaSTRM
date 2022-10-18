@@ -1,10 +1,11 @@
 # Introduction
 Welcome to v1.x of vpaSTRM! So far it is very simple and limited but 
 stay tuned for more!
-Previously implemented in Python for streaming RTSP based IP cameras, 
-this version aims to start from the ground up improving performance 
-and usability and will be primarily focused on implementations in 
-C, C++ for computer vision related tasks (openCV C API is outdated). 
+Previously a streaming applicatoin implemented in Python for streaming 
+RTSP based IP cameras, this version aims to start from the ground up 
+improving performance and usability and will be primarily focused on 
+implementations in C, C++ for computer vision related tasks 
+(openCV C API is outdated).
 
 There a multiple branches in this repository. The stable one being v1.x,
 an will be updated on a rolling basis that will include some minor changes 
@@ -12,13 +13,13 @@ and feature improvements as well as large changes including brand new features,
 new funcionality and of course more fun algorithms to play with :). 
 
 ```
-v1.x : stable, updated on volitile basis
+v1.x : stable, updated on volatile basis. 
 v1.0.0 : stable, archived release. Major versions will have their own branch. 
-v1.x-dev : development branch, updated daily but sometimes left in broken condition. 
+v1.x-dev : development branch, updated frequently, often left in broken state. 
 ```
 
-The goal is to wrap certain functionaities of FFMPEG, in conjunction 
-with OpenCV + friendly UI to manipulate video files in various ways.
+The goal is to wrap certain functionaities of FFMPEG, OpenCV + friendly UI 
+to manipulate video files in various ways.
 
 > :warning: *This repo is forked and detached from [here](https://github.com/DiscoverCCRI/ip_cam) and serves
 as a "new version" also developed by [me](https://github.com/akielaries), building off of an application
