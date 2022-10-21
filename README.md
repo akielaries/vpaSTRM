@@ -1,5 +1,5 @@
 # Introduction
-Welcome to v1.x of vpaSTRM! So far it is very simple and limited but 
+Welcome to v1.1.2 of vpaSTRM! So far it is very simple and limited but 
 stay tuned for more!
 Previously a streaming applicatoin implemented in Python for streaming 
 RTSP based IP cameras, this version aims to start from the ground up 
