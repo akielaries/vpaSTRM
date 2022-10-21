@@ -4,7 +4,7 @@ stay tuned for more!
 Previously a streaming applicatoin implemented in Python for streaming 
 RTSP based IP cameras, this version aims to start from the ground up 
 improving performance + usability and will be primarily focused on 
-implementations in C, C++. and other languages close to the hardware.
+implementations in C, C++, and other languages close to the hardware.
 
 There a multiple branches in this repository. The stable one being v1.x,
 an will be updated on a rolling basis that will include some minor changes 
