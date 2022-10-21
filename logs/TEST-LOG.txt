@@ -1,0 +1,802 @@
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 81] initializing all the containers, codecs and protocols.
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 95] opening the input file (cv-data/input/small_bunny_1080p_60fps-TRIM.mp4 DBG0) and loading format (container) header
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 119] format mov,mp4,m4a,3gp,3g2,mj2 DBG0, duration lld us, bit_rate lld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 123] finding stream info from format
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 159] AVStream->time_base before open coded 1 DBG1/15360 DBG1
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 163] AVStream->r_frame_rate before open coded 60 DBG1/1 DBG1
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 167] AVStream->start_time ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 170] AVStream->duration ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 173] finding the proper decoder (CODEC)
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 198] Video Codec: resolution 1920 DBG1 x 1080 DBG1
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 211] 	Codec h264 DBG0 ID 27 DBG1 bit_rate lld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 159] AVStream->time_base before open coded 1 DBG1/48000 DBG1
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 163] AVStream->r_frame_rate before open coded 0 DBG1/0 DBG1
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 167] AVStream->start_time ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 170] AVStream->duration ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 173] finding the proper decoder (CODEC)
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 204] Audio Codec: 48000 DBG1 channels, sample rate 7 DBG1
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 211] 	Codec aac DBG0 ID 86018 DBG1 bit_rate lld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 1 DBG1 (type=c, size=73 DBG1 bytes, format=100339 DBG1) pts 0 DBG1 key_frame 0 DBG1 [DTS 1 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 2 DBG1 (type=c, size=66 DBG1 bytes, format=7484 DBG1) pts 0 DBG1 key_frame 256 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 3 DBG1 (type=c, size=66 DBG1 bytes, format=14764 DBG1) pts 0 DBG1 key_frame 512 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 4 DBG1 (type=c, size=66 DBG1 bytes, format=7058 DBG1) pts 0 DBG1 key_frame 768 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 5 DBG1 (type=c, size=80 DBG1 bytes, format=37353 DBG1) pts 0 DBG1 key_frame 1024 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 6 DBG1 (type=c, size=66 DBG1 bytes, format=8678 DBG1) pts 0 DBG1 key_frame 1280 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 7 DBG1 (type=c, size=66 DBG1 bytes, format=17160 DBG1) pts 0 DBG1 key_frame 1536 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 8 DBG1 (type=c, size=66 DBG1 bytes, format=7624 DBG1) pts 0 DBG1 key_frame 1792 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 9 DBG1 (type=c, size=80 DBG1 bytes, format=44236 DBG1) pts 0 DBG1 key_frame 2048 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 10 DBG1 (type=c, size=66 DBG1 bytes, format=9522 DBG1) pts 0 DBG1 key_frame 2304 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 11 DBG1 (type=c, size=66 DBG1 bytes, format=5917 DBG1) pts 0 DBG1 key_frame 2560 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 12 DBG1 (type=c, size=80 DBG1 bytes, format=29872 DBG1) pts 0 DBG1 key_frame 2816 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 13 DBG1 (type=c, size=66 DBG1 bytes, format=6367 DBG1) pts 0 DBG1 key_frame 3072 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 14 DBG1 (type=c, size=66 DBG1 bytes, format=11038 DBG1) pts 0 DBG1 key_frame 3328 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 15 DBG1 (type=c, size=66 DBG1 bytes, format=6670 DBG1) pts 0 DBG1 key_frame 3584 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 16 DBG1 (type=c, size=80 DBG1 bytes, format=27801 DBG1) pts 0 DBG1 key_frame 3840 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 17 DBG1 (type=c, size=66 DBG1 bytes, format=6211 DBG1) pts 0 DBG1 key_frame 4096 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 18 DBG1 (type=c, size=66 DBG1 bytes, format=13124 DBG1) pts 0 DBG1 key_frame 4352 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 19 DBG1 (type=c, size=66 DBG1 bytes, format=5224 DBG1) pts 0 DBG1 key_frame 4608 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 20 DBG1 (type=c, size=80 DBG1 bytes, format=21799 DBG1) pts 0 DBG1 key_frame 4864 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 21 DBG1 (type=c, size=80 DBG1 bytes, format=7916 DBG1) pts 0 DBG1 key_frame 5120 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 22 DBG1 (type=c, size=73 DBG1 bytes, format=118405 DBG1) pts 0 DBG1 key_frame 5376 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 23 DBG1 (type=c, size=66 DBG1 bytes, format=514 DBG1) pts 0 DBG1 key_frame 5632 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 24 DBG1 (type=c, size=66 DBG1 bytes, format=1668 DBG1) pts 0 DBG1 key_frame 5888 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 25 DBG1 (type=c, size=66 DBG1 bytes, format=1968 DBG1) pts 0 DBG1 key_frame 6144 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 26 DBG1 (type=c, size=80 DBG1 bytes, format=6652 DBG1) pts 0 DBG1 key_frame 6400 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 27 DBG1 (type=c, size=66 DBG1 bytes, format=2451 DBG1) pts 0 DBG1 key_frame 6656 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 28 DBG1 (type=c, size=66 DBG1 bytes, format=4228 DBG1) pts 0 DBG1 key_frame 6912 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 29 DBG1 (type=c, size=66 DBG1 bytes, format=2660 DBG1) pts 0 DBG1 key_frame 7168 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 30 DBG1 (type=c, size=80 DBG1 bytes, format=13221 DBG1) pts 0 DBG1 key_frame 7424 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 31 DBG1 (type=c, size=66 DBG1 bytes, format=2538 DBG1) pts 0 DBG1 key_frame 7680 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 32 DBG1 (type=c, size=66 DBG1 bytes, format=4344 DBG1) pts 0 DBG1 key_frame 7936 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 33 DBG1 (type=c, size=66 DBG1 bytes, format=2237 DBG1) pts 0 DBG1 key_frame 8192 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 34 DBG1 (type=c, size=80 DBG1 bytes, format=13379 DBG1) pts 0 DBG1 key_frame 8448 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 35 DBG1 (type=c, size=66 DBG1 bytes, format=2589 DBG1) pts 0 DBG1 key_frame 8704 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 36 DBG1 (type=c, size=66 DBG1 bytes, format=5144 DBG1) pts 0 DBG1 key_frame 8960 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 37 DBG1 (type=c, size=66 DBG1 bytes, format=2903 DBG1) pts 0 DBG1 key_frame 9216 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 38 DBG1 (type=c, size=80 DBG1 bytes, format=17675 DBG1) pts 0 DBG1 key_frame 9472 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 39 DBG1 (type=c, size=66 DBG1 bytes, format=2861 DBG1) pts 0 DBG1 key_frame 9728 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 40 DBG1 (type=c, size=66 DBG1 bytes, format=3974 DBG1) pts 0 DBG1 key_frame 9984 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 41 DBG1 (type=c, size=66 DBG1 bytes, format=2769 DBG1) pts 0 DBG1 key_frame 10240 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 42 DBG1 (type=c, size=80 DBG1 bytes, format=15602 DBG1) pts 0 DBG1 key_frame 10496 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 43 DBG1 (type=c, size=66 DBG1 bytes, format=2973 DBG1) pts 0 DBG1 key_frame 10752 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 44 DBG1 (type=c, size=66 DBG1 bytes, format=4244 DBG1) pts 0 DBG1 key_frame 11008 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 45 DBG1 (type=c, size=66 DBG1 bytes, format=2806 DBG1) pts 0 DBG1 key_frame 11264 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 46 DBG1 (type=c, size=80 DBG1 bytes, format=15954 DBG1) pts 0 DBG1 key_frame 11520 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 47 DBG1 (type=c, size=66 DBG1 bytes, format=3334 DBG1) pts 0 DBG1 key_frame 11776 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 48 DBG1 (type=c, size=66 DBG1 bytes, format=5329 DBG1) pts 0 DBG1 key_frame 12032 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 49 DBG1 (type=c, size=66 DBG1 bytes, format=3273 DBG1) pts 0 DBG1 key_frame 12288 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 50 DBG1 (type=c, size=80 DBG1 bytes, format=20391 DBG1) pts 0 DBG1 key_frame 12544 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 51 DBG1 (type=c, size=66 DBG1 bytes, format=3001 DBG1) pts 0 DBG1 key_frame 12800 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 52 DBG1 (type=c, size=66 DBG1 bytes, format=6938 DBG1) pts 0 DBG1 key_frame 13056 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 53 DBG1 (type=c, size=66 DBG1 bytes, format=3211 DBG1) pts 0 DBG1 key_frame 13312 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 54 DBG1 (type=c, size=80 DBG1 bytes, format=18976 DBG1) pts 0 DBG1 key_frame 13568 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 55 DBG1 (type=c, size=66 DBG1 bytes, format=3076 DBG1) pts 0 DBG1 key_frame 13824 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 56 DBG1 (type=c, size=66 DBG1 bytes, format=4609 DBG1) pts 0 DBG1 key_frame 14080 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 57 DBG1 (type=c, size=66 DBG1 bytes, format=2655 DBG1) pts 0 DBG1 key_frame 14336 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 58 DBG1 (type=c, size=80 DBG1 bytes, format=22867 DBG1) pts 0 DBG1 key_frame 14592 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 59 DBG1 (type=c, size=66 DBG1 bytes, format=3095 DBG1) pts 0 DBG1 key_frame 14848 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 60 DBG1 (type=c, size=66 DBG1 bytes, format=4188 DBG1) pts 0 DBG1 key_frame 15104 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 61 DBG1 (type=c, size=66 DBG1 bytes, format=2712 DBG1) pts 0 DBG1 key_frame 15360 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 62 DBG1 (type=c, size=80 DBG1 bytes, format=17627 DBG1) pts 0 DBG1 key_frame 15616 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 63 DBG1 (type=c, size=66 DBG1 bytes, format=3053 DBG1) pts 0 DBG1 key_frame 15872 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 64 DBG1 (type=c, size=66 DBG1 bytes, format=7225 DBG1) pts 0 DBG1 key_frame 16128 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 65 DBG1 (type=c, size=66 DBG1 bytes, format=3510 DBG1) pts 0 DBG1 key_frame 16384 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 66 DBG1 (type=c, size=80 DBG1 bytes, format=20818 DBG1) pts 0 DBG1 key_frame 16640 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 67 DBG1 (type=c, size=66 DBG1 bytes, format=3546 DBG1) pts 0 DBG1 key_frame 16896 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 68 DBG1 (type=c, size=66 DBG1 bytes, format=5117 DBG1) pts 0 DBG1 key_frame 17152 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 69 DBG1 (type=c, size=66 DBG1 bytes, format=3299 DBG1) pts 0 DBG1 key_frame 17408 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 70 DBG1 (type=c, size=80 DBG1 bytes, format=20112 DBG1) pts 0 DBG1 key_frame 17664 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 71 DBG1 (type=c, size=66 DBG1 bytes, format=3149 DBG1) pts 0 DBG1 key_frame 17920 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 72 DBG1 (type=c, size=66 DBG1 bytes, format=5029 DBG1) pts 0 DBG1 key_frame 18176 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 73 DBG1 (type=c, size=66 DBG1 bytes, format=2404 DBG1) pts 0 DBG1 key_frame 18432 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 74 DBG1 (type=c, size=80 DBG1 bytes, format=24264 DBG1) pts 0 DBG1 key_frame 18688 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 75 DBG1 (type=c, size=66 DBG1 bytes, format=3037 DBG1) pts 0 DBG1 key_frame 18944 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 76 DBG1 (type=c, size=66 DBG1 bytes, format=4876 DBG1) pts 0 DBG1 key_frame 19200 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 77 DBG1 (type=c, size=66 DBG1 bytes, format=3428 DBG1) pts 0 DBG1 key_frame 19456 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 78 DBG1 (type=c, size=80 DBG1 bytes, format=21639 DBG1) pts 0 DBG1 key_frame 19712 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 79 DBG1 (type=c, size=66 DBG1 bytes, format=3403 DBG1) pts 0 DBG1 key_frame 19968 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 80 DBG1 (type=c, size=66 DBG1 bytes, format=5128 DBG1) pts 0 DBG1 key_frame 20224 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 81 DBG1 (type=c, size=66 DBG1 bytes, format=3499 DBG1) pts 0 DBG1 key_frame 20480 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 82 DBG1 (type=c, size=80 DBG1 bytes, format=20067 DBG1) pts 0 DBG1 key_frame 20736 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 83 DBG1 (type=c, size=66 DBG1 bytes, format=3368 DBG1) pts 0 DBG1 key_frame 20992 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 84 DBG1 (type=c, size=66 DBG1 bytes, format=4878 DBG1) pts 0 DBG1 key_frame 21248 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 85 DBG1 (type=c, size=66 DBG1 bytes, format=2976 DBG1) pts 0 DBG1 key_frame 21504 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 86 DBG1 (type=c, size=80 DBG1 bytes, format=22805 DBG1) pts 0 DBG1 key_frame 21760 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 87 DBG1 (type=c, size=66 DBG1 bytes, format=3327 DBG1) pts 0 DBG1 key_frame 22016 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 88 DBG1 (type=c, size=66 DBG1 bytes, format=5015 DBG1) pts 0 DBG1 key_frame 22272 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 89 DBG1 (type=c, size=66 DBG1 bytes, format=3372 DBG1) pts 0 DBG1 key_frame 22528 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 90 DBG1 (type=c, size=80 DBG1 bytes, format=19403 DBG1) pts 0 DBG1 key_frame 22784 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 91 DBG1 (type=c, size=66 DBG1 bytes, format=3095 DBG1) pts 0 DBG1 key_frame 23040 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 92 DBG1 (type=c, size=66 DBG1 bytes, format=6828 DBG1) pts 0 DBG1 key_frame 23296 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 93 DBG1 (type=c, size=66 DBG1 bytes, format=3343 DBG1) pts 0 DBG1 key_frame 23552 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 94 DBG1 (type=c, size=80 DBG1 bytes, format=18937 DBG1) pts 0 DBG1 key_frame 23808 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 95 DBG1 (type=c, size=66 DBG1 bytes, format=3356 DBG1) pts 0 DBG1 key_frame 24064 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 96 DBG1 (type=c, size=66 DBG1 bytes, format=4645 DBG1) pts 0 DBG1 key_frame 24320 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 97 DBG1 (type=c, size=66 DBG1 bytes, format=3180 DBG1) pts 0 DBG1 key_frame 24576 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 98 DBG1 (type=c, size=80 DBG1 bytes, format=18269 DBG1) pts 0 DBG1 key_frame 24832 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 99 DBG1 (type=c, size=66 DBG1 bytes, format=3538 DBG1) pts 0 DBG1 key_frame 25088 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 100 DBG1 (type=c, size=66 DBG1 bytes, format=4888 DBG1) pts 0 DBG1 key_frame 25344 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 101 DBG1 (type=c, size=66 DBG1 bytes, format=2358 DBG1) pts 0 DBG1 key_frame 25600 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 102 DBG1 (type=c, size=80 DBG1 bytes, format=22254 DBG1) pts 0 DBG1 key_frame 25856 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 103 DBG1 (type=c, size=66 DBG1 bytes, format=3018 DBG1) pts 0 DBG1 key_frame 26112 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 104 DBG1 (type=c, size=66 DBG1 bytes, format=3711 DBG1) pts 0 DBG1 key_frame 26368 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 105 DBG1 (type=c, size=66 DBG1 bytes, format=2954 DBG1) pts 0 DBG1 key_frame 26624 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 106 DBG1 (type=c, size=80 DBG1 bytes, format=18568 DBG1) pts 0 DBG1 key_frame 26880 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 107 DBG1 (type=c, size=66 DBG1 bytes, format=2646 DBG1) pts 0 DBG1 key_frame 27136 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 108 DBG1 (type=c, size=66 DBG1 bytes, format=3769 DBG1) pts 0 DBG1 key_frame 27392 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 109 DBG1 (type=c, size=66 DBG1 bytes, format=2584 DBG1) pts 0 DBG1 key_frame 27648 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 110 DBG1 (type=c, size=80 DBG1 bytes, format=12180 DBG1) pts 0 DBG1 key_frame 27904 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 111 DBG1 (type=c, size=66 DBG1 bytes, format=2356 DBG1) pts 0 DBG1 key_frame 28160 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 112 DBG1 (type=c, size=66 DBG1 bytes, format=3965 DBG1) pts 0 DBG1 key_frame 28416 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 113 DBG1 (type=c, size=66 DBG1 bytes, format=2448 DBG1) pts 0 DBG1 key_frame 28672 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 114 DBG1 (type=c, size=80 DBG1 bytes, format=11631 DBG1) pts 0 DBG1 key_frame 28928 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 115 DBG1 (type=c, size=66 DBG1 bytes, format=2585 DBG1) pts 0 DBG1 key_frame 29184 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 116 DBG1 (type=c, size=66 DBG1 bytes, format=3432 DBG1) pts 0 DBG1 key_frame 29440 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 117 DBG1 (type=c, size=66 DBG1 bytes, format=2601 DBG1) pts 0 DBG1 key_frame 29696 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 118 DBG1 (type=c, size=80 DBG1 bytes, format=6483 DBG1) pts 0 DBG1 key_frame 29952 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 295] 
+ <-------DUMPING-------> 
+
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 81] initializing all the containers, codecs and protocols.
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 95] opening the input file (cv-data/input/small_bunny_1080p_60fps-TRIM.mp4 DBG0) and loading format (container) header
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 119] format mov,mp4,m4a,3gp,3g2,mj2 DBG0, duration lld us, bit_rate lld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 123] finding stream info from format
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 159] AVStream->time_base before open coded 1 DBG1/15360 DBG1
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 163] AVStream->r_frame_rate before open coded 60 DBG1/1 DBG1
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 167] AVStream->start_time ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 170] AVStream->duration ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 173] finding the proper decoder (CODEC)
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 198] Video Codec: resolution 1920 DBG1 x 1080 DBG1
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 211] 	Codec h264 DBG0 ID 27 DBG1 bit_rate lld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 159] AVStream->time_base before open coded 1 DBG1/48000 DBG1
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 163] AVStream->r_frame_rate before open coded 0 DBG1/0 DBG1
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 167] AVStream->start_time ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 170] AVStream->duration ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 173] finding the proper decoder (CODEC)
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 204] Audio Codec: 48000 DBG1 channels, sample rate 7 DBG1
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 211] 	Codec aac DBG0 ID 86018 DBG1 bit_rate lld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 1 DBG1 (type=c, size=73 DBG1 bytes, format=100339 DBG1) pts 0 DBG1 key_frame 0 DBG1 [DTS 1 DBG1]
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 2 DBG1 (type=c, size=66 DBG1 bytes, format=7484 DBG1) pts 0 DBG1 key_frame 256 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 3 DBG1 (type=c, size=66 DBG1 bytes, format=14764 DBG1) pts 0 DBG1 key_frame 512 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 4 DBG1 (type=c, size=66 DBG1 bytes, format=7058 DBG1) pts 0 DBG1 key_frame 768 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 5 DBG1 (type=c, size=80 DBG1 bytes, format=37353 DBG1) pts 0 DBG1 key_frame 1024 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 6 DBG1 (type=c, size=66 DBG1 bytes, format=8678 DBG1) pts 0 DBG1 key_frame 1280 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 7 DBG1 (type=c, size=66 DBG1 bytes, format=17160 DBG1) pts 0 DBG1 key_frame 1536 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 8 DBG1 (type=c, size=66 DBG1 bytes, format=7624 DBG1) pts 0 DBG1 key_frame 1792 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 9 DBG1 (type=c, size=80 DBG1 bytes, format=44236 DBG1) pts 0 DBG1 key_frame 2048 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 10 DBG1 (type=c, size=66 DBG1 bytes, format=9522 DBG1) pts 0 DBG1 key_frame 2304 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 11 DBG1 (type=c, size=66 DBG1 bytes, format=5917 DBG1) pts 0 DBG1 key_frame 2560 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:35_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 12 DBG1 (type=c, size=80 DBG1 bytes, format=29872 DBG1) pts 0 DBG1 key_frame 2816 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:36_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:36_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 13 DBG1 (type=c, size=66 DBG1 bytes, format=6367 DBG1) pts 0 DBG1 key_frame 3072 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:36_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:36_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 14 DBG1 (type=c, size=66 DBG1 bytes, format=11038 DBG1) pts 0 DBG1 key_frame 3328 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:36_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:36_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 15 DBG1 (type=c, size=66 DBG1 bytes, format=6670 DBG1) pts 0 DBG1 key_frame 3584 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:36_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:36_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 16 DBG1 (type=c, size=80 DBG1 bytes, format=27801 DBG1) pts 0 DBG1 key_frame 3840 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 17 DBG1 (type=c, size=66 DBG1 bytes, format=6211 DBG1) pts 0 DBG1 key_frame 4096 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 18 DBG1 (type=c, size=66 DBG1 bytes, format=13124 DBG1) pts 0 DBG1 key_frame 4352 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 19 DBG1 (type=c, size=66 DBG1 bytes, format=5224 DBG1) pts 0 DBG1 key_frame 4608 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 20 DBG1 (type=c, size=80 DBG1 bytes, format=21799 DBG1) pts 0 DBG1 key_frame 4864 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 21 DBG1 (type=c, size=80 DBG1 bytes, format=7916 DBG1) pts 0 DBG1 key_frame 5120 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 22 DBG1 (type=c, size=73 DBG1 bytes, format=118405 DBG1) pts 0 DBG1 key_frame 5376 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 23 DBG1 (type=c, size=66 DBG1 bytes, format=514 DBG1) pts 0 DBG1 key_frame 5632 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 24 DBG1 (type=c, size=66 DBG1 bytes, format=1668 DBG1) pts 0 DBG1 key_frame 5888 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 25 DBG1 (type=c, size=66 DBG1 bytes, format=1968 DBG1) pts 0 DBG1 key_frame 6144 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 26 DBG1 (type=c, size=80 DBG1 bytes, format=6652 DBG1) pts 0 DBG1 key_frame 6400 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 27 DBG1 (type=c, size=66 DBG1 bytes, format=2451 DBG1) pts 0 DBG1 key_frame 6656 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 28 DBG1 (type=c, size=66 DBG1 bytes, format=4228 DBG1) pts 0 DBG1 key_frame 6912 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 29 DBG1 (type=c, size=66 DBG1 bytes, format=2660 DBG1) pts 0 DBG1 key_frame 7168 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 30 DBG1 (type=c, size=80 DBG1 bytes, format=13221 DBG1) pts 0 DBG1 key_frame 7424 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 31 DBG1 (type=c, size=66 DBG1 bytes, format=2538 DBG1) pts 0 DBG1 key_frame 7680 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 32 DBG1 (type=c, size=66 DBG1 bytes, format=4344 DBG1) pts 0 DBG1 key_frame 7936 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 33 DBG1 (type=c, size=66 DBG1 bytes, format=2237 DBG1) pts 0 DBG1 key_frame 8192 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 34 DBG1 (type=c, size=80 DBG1 bytes, format=13379 DBG1) pts 0 DBG1 key_frame 8448 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 35 DBG1 (type=c, size=66 DBG1 bytes, format=2589 DBG1) pts 0 DBG1 key_frame 8704 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 36 DBG1 (type=c, size=66 DBG1 bytes, format=5144 DBG1) pts 0 DBG1 key_frame 8960 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 37 DBG1 (type=c, size=66 DBG1 bytes, format=2903 DBG1) pts 0 DBG1 key_frame 9216 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 38 DBG1 (type=c, size=80 DBG1 bytes, format=17675 DBG1) pts 0 DBG1 key_frame 9472 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 39 DBG1 (type=c, size=66 DBG1 bytes, format=2861 DBG1) pts 0 DBG1 key_frame 9728 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 40 DBG1 (type=c, size=66 DBG1 bytes, format=3974 DBG1) pts 0 DBG1 key_frame 9984 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 41 DBG1 (type=c, size=66 DBG1 bytes, format=2769 DBG1) pts 0 DBG1 key_frame 10240 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 42 DBG1 (type=c, size=80 DBG1 bytes, format=15602 DBG1) pts 0 DBG1 key_frame 10496 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 43 DBG1 (type=c, size=66 DBG1 bytes, format=2973 DBG1) pts 0 DBG1 key_frame 10752 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 44 DBG1 (type=c, size=66 DBG1 bytes, format=4244 DBG1) pts 0 DBG1 key_frame 11008 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:38_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:38_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 45 DBG1 (type=c, size=66 DBG1 bytes, format=2806 DBG1) pts 0 DBG1 key_frame 11264 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:38_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:38_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 46 DBG1 (type=c, size=80 DBG1 bytes, format=15954 DBG1) pts 0 DBG1 key_frame 11520 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:38_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:38_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 47 DBG1 (type=c, size=66 DBG1 bytes, format=3334 DBG1) pts 0 DBG1 key_frame 11776 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:38_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:38_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 48 DBG1 (type=c, size=66 DBG1 bytes, format=5329 DBG1) pts 0 DBG1 key_frame 12032 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:38_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:38_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 49 DBG1 (type=c, size=66 DBG1 bytes, format=3273 DBG1) pts 0 DBG1 key_frame 12288 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:38_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:38_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 50 DBG1 (type=c, size=80 DBG1 bytes, format=20391 DBG1) pts 0 DBG1 key_frame 12544 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:39_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:39_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 51 DBG1 (type=c, size=66 DBG1 bytes, format=3001 DBG1) pts 0 DBG1 key_frame 12800 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 52 DBG1 (type=c, size=66 DBG1 bytes, format=6938 DBG1) pts 0 DBG1 key_frame 13056 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 53 DBG1 (type=c, size=66 DBG1 bytes, format=3211 DBG1) pts 0 DBG1 key_frame 13312 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 54 DBG1 (type=c, size=80 DBG1 bytes, format=18976 DBG1) pts 0 DBG1 key_frame 13568 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 55 DBG1 (type=c, size=66 DBG1 bytes, format=3076 DBG1) pts 0 DBG1 key_frame 13824 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 56 DBG1 (type=c, size=66 DBG1 bytes, format=4609 DBG1) pts 0 DBG1 key_frame 14080 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 57 DBG1 (type=c, size=66 DBG1 bytes, format=2655 DBG1) pts 0 DBG1 key_frame 14336 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 58 DBG1 (type=c, size=80 DBG1 bytes, format=22867 DBG1) pts 0 DBG1 key_frame 14592 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 59 DBG1 (type=c, size=66 DBG1 bytes, format=3095 DBG1) pts 0 DBG1 key_frame 14848 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 60 DBG1 (type=c, size=66 DBG1 bytes, format=4188 DBG1) pts 0 DBG1 key_frame 15104 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 61 DBG1 (type=c, size=66 DBG1 bytes, format=2712 DBG1) pts 0 DBG1 key_frame 15360 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 62 DBG1 (type=c, size=80 DBG1 bytes, format=17627 DBG1) pts 0 DBG1 key_frame 15616 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 63 DBG1 (type=c, size=66 DBG1 bytes, format=3053 DBG1) pts 0 DBG1 key_frame 15872 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 64 DBG1 (type=c, size=66 DBG1 bytes, format=7225 DBG1) pts 0 DBG1 key_frame 16128 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 65 DBG1 (type=c, size=66 DBG1 bytes, format=3510 DBG1) pts 0 DBG1 key_frame 16384 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 66 DBG1 (type=c, size=80 DBG1 bytes, format=20818 DBG1) pts 0 DBG1 key_frame 16640 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 67 DBG1 (type=c, size=66 DBG1 bytes, format=3546 DBG1) pts 0 DBG1 key_frame 16896 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 68 DBG1 (type=c, size=66 DBG1 bytes, format=5117 DBG1) pts 0 DBG1 key_frame 17152 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 69 DBG1 (type=c, size=66 DBG1 bytes, format=3299 DBG1) pts 0 DBG1 key_frame 17408 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 70 DBG1 (type=c, size=80 DBG1 bytes, format=20112 DBG1) pts 0 DBG1 key_frame 17664 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 71 DBG1 (type=c, size=66 DBG1 bytes, format=3149 DBG1) pts 0 DBG1 key_frame 17920 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 72 DBG1 (type=c, size=66 DBG1 bytes, format=5029 DBG1) pts 0 DBG1 key_frame 18176 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 73 DBG1 (type=c, size=66 DBG1 bytes, format=2404 DBG1) pts 0 DBG1 key_frame 18432 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 74 DBG1 (type=c, size=80 DBG1 bytes, format=24264 DBG1) pts 0 DBG1 key_frame 18688 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:40_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 75 DBG1 (type=c, size=66 DBG1 bytes, format=3037 DBG1) pts 0 DBG1 key_frame 18944 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 76 DBG1 (type=c, size=66 DBG1 bytes, format=4876 DBG1) pts 0 DBG1 key_frame 19200 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 77 DBG1 (type=c, size=66 DBG1 bytes, format=3428 DBG1) pts 0 DBG1 key_frame 19456 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 78 DBG1 (type=c, size=80 DBG1 bytes, format=21639 DBG1) pts 0 DBG1 key_frame 19712 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 79 DBG1 (type=c, size=66 DBG1 bytes, format=3403 DBG1) pts 0 DBG1 key_frame 19968 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 80 DBG1 (type=c, size=66 DBG1 bytes, format=5128 DBG1) pts 0 DBG1 key_frame 20224 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 81 DBG1 (type=c, size=66 DBG1 bytes, format=3499 DBG1) pts 0 DBG1 key_frame 20480 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 82 DBG1 (type=c, size=80 DBG1 bytes, format=20067 DBG1) pts 0 DBG1 key_frame 20736 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 83 DBG1 (type=c, size=66 DBG1 bytes, format=3368 DBG1) pts 0 DBG1 key_frame 20992 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 84 DBG1 (type=c, size=66 DBG1 bytes, format=4878 DBG1) pts 0 DBG1 key_frame 21248 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 85 DBG1 (type=c, size=66 DBG1 bytes, format=2976 DBG1) pts 0 DBG1 key_frame 21504 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:41_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 86 DBG1 (type=c, size=80 DBG1 bytes, format=22805 DBG1) pts 0 DBG1 key_frame 21760 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:42_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:42_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 87 DBG1 (type=c, size=66 DBG1 bytes, format=3327 DBG1) pts 0 DBG1 key_frame 22016 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:42_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:42_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 88 DBG1 (type=c, size=66 DBG1 bytes, format=5015 DBG1) pts 0 DBG1 key_frame 22272 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:42_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:42_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 89 DBG1 (type=c, size=66 DBG1 bytes, format=3372 DBG1) pts 0 DBG1 key_frame 22528 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:42_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:42_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 90 DBG1 (type=c, size=80 DBG1 bytes, format=19403 DBG1) pts 0 DBG1 key_frame 22784 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:42_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:42_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 91 DBG1 (type=c, size=66 DBG1 bytes, format=3095 DBG1) pts 0 DBG1 key_frame 23040 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:42_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:42_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 92 DBG1 (type=c, size=66 DBG1 bytes, format=6828 DBG1) pts 0 DBG1 key_frame 23296 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:43_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:43_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 93 DBG1 (type=c, size=66 DBG1 bytes, format=3343 DBG1) pts 0 DBG1 key_frame 23552 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:43_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:43_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 94 DBG1 (type=c, size=80 DBG1 bytes, format=18937 DBG1) pts 0 DBG1 key_frame 23808 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:43_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:43_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 95 DBG1 (type=c, size=66 DBG1 bytes, format=3356 DBG1) pts 0 DBG1 key_frame 24064 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:43_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:43_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 96 DBG1 (type=c, size=66 DBG1 bytes, format=4645 DBG1) pts 0 DBG1 key_frame 24320 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:43_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:43_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 97 DBG1 (type=c, size=66 DBG1 bytes, format=3180 DBG1) pts 0 DBG1 key_frame 24576 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:43_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:43_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 98 DBG1 (type=c, size=80 DBG1 bytes, format=18269 DBG1) pts 0 DBG1 key_frame 24832 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:43_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:43_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 99 DBG1 (type=c, size=66 DBG1 bytes, format=3538 DBG1) pts 0 DBG1 key_frame 25088 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:43_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:43_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 100 DBG1 (type=c, size=66 DBG1 bytes, format=4888 DBG1) pts 0 DBG1 key_frame 25344 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:43_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 101 DBG1 (type=c, size=66 DBG1 bytes, format=2358 DBG1) pts 0 DBG1 key_frame 25600 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 102 DBG1 (type=c, size=80 DBG1 bytes, format=22254 DBG1) pts 0 DBG1 key_frame 25856 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 103 DBG1 (type=c, size=66 DBG1 bytes, format=3018 DBG1) pts 0 DBG1 key_frame 26112 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 104 DBG1 (type=c, size=66 DBG1 bytes, format=3711 DBG1) pts 0 DBG1 key_frame 26368 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 105 DBG1 (type=c, size=66 DBG1 bytes, format=2954 DBG1) pts 0 DBG1 key_frame 26624 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 106 DBG1 (type=c, size=80 DBG1 bytes, format=18568 DBG1) pts 0 DBG1 key_frame 26880 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 107 DBG1 (type=c, size=66 DBG1 bytes, format=2646 DBG1) pts 0 DBG1 key_frame 27136 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 108 DBG1 (type=c, size=66 DBG1 bytes, format=3769 DBG1) pts 0 DBG1 key_frame 27392 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 109 DBG1 (type=c, size=66 DBG1 bytes, format=2584 DBG1) pts 0 DBG1 key_frame 27648 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 110 DBG1 (type=c, size=80 DBG1 bytes, format=12180 DBG1) pts 0 DBG1 key_frame 27904 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 111 DBG1 (type=c, size=66 DBG1 bytes, format=2356 DBG1) pts 0 DBG1 key_frame 28160 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 112 DBG1 (type=c, size=66 DBG1 bytes, format=3965 DBG1) pts 0 DBG1 key_frame 28416 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 113 DBG1 (type=c, size=66 DBG1 bytes, format=2448 DBG1) pts 0 DBG1 key_frame 28672 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 114 DBG1 (type=c, size=80 DBG1 bytes, format=11631 DBG1) pts 0 DBG1 key_frame 28928 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 115 DBG1 (type=c, size=66 DBG1 bytes, format=2585 DBG1) pts 0 DBG1 key_frame 29184 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 116 DBG1 (type=c, size=66 DBG1 bytes, format=3432 DBG1) pts 0 DBG1 key_frame 29440 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:44_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:45_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 117 DBG1 (type=c, size=66 DBG1 bytes, format=2601 DBG1) pts 0 DBG1 key_frame 29696 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:45_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:17:45_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 118 DBG1 (type=c, size=80 DBG1 bytes, format=6483 DBG1) pts 0 DBG1 key_frame 29952 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:17:45_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 295] 
+ <-------DUMPING-------> 
+
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 81] initializing all the containers, codecs and protocols.
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 95] opening the input file (cv-data/input/small_bunny_1080p_60fps-TRIM.mp4 DBG0) and loading format (container) header
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 119] format mov,mp4,m4a,3gp,3g2,mj2 DBG0, duration lld us, bit_rate lld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 123] finding stream info from format
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 159] AVStream->time_base before open coded 1 DBG1/15360 DBG1
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 163] AVStream->r_frame_rate before open coded 60 DBG1/1 DBG1
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 167] AVStream->start_time ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 170] AVStream->duration ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 173] finding the proper decoder (CODEC)
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 198] Video Codec: resolution 1920 DBG1 x 1080 DBG1
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 211] 	Codec h264 DBG0 ID 27 DBG1 bit_rate lld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 159] AVStream->time_base before open coded 1 DBG1/48000 DBG1
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 163] AVStream->r_frame_rate before open coded 0 DBG1/0 DBG1
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 167] AVStream->start_time ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 170] AVStream->duration ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 173] finding the proper decoder (CODEC)
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 204] Audio Codec: 48000 DBG1 channels, sample rate 7 DBG1
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 211] 	Codec aac DBG0 ID 86018 DBG1 bit_rate lld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 1 DBG1 (type=c, size=73 DBG1 bytes, format=100339 DBG1) pts 0 DBG1 key_frame 0 DBG1 [DTS 1 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 2 DBG1 (type=c, size=66 DBG1 bytes, format=7484 DBG1) pts 0 DBG1 key_frame 256 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 3 DBG1 (type=c, size=66 DBG1 bytes, format=14764 DBG1) pts 0 DBG1 key_frame 512 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 4 DBG1 (type=c, size=66 DBG1 bytes, format=7058 DBG1) pts 0 DBG1 key_frame 768 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 5 DBG1 (type=c, size=80 DBG1 bytes, format=37353 DBG1) pts 0 DBG1 key_frame 1024 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 6 DBG1 (type=c, size=66 DBG1 bytes, format=8678 DBG1) pts 0 DBG1 key_frame 1280 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 7 DBG1 (type=c, size=66 DBG1 bytes, format=17160 DBG1) pts 0 DBG1 key_frame 1536 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 8 DBG1 (type=c, size=66 DBG1 bytes, format=7624 DBG1) pts 0 DBG1 key_frame 1792 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 9 DBG1 (type=c, size=80 DBG1 bytes, format=44236 DBG1) pts 0 DBG1 key_frame 2048 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 10 DBG1 (type=c, size=66 DBG1 bytes, format=9522 DBG1) pts 0 DBG1 key_frame 2304 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 11 DBG1 (type=c, size=66 DBG1 bytes, format=5917 DBG1) pts 0 DBG1 key_frame 2560 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 12 DBG1 (type=c, size=80 DBG1 bytes, format=29872 DBG1) pts 0 DBG1 key_frame 2816 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 13 DBG1 (type=c, size=66 DBG1 bytes, format=6367 DBG1) pts 0 DBG1 key_frame 3072 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 14 DBG1 (type=c, size=66 DBG1 bytes, format=11038 DBG1) pts 0 DBG1 key_frame 3328 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 15 DBG1 (type=c, size=66 DBG1 bytes, format=6670 DBG1) pts 0 DBG1 key_frame 3584 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 16 DBG1 (type=c, size=80 DBG1 bytes, format=27801 DBG1) pts 0 DBG1 key_frame 3840 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 17 DBG1 (type=c, size=66 DBG1 bytes, format=6211 DBG1) pts 0 DBG1 key_frame 4096 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 18 DBG1 (type=c, size=66 DBG1 bytes, format=13124 DBG1) pts 0 DBG1 key_frame 4352 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 19 DBG1 (type=c, size=66 DBG1 bytes, format=5224 DBG1) pts 0 DBG1 key_frame 4608 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 20 DBG1 (type=c, size=80 DBG1 bytes, format=21799 DBG1) pts 0 DBG1 key_frame 4864 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 21 DBG1 (type=c, size=80 DBG1 bytes, format=7916 DBG1) pts 0 DBG1 key_frame 5120 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 22 DBG1 (type=c, size=73 DBG1 bytes, format=118405 DBG1) pts 0 DBG1 key_frame 5376 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 23 DBG1 (type=c, size=66 DBG1 bytes, format=514 DBG1) pts 0 DBG1 key_frame 5632 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 24 DBG1 (type=c, size=66 DBG1 bytes, format=1668 DBG1) pts 0 DBG1 key_frame 5888 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 25 DBG1 (type=c, size=66 DBG1 bytes, format=1968 DBG1) pts 0 DBG1 key_frame 6144 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 26 DBG1 (type=c, size=80 DBG1 bytes, format=6652 DBG1) pts 0 DBG1 key_frame 6400 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 27 DBG1 (type=c, size=66 DBG1 bytes, format=2451 DBG1) pts 0 DBG1 key_frame 6656 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 28 DBG1 (type=c, size=66 DBG1 bytes, format=4228 DBG1) pts 0 DBG1 key_frame 6912 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 29 DBG1 (type=c, size=66 DBG1 bytes, format=2660 DBG1) pts 0 DBG1 key_frame 7168 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 30 DBG1 (type=c, size=80 DBG1 bytes, format=13221 DBG1) pts 0 DBG1 key_frame 7424 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:18:59_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 31 DBG1 (type=c, size=66 DBG1 bytes, format=2538 DBG1) pts 0 DBG1 key_frame 7680 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:00_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:00_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 32 DBG1 (type=c, size=66 DBG1 bytes, format=4344 DBG1) pts 0 DBG1 key_frame 7936 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:00_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:00_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 33 DBG1 (type=c, size=66 DBG1 bytes, format=2237 DBG1) pts 0 DBG1 key_frame 8192 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:00_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:00_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 34 DBG1 (type=c, size=80 DBG1 bytes, format=13379 DBG1) pts 0 DBG1 key_frame 8448 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:00_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:00_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 35 DBG1 (type=c, size=66 DBG1 bytes, format=2589 DBG1) pts 0 DBG1 key_frame 8704 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:00_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:00_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 36 DBG1 (type=c, size=66 DBG1 bytes, format=5144 DBG1) pts 0 DBG1 key_frame 8960 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:00_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:00_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 37 DBG1 (type=c, size=66 DBG1 bytes, format=2903 DBG1) pts 0 DBG1 key_frame 9216 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 38 DBG1 (type=c, size=80 DBG1 bytes, format=17675 DBG1) pts 0 DBG1 key_frame 9472 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 39 DBG1 (type=c, size=66 DBG1 bytes, format=2861 DBG1) pts 0 DBG1 key_frame 9728 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 40 DBG1 (type=c, size=66 DBG1 bytes, format=3974 DBG1) pts 0 DBG1 key_frame 9984 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 41 DBG1 (type=c, size=66 DBG1 bytes, format=2769 DBG1) pts 0 DBG1 key_frame 10240 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 42 DBG1 (type=c, size=80 DBG1 bytes, format=15602 DBG1) pts 0 DBG1 key_frame 10496 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 43 DBG1 (type=c, size=66 DBG1 bytes, format=2973 DBG1) pts 0 DBG1 key_frame 10752 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 44 DBG1 (type=c, size=66 DBG1 bytes, format=4244 DBG1) pts 0 DBG1 key_frame 11008 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 45 DBG1 (type=c, size=66 DBG1 bytes, format=2806 DBG1) pts 0 DBG1 key_frame 11264 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 46 DBG1 (type=c, size=80 DBG1 bytes, format=15954 DBG1) pts 0 DBG1 key_frame 11520 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 47 DBG1 (type=c, size=66 DBG1 bytes, format=3334 DBG1) pts 0 DBG1 key_frame 11776 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 48 DBG1 (type=c, size=66 DBG1 bytes, format=5329 DBG1) pts 0 DBG1 key_frame 12032 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 49 DBG1 (type=c, size=66 DBG1 bytes, format=3273 DBG1) pts 0 DBG1 key_frame 12288 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 50 DBG1 (type=c, size=80 DBG1 bytes, format=20391 DBG1) pts 0 DBG1 key_frame 12544 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 51 DBG1 (type=c, size=66 DBG1 bytes, format=3001 DBG1) pts 0 DBG1 key_frame 12800 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 52 DBG1 (type=c, size=66 DBG1 bytes, format=6938 DBG1) pts 0 DBG1 key_frame 13056 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 53 DBG1 (type=c, size=66 DBG1 bytes, format=3211 DBG1) pts 0 DBG1 key_frame 13312 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 54 DBG1 (type=c, size=80 DBG1 bytes, format=18976 DBG1) pts 0 DBG1 key_frame 13568 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 55 DBG1 (type=c, size=66 DBG1 bytes, format=3076 DBG1) pts 0 DBG1 key_frame 13824 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 56 DBG1 (type=c, size=66 DBG1 bytes, format=4609 DBG1) pts 0 DBG1 key_frame 14080 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 57 DBG1 (type=c, size=66 DBG1 bytes, format=2655 DBG1) pts 0 DBG1 key_frame 14336 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 58 DBG1 (type=c, size=80 DBG1 bytes, format=22867 DBG1) pts 0 DBG1 key_frame 14592 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 59 DBG1 (type=c, size=66 DBG1 bytes, format=3095 DBG1) pts 0 DBG1 key_frame 14848 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:01_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 60 DBG1 (type=c, size=66 DBG1 bytes, format=4188 DBG1) pts 0 DBG1 key_frame 15104 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:02_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:02_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 61 DBG1 (type=c, size=66 DBG1 bytes, format=2712 DBG1) pts 0 DBG1 key_frame 15360 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:02_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:02_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 62 DBG1 (type=c, size=80 DBG1 bytes, format=17627 DBG1) pts 0 DBG1 key_frame 15616 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:02_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:02_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 63 DBG1 (type=c, size=66 DBG1 bytes, format=3053 DBG1) pts 0 DBG1 key_frame 15872 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:02_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:02_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 64 DBG1 (type=c, size=66 DBG1 bytes, format=7225 DBG1) pts 0 DBG1 key_frame 16128 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:02_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:02_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 65 DBG1 (type=c, size=66 DBG1 bytes, format=3510 DBG1) pts 0 DBG1 key_frame 16384 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:02_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:02_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 66 DBG1 (type=c, size=80 DBG1 bytes, format=20818 DBG1) pts 0 DBG1 key_frame 16640 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 67 DBG1 (type=c, size=66 DBG1 bytes, format=3546 DBG1) pts 0 DBG1 key_frame 16896 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 68 DBG1 (type=c, size=66 DBG1 bytes, format=5117 DBG1) pts 0 DBG1 key_frame 17152 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 69 DBG1 (type=c, size=66 DBG1 bytes, format=3299 DBG1) pts 0 DBG1 key_frame 17408 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 70 DBG1 (type=c, size=80 DBG1 bytes, format=20112 DBG1) pts 0 DBG1 key_frame 17664 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 71 DBG1 (type=c, size=66 DBG1 bytes, format=3149 DBG1) pts 0 DBG1 key_frame 17920 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 72 DBG1 (type=c, size=66 DBG1 bytes, format=5029 DBG1) pts 0 DBG1 key_frame 18176 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 73 DBG1 (type=c, size=66 DBG1 bytes, format=2404 DBG1) pts 0 DBG1 key_frame 18432 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 74 DBG1 (type=c, size=80 DBG1 bytes, format=24264 DBG1) pts 0 DBG1 key_frame 18688 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 75 DBG1 (type=c, size=66 DBG1 bytes, format=3037 DBG1) pts 0 DBG1 key_frame 18944 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 76 DBG1 (type=c, size=66 DBG1 bytes, format=4876 DBG1) pts 0 DBG1 key_frame 19200 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 77 DBG1 (type=c, size=66 DBG1 bytes, format=3428 DBG1) pts 0 DBG1 key_frame 19456 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 78 DBG1 (type=c, size=80 DBG1 bytes, format=21639 DBG1) pts 0 DBG1 key_frame 19712 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 79 DBG1 (type=c, size=66 DBG1 bytes, format=3403 DBG1) pts 0 DBG1 key_frame 19968 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 80 DBG1 (type=c, size=66 DBG1 bytes, format=5128 DBG1) pts 0 DBG1 key_frame 20224 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 81 DBG1 (type=c, size=66 DBG1 bytes, format=3499 DBG1) pts 0 DBG1 key_frame 20480 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 82 DBG1 (type=c, size=80 DBG1 bytes, format=20067 DBG1) pts 0 DBG1 key_frame 20736 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 83 DBG1 (type=c, size=66 DBG1 bytes, format=3368 DBG1) pts 0 DBG1 key_frame 20992 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 84 DBG1 (type=c, size=66 DBG1 bytes, format=4878 DBG1) pts 0 DBG1 key_frame 21248 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 85 DBG1 (type=c, size=66 DBG1 bytes, format=2976 DBG1) pts 0 DBG1 key_frame 21504 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 86 DBG1 (type=c, size=80 DBG1 bytes, format=22805 DBG1) pts 0 DBG1 key_frame 21760 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 87 DBG1 (type=c, size=66 DBG1 bytes, format=3327 DBG1) pts 0 DBG1 key_frame 22016 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 88 DBG1 (type=c, size=66 DBG1 bytes, format=5015 DBG1) pts 0 DBG1 key_frame 22272 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 89 DBG1 (type=c, size=66 DBG1 bytes, format=3372 DBG1) pts 0 DBG1 key_frame 22528 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 90 DBG1 (type=c, size=80 DBG1 bytes, format=19403 DBG1) pts 0 DBG1 key_frame 22784 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 91 DBG1 (type=c, size=66 DBG1 bytes, format=3095 DBG1) pts 0 DBG1 key_frame 23040 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 92 DBG1 (type=c, size=66 DBG1 bytes, format=6828 DBG1) pts 0 DBG1 key_frame 23296 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 93 DBG1 (type=c, size=66 DBG1 bytes, format=3343 DBG1) pts 0 DBG1 key_frame 23552 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 94 DBG1 (type=c, size=80 DBG1 bytes, format=18937 DBG1) pts 0 DBG1 key_frame 23808 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:04_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 95 DBG1 (type=c, size=66 DBG1 bytes, format=3356 DBG1) pts 0 DBG1 key_frame 24064 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 96 DBG1 (type=c, size=66 DBG1 bytes, format=4645 DBG1) pts 0 DBG1 key_frame 24320 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 97 DBG1 (type=c, size=66 DBG1 bytes, format=3180 DBG1) pts 0 DBG1 key_frame 24576 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 98 DBG1 (type=c, size=80 DBG1 bytes, format=18269 DBG1) pts 0 DBG1 key_frame 24832 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 99 DBG1 (type=c, size=66 DBG1 bytes, format=3538 DBG1) pts 0 DBG1 key_frame 25088 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 100 DBG1 (type=c, size=66 DBG1 bytes, format=4888 DBG1) pts 0 DBG1 key_frame 25344 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 101 DBG1 (type=c, size=66 DBG1 bytes, format=2358 DBG1) pts 0 DBG1 key_frame 25600 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:05_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 102 DBG1 (type=c, size=80 DBG1 bytes, format=22254 DBG1) pts 0 DBG1 key_frame 25856 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 103 DBG1 (type=c, size=66 DBG1 bytes, format=3018 DBG1) pts 0 DBG1 key_frame 26112 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 104 DBG1 (type=c, size=66 DBG1 bytes, format=3711 DBG1) pts 0 DBG1 key_frame 26368 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 105 DBG1 (type=c, size=66 DBG1 bytes, format=2954 DBG1) pts 0 DBG1 key_frame 26624 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 106 DBG1 (type=c, size=80 DBG1 bytes, format=18568 DBG1) pts 0 DBG1 key_frame 26880 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 107 DBG1 (type=c, size=66 DBG1 bytes, format=2646 DBG1) pts 0 DBG1 key_frame 27136 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 108 DBG1 (type=c, size=66 DBG1 bytes, format=3769 DBG1) pts 0 DBG1 key_frame 27392 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 109 DBG1 (type=c, size=66 DBG1 bytes, format=2584 DBG1) pts 0 DBG1 key_frame 27648 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 110 DBG1 (type=c, size=80 DBG1 bytes, format=12180 DBG1) pts 0 DBG1 key_frame 27904 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 111 DBG1 (type=c, size=66 DBG1 bytes, format=2356 DBG1) pts 0 DBG1 key_frame 28160 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 112 DBG1 (type=c, size=66 DBG1 bytes, format=3965 DBG1) pts 0 DBG1 key_frame 28416 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 113 DBG1 (type=c, size=66 DBG1 bytes, format=2448 DBG1) pts 0 DBG1 key_frame 28672 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 114 DBG1 (type=c, size=80 DBG1 bytes, format=11631 DBG1) pts 0 DBG1 key_frame 28928 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 115 DBG1 (type=c, size=66 DBG1 bytes, format=2585 DBG1) pts 0 DBG1 key_frame 29184 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 116 DBG1 (type=c, size=66 DBG1 bytes, format=3432 DBG1) pts 0 DBG1 key_frame 29440 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 117 DBG1 (type=c, size=66 DBG1 bytes, format=2601 DBG1) pts 0 DBG1 key_frame 29696 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 277] AVPacket->pts ld
+[Fri_Oct_21_04:19:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode.c][line: 51] Frame 118 DBG1 (type=c, size=80 DBG1 bytes, format=6483 DBG1) pts 0 DBG1 key_frame 29952 DBG1 [DTS 0 DBG1]
+[Fri_Oct_21_04:19:07_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 295] 
+ <-------DUMPING-------> 
+
+[Fri_Oct_21_04:30:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:30:18_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:30:18_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 81] initializing all the containers, codecs and protocols.
+[Fri_Oct_21_04:30:18_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 95] opening the input file (../cv-data/input/small_bunny_1080p_60fps-TRIM.mp4 DBG0) and loading format (container) header
+[Fri_Oct_21_04:30:18_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 109] ERROR could not open the file
+[Fri_Oct_21_04:31:37_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:31:58_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:32:09_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:35:21_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:35:21_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 81] initializing all the containers, codecs and protocols.
+[Fri_Oct_21_04:35:21_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 95] opening the input file (../cv-data/input/small_bunny_1080p_60fps-TRIM.mp4 DBG0) and loading format (container) header
+[Fri_Oct_21_04:35:21_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/decode_call.c][line: 109] ERROR could not open the file
+[Fri_Oct_21_04:38:27_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:41:03_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:43:49_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:44:57_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:45:06_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:45:27_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:45:34_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:45:57_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:46:09_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->
+[Fri_Oct_21_04:48:27_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 46] <-------------------------NEW-SESSION------------------------->

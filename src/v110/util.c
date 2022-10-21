@@ -1,5 +1,6 @@
 /*
- *
+ * This file contains miscellaneous utility functions used through the vpaSTRM
+ * project 
  */
 #include <stdlib.h>
 #include <string.h>

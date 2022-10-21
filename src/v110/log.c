@@ -14,7 +14,8 @@
 FILE *log_out;
 
 // keep track of session
-static int SESSION_NUM;
+static int SESSION_TRACKER;
+
 
 /*
  * function to print the current time to our log files
@@ -44,12 +45,12 @@ char* timestamp() {
 }
 
 /*
- * Function that takes care of logging with variadic function. When called
+ * Variadic function that takes care of logging. When called
  * behavior is returned to STDOUT + log file in /logs
  *
  * <---------- FIX DUMP TO LOG ---------->
  */
-void logging(char* file_name, int line, char *format, ...) {
+void logging (char* file_name, int line, char *format, ...) {
     va_list list;
     char *ptr_p, *ptr_s;
     int i;
@@ -57,7 +58,7 @@ void logging(char* file_name, int line, char *format, ...) {
     /* use this for checking if the file exists and appending or writing
      * accordingly
      *
-    if(SESSION_NUM > 0)
+    if(SESSION_TRACKER > 0)
       fp = fopen ("log.txt","a+");
     else
       fp = fopen ("log.txt","w");
@@ -73,14 +74,14 @@ void logging(char* file_name, int line, char *format, ...) {
     //log_out = fopen("logs/TEST-LOG-001.txt", "a+");
     // log_file = ("logs/TEST-LOG-110%s.txt", timestamp());
 
-    // buffer of 256
-    char buffer[0x100];
+    // character buffer of 256
+    // char buffer[0x100];
 
-    snprintf(buffer, sizeof(buffer), "logs/LOG-%s.txt", timestamp());
+    // snprintf(buffer, sizeof(buffer), "logs/LOG-%s.txt", timestamp());
 
-    log_out = fopen(buffer, "w+");
-    // log_out = fopen(test_file, "w+");
-    // fopen(log_out, "w+");
+    // log_out = fopen(buffer, "w+");
+    log_out = fopen("logs/TEST-LOG.txt", "a+");
+    //fopen(log_out, "w+");
 
     fprintf(log_out, "%s", timestamp());
     fprintf(log_out, "[%s][line: %d] ", file_name, line);
@@ -119,32 +120,5 @@ void logging(char* file_name, int line, char *format, ...) {
     fputc('\n', log_out);
     fclose(log_out);
 
-    /* leaving because I might use this still
-    va_list args_file, args_stdout;
-
-    fprintf(stderr, "LOG: ");
-
-    va_start(args_file, format);
-    va_start(args_stdout, format);
-
-    vfprintf(file_ptr, format, args_file);
-    vfprintf(stderr, format, args_stdout);
-
-    fflush(file_ptr);
-    fflush(stderr);
-
-    va_end(args_file);
-    va_end(args_stdout);
-
-    fprintf(stderr, "\n");
-    */
-    /*
-    va_list args;
-    fprintf( stderr, "LOG: " );
-    va_start( args, format );
-    vfprintf( stderr, format, args );
-    va_end( args );
-    fprintf( stderr, "\n" );
-    */
 }
 

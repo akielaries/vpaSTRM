@@ -3,9 +3,8 @@ Welcome to v1.x of vpaSTRM! So far it is very simple and limited but
 stay tuned for more!
 Previously a streaming applicatoin implemented in Python for streaming 
 RTSP based IP cameras, this version aims to start from the ground up 
-improving performance and usability and will be primarily focused on 
-implementations in C, C++ for computer vision related tasks 
-(openCV C API is outdated).
+improving performance + usability and will be primarily focused on 
+implementations in C, C++, and other languages close to the hardware.
 
 There a multiple branches in this repository. The stable one being v1.x,
 an will be updated on a rolling basis that will include some minor changes 
@@ -90,12 +89,14 @@ $ make clean
 ```
 
 # Contribute
-Checkout some of the documentation located in docs/ on how to submit a pull request, what it should contain,
-etc. All contributors are welcome and I hope this project is easily digestible. This project could use
-students, industry-based individuals, with knowledge of computer vision, systems/low-level programming, 
-knowledge and passion for image processing related algorithms, codecs, + more! This project has no limitations
-and welcomes all suggestions.
-
+Checkout some of the documentation located in docs/ on how to submit a pull 
+request, what it should contain, etc. All contributors are welcome and I hope 
+this project is easily digestible. This project could use students, 
+industry-based individuals, with knowledge of computer vision, 
+systems/low-level programming, knowledge and passion for image processing 
+related algorithms, codecs, + more! This project has no limitations and 
+welcomes all suggestions. vpaSTRM uses the K & R Stroustrup variant for code
+indentation style. 
 
 # Ideas
 Some cases of python for quick and dirty prototyping for basic
