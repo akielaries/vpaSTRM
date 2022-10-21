@@ -1,0 +1,7 @@
+vpaSTRM version 1.1.2 Copyright (c) 2022, Akiel Aries
+Light-weight computer vision software tool.
+
+USAGE: ./bin/run/vpaSTRM-110 -[flags] [[in-file opts]]...[out-file]
+-d      decode
+-h      help
+more coming soon...

@@ -8,7 +8,7 @@
 #define DECODE_H
 
 // driver for decoding our packets 
-int decode_call(int i_o, char *c_o[]);
+int decode_call(int argc, char *argv[]);
 
 // decodes our packets with calls to FFMPEG libs avformat and others
 int decode(AVPacket *p_packet, 

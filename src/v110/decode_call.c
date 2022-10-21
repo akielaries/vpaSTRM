@@ -28,6 +28,7 @@
  */
 #include "../../include/decode.h"
 #include "../../include/log.h"
+#include "../../include/usage.h"
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
 #include <sys/types.h>
@@ -48,7 +49,7 @@
  * WILL SERVE FINE FOR THE CURRENT VIDEO->PICTURE 
  * CONVERSION
  */
-int decode_call (int argc, const char *argv[]) {
+int decode_call (int argc, char *argv[]) {
     /* TODO */
     
     // time the function
@@ -72,7 +73,8 @@ int decode_call (int argc, const char *argv[]) {
     //    return -1;
     //}
     if (argv[2] == NULL) {
-        printf("ERR: SPECIFY VIDEO FILE\n");
+        printf("ERROR: SPECIFY VIDEO FILE\n");
+        usage_decode(argv[1]);
         return -1;
     }
 
@@ -303,9 +305,8 @@ int decode_call (int argc, const char *argv[]) {
     t = clock() - t;
     // return time in seconds
     double final_time = ((double)t) / CLOCKS_PER_SEC;
-    printf("Elapsed Time: %f seconds\n", final_time);
+    printf("Decoded in: %f seconds\n", final_time);
 
-    printf("response: %d", response);
     return 0;
 
 }

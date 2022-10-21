@@ -16,6 +16,7 @@ FILE *log_out;
 // keep track of session
 static int SESSION_TRACKER;
 
+
 /*
  * function to print the current time to our log files
  */
@@ -49,7 +50,7 @@ char* timestamp() {
  *
  * <---------- FIX DUMP TO LOG ---------->
  */
-void logging(char* file_name, int line, char *format, ...) {
+void logging (char* file_name, int line, char *format, ...) {
     va_list list;
     char *ptr_p, *ptr_s;
     int i;
@@ -73,14 +74,14 @@ void logging(char* file_name, int line, char *format, ...) {
     //log_out = fopen("logs/TEST-LOG-001.txt", "a+");
     // log_file = ("logs/TEST-LOG-110%s.txt", timestamp());
 
-    // buffer of 256
-    char buffer[0x100];
+    // character buffer of 256
+    // char buffer[0x100];
 
-    snprintf(buffer, sizeof(buffer), "logs/LOG-%s.txt", timestamp());
+    // snprintf(buffer, sizeof(buffer), "logs/LOG-%s.txt", timestamp());
 
-    log_out = fopen(buffer, "w+");
-    // log_out = fopen(test_file, "w+");
-    // fopen(log_out, "w+");
+    // log_out = fopen(buffer, "w+");
+    log_out = fopen("logs/TEST-LOG.txt", "a+");
+    //fopen(log_out, "w+");
 
     fprintf(log_out, "%s", timestamp());
     fprintf(log_out, "[%s][line: %d] ", file_name, line);

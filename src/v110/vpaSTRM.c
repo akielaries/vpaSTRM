@@ -18,6 +18,7 @@
  * import libs
  */
 #include "../../include/decode.h"
+#include "../../include/usage.h"
 #include "../../include/log.h"
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
@@ -31,29 +32,19 @@
 #include <string.h>
 #include <inttypes.h>
 
-/*
- * Function that returns usage of the software
- */
-void return_usage (const char *argv0) {
-    printf("vpaSTRM, a light-weight computer vision software tool.\n", argv0);
-    printf("USAGE: %s -[flags] [[in-file opts]]...[out-file]\n", argv0);
-    printf("PRINT FULL USAGE FLAGS HERE\n");
-
-    printf("\n");
-}
 
 /* <--------------------------------------------------------------------------->
- * MAIN DRIVER FOR vpaSTRM. ARGUMENTS ARE DEFINE HERE.
+ * MAIN DRIVER FOR vpaSTRM. ARGUMENTS ARE DEFINED HERE.
  * 
  * <--------------------------------------------------------------------------->
  */
 
 int main (int argc, char *argv[]) {
+    // initialize our logging for this session
+    //log_init();
+
     LOGGING("<-------------------------NEW-SESSION------------------------->");
      
-    // set our arguments to values for passing around
-    // int argc = 
-
     /*
      * omit '0' since the first argument first always be the same, './vpaSTRM'
      */
@@ -61,27 +52,37 @@ int main (int argc, char *argv[]) {
 
     // if there are no arguments passed in return the usage
     if (argv[1] == NULL) {
-        return_usage(argv[0]);
+        usage_overview(argv[0]);
     }
     // parse arguments 1 - N and compare argc val to a given string
     for (i; i < argc; i++) {
-    // if (argv[1] != NULL) {
-        
+
         // if the flag -d is passed in
-        if (strcmp(argv[1], "-d") && i + 1 < argc) {
-            
-            // flag for decoding
-            if (argv[2] != NULL) {
+        if (strcmp(argv[i], "-d") == 0) {
+            // increment argument
+            i++;
+
+            // if argv[2] is specified
+            if (argv[i] != NULL) {
                 // call decode driver
                 decode_call(argc, argv);
-
-                // save the argument to a value
-                // return it for other functions to use
+                i++;
+            }
+            // argv[2] not specified
+            else {
+                usage_decode(argv[1]);
             }
 
         }
+        // -h; help  
+        else if (strcmp(argv[i], "-h") == 0) {
+            usage_overview(argv[0]);
+            i++;
+        }
         else {
-            return_usage(argv[0]);
+            // if no arguments/flags are recognized, return usage
+            usage_overview(argv[0]);
+            return -1;
         }
     }
     return 0;
