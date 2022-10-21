@@ -1,0 +1,1 @@
+[Thu_Oct_20_23:23:16_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/v110/vpaSTRM.c][line: 52] <-------------------------NEWS-SESSION------------------------->

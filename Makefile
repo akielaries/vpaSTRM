@@ -40,7 +40,7 @@ all: compile run
 
 
 compile: 
-	${CC} ${CLFAGS} ${SRC} ${LFLAGS} -o ${STORE_BIN}
+	@${CC} ${CLFAGS} ${SRC} ${LFLAGS} -o ${STORE_BIN}
 
 
 run:

@@ -34,10 +34,10 @@
 /*
  * Function that returns usage of the software
  */
-void return_usage (void) {
-    printf("vpaSTRM, a light-weight computer vision software tool");
-    printf("USAGE: ./vpaSTRM -[flags] [[input-file options]]...[output-file]");
-    printf("PRINT FULL USAGE FLAGS HERE");
+void return_usage (const char *argv0) {
+    printf("vpaSTRM, a light-weight computer vision software tool.\n", argv0);
+    printf("USAGE: %s -[flags] [[in-file opts]]...[out-file]\n", argv0);
+    printf("PRINT FULL USAGE FLAGS HERE\n");
 
     printf("\n");
 }
@@ -49,7 +49,7 @@ void return_usage (void) {
  */
 
 int main (int argc, char *argv[]) {
-    LOGGING("<-------------------------NEWS-SESSION------------------------->");
+    LOGGING("<-------------------------NEW-SESSION------------------------->");
      
     // set our arguments to values for passing around
     // int argc = 
@@ -59,26 +59,21 @@ int main (int argc, char *argv[]) {
      */
     int i = 1;
 
+    // if there are no arguments passed in return the usage
+    if (argv[1] == NULL) {
+        return_usage(argv[0]);
+    }
     // parse arguments 1 - N and compare argc val to a given string
     for (i; i < argc; i++) {
-        //if (!strcmp())
-        /*
-         * conditionals for our args/flags
-         */
+    // if (argv[1] != NULL) {
         
-        // if there is no argument passed in return the usage
-        if (argv[i] == NULL) {
-            return_usage();
-            return -1;
-        }
-
         // if the flag -d is passed in
-        if (strcmp(argv[1], "-d")) {
+        if (strcmp(argv[1], "-d") && i + 1 < argc) {
             
             // flag for decoding
             if (argv[2] != NULL) {
                 // call decode driver
-                decode_call(argc, argv[2]);
+                decode_call(argc, argv);
 
                 // save the argument to a value
                 // return it for other functions to use
@@ -86,7 +81,7 @@ int main (int argc, char *argv[]) {
 
         }
         else {
-            return_usage();
+            return_usage(argv[0]);
         }
     }
     return 0;

@@ -48,7 +48,7 @@
  * WILL SERVE FINE FOR THE CURRENT VIDEO->PICTURE 
  * CONVERSION
  */
-int decode_call (int i_o, char *c_o[]) {
+int decode_call (int argc, const char *argv[]) {
     /* TODO */
     
     // time the function
@@ -71,7 +71,7 @@ int decode_call (int i_o, char *c_o[]) {
     //    printf("ERR: SPECIFY VIDEO FILE.\n");
     //    return -1;
     //}
-    if (c_o[2] == NULL) {
+    if (argv[2] == NULL) {
         printf("ERR: SPECIFY VIDEO FILE\n");
         return -1;
     }
@@ -91,7 +91,7 @@ int decode_call (int i_o, char *c_o[]) {
     }
 
     LOGGING("opening the input file (%s) and loading format (container) header",
-          c_o[2]);
+          argv[2]);
 
     /*
      * Open the file and read its header. The codecs are not opened.
@@ -103,7 +103,7 @@ int decode_call (int i_o, char *c_o[]) {
      * http://ffmpeg.org/doxygen/trunk/group__lavf__decoding.
      * html#ga31d601155e9035d5b0e7efedc894ee49
     */
-    if (avformat_open_input(&pFormatContext, c_o[2], NULL, NULL) != 0) {
+    if (avformat_open_input(&pFormatContext, argv[2], NULL, NULL) != 0) {
         LOGGING("ERROR could not open the file");
         /* <-- 😤 --> */ 
         return 17;
