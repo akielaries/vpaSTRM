@@ -14,7 +14,7 @@
 FILE *log_out;
 
 // keep track of session
-static int SESSION_NUM;
+static int SESSION_TRACKER;
 
 /*
  * function to print the current time to our log files
@@ -44,7 +44,7 @@ char* timestamp() {
 }
 
 /*
- * Function that takes care of logging with variadic function. When called
+ * Variadic function that takes care of logging. When called
  * behavior is returned to STDOUT + log file in /logs
  *
  * <---------- FIX DUMP TO LOG ---------->
@@ -57,7 +57,7 @@ void logging(char* file_name, int line, char *format, ...) {
     /* use this for checking if the file exists and appending or writing
      * accordingly
      *
-    if(SESSION_NUM > 0)
+    if(SESSION_TRACKER > 0)
       fp = fopen ("log.txt","a+");
     else
       fp = fopen ("log.txt","w");
@@ -119,32 +119,5 @@ void logging(char* file_name, int line, char *format, ...) {
     fputc('\n', log_out);
     fclose(log_out);
 
-    /* leaving because I might use this still
-    va_list args_file, args_stdout;
-
-    fprintf(stderr, "LOG: ");
-
-    va_start(args_file, format);
-    va_start(args_stdout, format);
-
-    vfprintf(file_ptr, format, args_file);
-    vfprintf(stderr, format, args_stdout);
-
-    fflush(file_ptr);
-    fflush(stderr);
-
-    va_end(args_file);
-    va_end(args_stdout);
-
-    fprintf(stderr, "\n");
-    */
-    /*
-    va_list args;
-    fprintf( stderr, "LOG: " );
-    va_start( args, format );
-    vfprintf( stderr, format, args );
-    va_end( args );
-    fprintf( stderr, "\n" );
-    */
 }
 

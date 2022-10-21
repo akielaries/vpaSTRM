@@ -1,12 +1,4 @@
-/*
- * <--------------------------------------------------------------------------->
- *
- * MAIN DRIVER FUNCTION FOR THIS PROJECT
- *
- * INCLUDE LICENSING DETAILS HERE
- *      - BE SURE TO LOOK AT FFMPEG'S DOCS AND CROSS REFERENCE LICENSING WITH
- *      OTHER LIBS AND DEPENDENCIES USED
- *
+/* <--------------------------------------------------------------------------->
  * F : format
  * D : duration
  * R : resolution
@@ -28,7 +20,7 @@
  * Packet   - are the data (kind of slices of the stream data) to be decoded 
  *          as raw frames.
  * Frame    - a decoded raw frame (to be encoded or filtered).
- * <--------------------------------------------------------------------------->
+ * <---------------------------------------------------------------------------> 
  */
 
 /*
@@ -56,7 +48,7 @@
  * WILL SERVE FINE FOR THE CURRENT VIDEO->PICTURE 
  * CONVERSION
  */
-int main(int argc, char *argv[]) {
+int decode_call (int i_o, char *c_o[]) {
     /* TODO */
     
     // time the function
@@ -79,7 +71,7 @@ int main(int argc, char *argv[]) {
     //    printf("ERR: SPECIFY VIDEO FILE.\n");
     //    return -1;
     //}
-    if (argv[1] == NULL) {
+    if (c_o[2] == NULL) {
         printf("ERR: SPECIFY VIDEO FILE\n");
         return -1;
     }
@@ -99,7 +91,7 @@ int main(int argc, char *argv[]) {
     }
 
     LOGGING("opening the input file (%s) and loading format (container) header",
-          argv[1]);
+          c_o[2]);
 
     /*
      * Open the file and read its header. The codecs are not opened.
@@ -111,7 +103,7 @@ int main(int argc, char *argv[]) {
      * http://ffmpeg.org/doxygen/trunk/group__lavf__decoding.
      * html#ga31d601155e9035d5b0e7efedc894ee49
     */
-    if (avformat_open_input(&pFormatContext, argv[1], NULL, NULL) != 0) {
+    if (avformat_open_input(&pFormatContext, c_o[2], NULL, NULL) != 0) {
         LOGGING("ERROR could not open the file");
         /* <-- 😤 --> */ 
         return 17;
@@ -281,7 +273,7 @@ int main(int argc, char *argv[]) {
         // if it's the video stream
         if (pPacket->stream_index == video_stream_index) {
             LOGGING("AVPacket->pts %" PRId64, pPacket->pts);
-            response = decode_packet(pPacket, pCodecContext, pFrame);
+            response = decode(pPacket, pCodecContext, pFrame);
             
             if (response < 0) {
                 break;

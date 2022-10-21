@@ -14,9 +14,9 @@
 /*
  * DESCRIBE THIS FUNCTION
  */
-int decode_packet(AVPacket *p_packet,
-                AVCodecContext *p_codec,
-                AVFrame *p_frame) {
+int decode(AVPacket *p_packet,
+            AVCodecContext *p_codec,
+            AVFrame *p_frame) {
     /*
      * Supply raw packet data as input to a decoder
      * https://ffmpeg.org/doxygen/trunk/group__lavc__decoding.html
