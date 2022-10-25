@@ -63,7 +63,7 @@ $ git clone git@github.com:akielaries/vpaSTRM.git
 $ cd vpaSTRM
 
 # Run the test examples found in cv-tests/input to verify install
-$ ./vpaSTRM.sh cv-data/input/small_bunny_1080p_60fps.mp4
+$ ./vpaSTRM.sh -d cv-data/input/small_bunny_1080p_60fps.mp4
 ```
 Enter the vpaSTRM folder and run the software against video file of any length and expect
 a surplus of PGM (Portable Gray Map) image files. v1.0.0 has limited functionality but
