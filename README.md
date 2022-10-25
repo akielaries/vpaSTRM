@@ -1,7 +1,7 @@
 # Introduction
 Welcome to v1.1.2 of vpaSTRM! So far it is very simple and limited but 
 stay tuned for more!
-Previously a streaming applicatoin implemented in Python for streaming 
+Previously a streaming application implemented in Python for viewing 
 RTSP based IP cameras, this version aims to start from the ground up 
 improving performance + usability and will be primarily focused on 
 implementations in C, C++, and other languages close to the hardware.
