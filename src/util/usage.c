@@ -19,6 +19,7 @@ void usage_overview (const char *argv0) {
     printf("-h      help\n");
     printf("more coming soon...\n");
 
+    printf("\n");
     /*
      * printf("-o      output\n");
      * printf("-e      encode\n");
@@ -32,9 +33,8 @@ void usage_overview (const char *argv0) {
  */
 void usage_decode (const char *argv1) {
     printf("-d, DECODE A VIDEO FILE TO A SERIES OF PICTURES.\n");
-    printf("USAGE: ./vpaSTRM -d video.mp4\n");
+    printf("USAGE: ./vpaSTRM -d [in-file]\n");
 
     printf("\n");
 }
-
 

@@ -16,7 +16,8 @@
  */
 int decode(AVPacket *p_packet,
             AVCodecContext *p_codec,
-            AVFrame *p_frame) {
+            AVFrame *p_frame, 
+            char *argv[]) {
     /*
      * Supply raw packet data as input to a decoder
      * https://ffmpeg.org/doxygen/trunk/group__lavc__decoding.html
@@ -62,12 +63,23 @@ int decode(AVPacket *p_packet,
             char frame_file[1024];
             
             /* 
-             * our saved file name should be from the POV of the root dir which the
-             * makefile and shell script to compile/run this project are located
-             *
+             * our saved file name should be from the POV of the root dir which 
+             * the makefile and shell script to compile/run this project are 
+             * located
+             * 
              * change the below snprintf to allow for change based on flags. 
              * this will piggyback off of the flag deciding what format to save
              * the decoded files to. pgm, ppm, jpg, etc...
+             */
+            /*--------------------------------------------------------------------->
+             * | Pick up here for dealing with -o + -f arguments. 
+             * |
+             * | -o deals with the location where we will save to 
+             * | -f deals with the format of our saved file.
+             * |
+             * | Think about moving ln 84 into the wfmt file in the save_pgm file
+             * |
+             *--------------------------------------------------------------------->
              */
             snprintf(frame_file, sizeof(frame_file), 
                     "cv-data/output/tests/%s-%d.pgm",
@@ -81,12 +93,16 @@ int decode(AVPacket *p_packet,
             if (p_frame->format != AV_PIX_FMT_YUV420P) {
                 LOGGING("WARNING: THE GENERATED FILE MAY NOT BE GRAYSCALE BUT THE 'R' COMPONENT IF THE FILE FORMAT IS RBG!");
             }
-            // save a grayscale frame into a .pgm file
-            save_pgm(p_frame->data[0], 
-                    p_frame->linesize[0], 
-                    p_frame->width, 
-                    p_frame->height, 
-                    frame_file);
+
+            // if specified output file is pgm
+            //if (strcmp(argv[4], "pgm") == o) {
+                // save a grayscale frame into a .pgm file
+                save_pgm(p_frame->data[0], 
+                        p_frame->linesize[0], 
+                        p_frame->width, 
+                        p_frame->height, 
+                        frame_file);
+            //}
         }
     }
     return 0;

@@ -10,7 +10,7 @@ make compile
 
 # run bin, display to console AND write to .txt file
 #./bin/run/convert-001 "$@" | tee logs/STDOUT-001.txt
-./bin/run/vpaSTRM-110 "$@" 
+./bin/run/vpaSTRM-1x "$@" 
 
 # run bin, display stderr and stdout to seperate files
 
