@@ -65,7 +65,7 @@ $ cd vpaSTRM
 $ ./vpaSTRM.sh -d cv-data/input/small_bunny_1080p_60fps.mp4
 ```
 Enter the vpaSTRM folder and run the software against video files of any length and expect
-a surplus of PGM (Portable Gray Map) image files. v1.0.0 has limited functionality but
+a surplus of PGM (Portable Gray Map) image files. v1.x has limited functionality but
 future versions will build off of this version as it serves as the "core."
 
 
