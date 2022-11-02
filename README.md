@@ -11,7 +11,6 @@ and will be updated on a rolling basis that will include some minor changes
 and feature improvements as well as large changes including brand new features, 
 new functionality and of course more fun algorithms to play with :).
 
-
 > :warning: *For this version the biggest implementation was the use of some command line
 arguments including flags. For this piece of the software and this specific version
 I had only implemented the `-d` flag for decoding videos into picture frames. For
@@ -21,8 +20,7 @@ v1.1.3 will hopefully provide a more clear solution for parsing command line arg
 along with some new functionalities.*
 
 ```
-v1.x : stable, updated on a volatile basis. 
-v1.0.0 : stable, archived release. Major versions will have their own branch. 
+v1.x : stable, most recent release, updated on a volatile basis. 
 v1.x-dev : development branch, updated frequently, often left in broken state. 
 ```
 
