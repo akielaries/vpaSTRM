@@ -59,7 +59,7 @@ $ sudo apt-get update -y
 $ sudo apt-get install -y libavcodec-dev
 
 # install libavformat
-sudo apt-get install -y libavformat-dev
+$ sudo apt-get install -y libavformat-dev
 
 # OR install all libav related libs, comes with FFMPEG (what this project heavily relies on)
 $ sudo apt-get install ffmpeg

@@ -10,9 +10,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
+    - name: Configure
       uses: actions/checkout@v2.0.0
-    - name: Build project
+      run: sudo apt-get install -y libavcodec-dev libavformat-dev
+      
+    - name: Build
       uses: skx/github-action-build@master
       with: 
         builder: ./vpaSTRM.sh
+
