@@ -15,5 +15,5 @@ jobs:
       
     - name: Build
       shell: bash
-      run: .github/build.sh
+      run: vpaSTRM.sh
 
