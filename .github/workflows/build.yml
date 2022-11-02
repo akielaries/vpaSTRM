@@ -7,11 +7,12 @@ on:
     branches: [ v1.x, v1.x-dev ]
 
 jobs:
-  ubuntu-build:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2.0.0
     - name: Build project
-      uses: nicledomaS/cmake_build_action@v1.4
-    run: ./vpaSTRM
+      uses: skx/github-action-build@master
+      with: 
+        builder: ./vpaSTRM
