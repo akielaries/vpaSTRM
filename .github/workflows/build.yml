@@ -14,8 +14,6 @@ jobs:
       run: sudo apt-get install -y libavcodec-dev libavformat-dev
       
     - name: Build
-      uses: skx/github-action-build@master
       shell: bash
-      with: 
-        builder: .github/build
+      run: .github/build.sh
 
