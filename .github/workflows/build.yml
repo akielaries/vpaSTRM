@@ -14,8 +14,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Configure
-        run: sudo apt-get install ffmpeg libav-tools libavcodec-dev libavcodec57 libavdevice-dev libavdevice57 libavfilter-dev libavfilter6 libavformat-dev libavformat57 libavresample-dev libavresample3 libavutil-dev libavutil55 libpostproc-dev libpostproc54 libswresample-dev libswresample2 libswscale-dev libswscale4
-
+        run: sudo apt-get install ffmpeg
 
       - name: Build
         run: ./vpaSTRM.sh   
