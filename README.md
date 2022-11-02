@@ -1,6 +1,6 @@
 # Introduction
 Welcome to v1.0.2 of vpaSTRM! It is fair to say the tool is in a beta 
-stageas it is very simple and limited but stay tuned for more! 
+stages as it is very simple and limited but stay tuned for more! 
 Previously a streaming application implemented in Python for viewing 
 RTSP based IP cameras, this version aims to start from the ground up 
 improving performance + usability and will be primarily focused on 
