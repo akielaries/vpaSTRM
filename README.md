@@ -78,6 +78,18 @@ Enter the vpaSTRM folder and run the software against video files of any length 
 a surplus of PGM (Portable Gray Map) image files. v1.x has limited functionality but
 future versions will build off of this version as it serves as the "core."
 
+vpaSTRM can also be ran in a Docker container although this is primarily for testing 
+purposes when pushing changes upstream. 
+```
+# build the image
+$ docker build -t vpastrm .
+# view images
+$ docker images
+# run the container
+$ docker run -d vpastrm
+# view containers
+$ docker ps
+```
 
 # Clean Up
 For now I recommend running this in the root directory of this package. This allows for easier clean up

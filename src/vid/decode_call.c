@@ -203,7 +203,7 @@ int decode_call(int argc, char *argv[]) {
         else if (pLocalCodecParameters->codec_type == AVMEDIA_TYPE_AUDIO) {
             LOGGING("Audio Codec: %d channels, sample rate %d", 
                     // pLocalCodecParameters->channels, 
-                    pLocalCodecParameters->channel_layout,
+                    pLocalCodecParameters->ch_layout,
                     pLocalCodecParameters->sample_rate);
         }
         

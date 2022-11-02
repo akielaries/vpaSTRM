@@ -8,15 +8,10 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: initalize github repo
         uses: actions/checkout@v3
 
-      - name: Configure
-        run: sudo apt-get update && sudo apt-get install -y libavcodec-dev libavformat-dev libswscale-dev
-
       - name: Build
-        run: ./vpaSTRM.sh   
-        shell: bash
-        
+        run: docker build . --file Dockerfile 
