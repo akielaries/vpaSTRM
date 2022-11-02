@@ -10,10 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Configure
-      run: sudo apt-get install -y libavcodec-dev libavformat-dev
-      
-    - name: Build
-      shell: bash
-      run: ./vpaSTRM.sh
+      - name: Configure
+        run: sudo apt-get install -y libavcodec-dev libavformat-dev
 
+      - name: Build
+        run: ./.github/build.sh
+        shell: bash
+        
