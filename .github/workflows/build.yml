@@ -15,7 +15,6 @@ jobs:
 
       - name: Build
         run: |
-          ls && 
-          cd ../../../../ && ls
+          ls  
         shell: bash
         
