@@ -49,7 +49,7 @@
  * WILL SERVE FINE FOR THE CURRENT VIDEO->PICTURE 
  * CONVERSION
  */
-int decode_call (int argc, char *argv[]) {
+int decode_call(int argc, char *argv[]) {
     /* TODO */
     
     // time the function
@@ -275,7 +275,7 @@ int decode_call (int argc, char *argv[]) {
         // if it's the video stream
         if (pPacket->stream_index == video_stream_index) {
             LOGGING("AVPacket->pts %" PRId64, pPacket->pts);
-            response = decode(pPacket, pCodecContext, pFrame);
+            response = decode(pPacket, pCodecContext, pFrame, argv);
             
             if (response < 0) {
                 break;

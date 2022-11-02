@@ -1,14 +1,24 @@
 # Introduction
-Welcome to v1.1.2 of vpaSTRM! So far it is very simple and limited but 
-stay tuned for more! Previously a streaming application implemented in 
-Python for viewing RTSP based IP cameras, this version aims to start 
-from the ground up improving performance + usability and will be primarily 
-focused on implementations in C, C++, and other languages close to the hardware.
+Welcome to v1.1.2 of vpaSTRM! It is fair to say the tool is in a beta 
+stageas it is very simple and limited but stay tuned for more! 
+Previously a streaming application implemented in Python for viewing 
+RTSP based IP cameras, this version aims to start from the ground up 
+improving performance + usability and will be primarily focused on 
+implementations in C, C++, and other languages close to the hardware.
 
 There are multiple branches in this repository. The stable one being v1.x, 
 and will be updated on a rolling basis that will include some minor changes 
 and feature improvements as well as large changes including brand new features, 
 new functionality and of course more fun algorithms to play with :).
+
+
+> :warning: *For this version the biggest implementation was the use of some command line
+arguments including flags. For this piece of the software and this specific version
+I had only implemented the `-d` flag for decoding videos into picture frames. For
+this specific functionality I highly recommend that you only pass in a valid video 
+file as I have not implemented a failsafe for invalid arguments for this flag. 
+v1.1.3 will hopefully provide a more clear solution for parsing command line arguments
+along with some new functionalities.*
 
 ```
 v1.x : stable, updated on a volatile basis. 
@@ -49,7 +59,7 @@ $ sudo apt-get update -y
 $ sudo apt-get install -y libavcodec-dev
 
 # install libavformat
-sudo apt-get install -y libavformat-dev
+$ sudo apt-get install -y libavformat-dev
 
 # OR install all libav related libs, comes with FFMPEG (what this project heavily relies on)
 $ sudo apt-get install ffmpeg
@@ -65,9 +75,21 @@ $ cd vpaSTRM
 $ ./vpaSTRM.sh -d cv-data/input/small_bunny_1080p_60fps.mp4
 ```
 Enter the vpaSTRM folder and run the software against video files of any length and expect
-a surplus of PGM (Portable Gray Map) image files. v1.0.0 has limited functionality but
+a surplus of PGM (Portable Gray Map) image files. v1.x has limited functionality but
 future versions will build off of this version as it serves as the "core."
 
+vpaSTRM can also be ran in a Docker container although this is primarily for testing 
+purposes when pushing changes upstream. 
+```
+# build the image
+$ docker build -t vpastrm .
+# view images
+$ docker images
+# run the container
+$ docker run -d vpastrm
+# view containers
+$ docker ps
+```
 
 # Clean Up
 For now I recommend running this in the root directory of this package. This allows for easier clean up
@@ -94,8 +116,9 @@ this project is easily digestible. This project could use students,
 industry-based individuals, with knowledge of computer vision, 
 systems/low-level programming, knowledge and passion for image processing 
 related algorithms, codecs, + more! This project has no limitations and 
-welcomes all suggestions. vpaSTRM uses the K & R Stroustrup variant for code
-indentation style. 
+welcomes all suggestions. Please view the documentation for examples of
+the coding style adopted for this project. 
+
 
 # Ideas
 Some cases of python for quick and dirty prototyping for basic

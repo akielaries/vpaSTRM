@@ -748,7 +748,7 @@ void FFT(int n,
     }
     //Divide through n if it isn't the IDFT
 
-    if(!inverse){
+    if(!inverse) {
         for(int i = 0; i < n; i++) { 
             GRe[i] /= n;
             GIm[i] /= n;
@@ -799,3 +799,4 @@ void calculateAmp(int n,
         gAmp[x] = sqrt(gRe[x] * gRe[x] + gIm[x] * gIm[x]);
     }
 }
+

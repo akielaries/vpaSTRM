@@ -1,0 +1,17 @@
+name: Build vpaSTRM
+
+on:
+  push:
+    branches: [ v1.x, v1.x-dev ]
+  pull_request:
+    branches: [ v1.x, v1.x-dev ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: initalize github repo
+        uses: actions/checkout@v3
+
+      - name: Build
+        run: docker build . --file Dockerfile 

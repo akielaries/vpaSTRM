@@ -13,7 +13,7 @@ CFLAGS 		= -Wall -Wextra -g
 LFLAGS		= -lavcodec -lavformat -lswresample -lswscale -lavutil
 
 SRCDIR		= $(PROJDIR)/src/
-SRC 		= $(shell find $(PROJDIR)/src/v110 -name '*.c')
+SRC 		= $(shell find $(PROJDIR)/src -name '*.c')
 #SRC			= $(SRCDIR)/fdrad-001_LOGGER.c
 LIBDIR		= $(PROJDIR)/include
 
@@ -30,7 +30,7 @@ BIN			= $(OBJDIR)/run
 BUILDDIR 	= $(PROJDIR)/build
 
 # compiled binary
-TARGET 		= vpaSTRM-110
+TARGET 		= vpaSTRM-1x
 # store compiled binary in /bin/run
 STORE_BIN	= $(addprefix $(BIN)/, $(TARGET))
 LOG_FILES 	= $(shell find $(PROJDIR)/logs/ -name '*.txt')
@@ -46,7 +46,7 @@ compile:
 run:
 	# use var as an argument parser type function for our
 	# compile-run.sh script
-	./bin/run/convert-001 ${var}
+	./bin/run/${TARGET} ${var}
 
 
 clean:
