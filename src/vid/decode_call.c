@@ -49,7 +49,7 @@
  * WILL SERVE FINE FOR THE CURRENT VIDEO->PICTURE 
  * CONVERSION
  */
-int decode_call (int argc, char *argv[]) {
+int decode_call(int argc, char *argv[]) {
     /* TODO */
     
     // time the function

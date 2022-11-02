@@ -99,14 +99,14 @@ void logging (char* file_name, int line, char *format, ...) {
                 // string
                 case 's':
                     ptr_s = va_arg(list, char *);
-                    fprintf(log_out, "%s DBG0", ptr_s);
+                    fprintf(log_out, "%s", ptr_s);
                     // sprintf(log_out, "%s", ptr_r);
                     continue;
 
                 // integer
                 case 'd':
                     i = va_arg(list, int);
-                    fprintf(log_out, "%d DBG1", i);
+                    fprintf(log_out, "%d", i);
                     // sprintf(log_out, "%d", switch_arg);
                     continue;
 

@@ -44,16 +44,9 @@
  *
  * <--------------------------------------------------------------------------->
  */
-int main (int argc, char *argv[]) {
-    // initialize our logging for this session
-    //log_init();
-
+int main(int argc, char *argv[]) {
     LOGGING("<-------------------------NEW-SESSION------------------------->");
     
-    // accepted file extensions
-
-
-
     /*
      * omit '0' since the first argument will always be the same, './vpaSTRM'
      */
@@ -61,7 +54,7 @@ int main (int argc, char *argv[]) {
 
     // if there are no arguments passed in return the usage
     if (argv[1] == NULL) {
-        usage_overview(argv[0]);
+        usage_overview();
     }
    
     // parse arguments 1 - N and compare argc val to a given string
@@ -73,55 +66,28 @@ int main (int argc, char *argv[]) {
             i++;
         
             // if argv[2] is specified
-            /*if (argv[i] != NULL) {
+            if (argv[i] != NULL) {
                 // call decode driver
                 decode_call(argc, argv);
                 i++;
-            }*/
-
-            // if argv[2] matches a specified file format
-            if (argv[i] != NULL) {
-                // increment arg. argv[2]->argv[3]
-                i++;
-
-                // if argv[3] is specified
-                if (argv[i] != NULL) {
-                    // if flag -o is pass in as argv[3]
-                    if (strcmp(argv[i], "-o") == 0) {
-                        printf("CALLED FLAG -o\n");
-                    }
-                }
-                //else if (argv[i] == NULL)
-                else {
-                    printf("Error. Please specify an output format\n");
-                }
             }
-            
+
             // argv[2] not specified
             else {
                 printf("Error. Check arguments.\n");
-                usage_decode(argv[1]);
+                usage_decode();
             }
         }
-
-        /*
-        // -e; encode
-        else if (strcmp(argv[i], "-e") == 0) {
-            i++;
-            if (argv[i] != NULL) {
-                // encode driver
-            }
-        }*/
         
         // -h; help  
         else if (strcmp(argv[i], "-h") == 0) {
-            usage_overview(argv[0]);
+            usage_overview();
             i++;
         }
         
         else {
             // if no arguments/flags are recognized, return usage
-            usage_overview(argv[0]);
+            usage_overview();
             return -1;
         }
     }

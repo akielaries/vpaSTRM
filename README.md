@@ -1,14 +1,24 @@
 # Introduction
-Welcome to v1.1.2 of vpaSTRM! So far it is very simple and limited but 
-stay tuned for more! Previously a streaming application implemented in 
-Python for viewing RTSP based IP cameras, this version aims to start 
-from the ground up improving performance + usability and will be primarily 
-focused on implementations in C, C++, and other languages close to the hardware.
+Welcome to v1.1.2 of vpaSTRM! It is fair to say the tool is in a beta 
+stageas it is very simple and limited but stay tuned for more! 
+Previously a streaming application implemented in Python for viewing 
+RTSP based IP cameras, this version aims to start from the ground up 
+improving performance + usability and will be primarily focused on 
+implementations in C, C++, and other languages close to the hardware.
 
 There are multiple branches in this repository. The stable one being v1.x, 
 and will be updated on a rolling basis that will include some minor changes 
 and feature improvements as well as large changes including brand new features, 
 new functionality and of course more fun algorithms to play with :).
+
+
+> :warning: *For this version the biggest implementation was the use of some command line
+arguments including flags. For this piece of the software and this specific version
+I had only implemented the `-d` flag for decoding videos into picture frames. For
+this specific functionality I highly recommend that you only pass in a valid video 
+file as I have not implemented a failsafe for invalid arguments for this flag. 
+v1.1.3 will hopefully provide a more clear solution for parsing command line arguments
+along with some new functionalities.*
 
 ```
 v1.x : stable, updated on a volatile basis. 
