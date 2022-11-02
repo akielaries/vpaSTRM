@@ -17,6 +17,6 @@ jobs:
         run: sudo apt-get install -y libavcodec-dev libavformat-dev
 
       - name: Build
-        run: ./vpaSTRM   
+        run: ./vpaSTRM.sh   
         shell: bash
         
