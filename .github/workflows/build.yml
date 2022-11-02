@@ -15,5 +15,5 @@ jobs:
       
     - name: Build
       shell: bash
-      run: vpaSTRM.sh
+      run: ./vpaSTRM.sh
 
