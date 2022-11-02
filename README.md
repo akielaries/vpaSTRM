@@ -94,8 +94,9 @@ this project is easily digestible. This project could use students,
 industry-based individuals, with knowledge of computer vision, 
 systems/low-level programming, knowledge and passion for image processing 
 related algorithms, codecs, + more! This project has no limitations and 
-welcomes all suggestions. vpaSTRM uses the K & R Stroustrup variant for code
-indentation style. 
+welcomes all suggestions. Please view the documentation for examples of
+the coding style adopted for this project. 
+
 
 # Ideas
 Some cases of python for quick and dirty prototyping for basic
