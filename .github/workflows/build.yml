@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Configure
-        run: sudo apt-get install -y libavcodec-dev=7:5.1.2-1 libavformat-dev=7:5.1.2-1
+        run: sudo apt-get install -y libavcodec-dev libavformat-dev
 
       - name: Build
         run: ./vpaSTRM.sh   
