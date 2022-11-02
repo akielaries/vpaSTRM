@@ -15,6 +15,7 @@ jobs:
       
     - name: Build
       uses: skx/github-action-build@master
+      shell: bash
       with: 
         builder: .github/build
 
