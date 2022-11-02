@@ -16,5 +16,5 @@ jobs:
       - name: Build
         run: |
           cd ../vpaSTRM && ls 
-        shell: bash
+        shell: cmd
         
