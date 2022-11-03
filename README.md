@@ -136,3 +136,7 @@ implementations!
 - Py libs for GUI implementation: PyQt, Tkinter, etc
 - C libs for GUI implementation: GTK, Ncurses
 - Optional functionalities using GStreamer
+
+# Acknowledgments
+* FFMPEG
+
