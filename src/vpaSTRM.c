@@ -20,6 +20,7 @@
 #include "../include/decode.h"
 #include "../include/usage.h"
 #include "../include/log.h"
+#include "../include/util.h"
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
 #include <sys/types.h>
@@ -35,12 +36,12 @@
 
 /* <--------------------------------------------------------------------------->
  * MAIN DRIVER FOR vpaSTRM. ARGUMENTS ARE DEFINED HERE.
- *  -a  (!WKG)  = amount  | amount of frames we want converted
+ *  TODO -a  (!WKG)  = amount  | amount of frames we want converted
  *  -d  (WKG)   = decode  | convert video file into pictures 
- *  -e  (!WKG)  = encode  | convert pictures into a video file
- *  -f  (!WKG)  = format  | select file output type
+ *  TODO -e  (!WKG)  = encode  | convert pictures into a video file
+ *  TODO -f  (!WKG)  = format  | select file output type
  *  -h  (WKG)   = help    | displays usage
- *  -o  (!WKG)  = output  | select output
+ *  TODO -o  (!WKG)  = output  | select output
  *
  * <--------------------------------------------------------------------------->
  */
@@ -50,47 +51,77 @@ int main(int argc, char *argv[]) {
     /*
      * omit '0' since the first argument will always be the same, './vpaSTRM'
      */
-    int i = 1;
+    
+    extern char *optarg;
+    extern int optind;
+    // flags
+    int f_flag = 0;
 
-    // if there are no arguments passed in return the usage
+    // option parser
+    int opt;
+
     if (argv[1] == NULL) {
         usage_overview();
+        exit(1);
     }
-   
-    // parse arguments 1 - N and compare argc val to a given string
-    for (i; i < argc; i++) {
 
-        // if flag -d is passed in as argv[1]
-        if (strcmp(argv[i], "-d") == 0) {
-            // increment arg. argv[1]->argv[2]
-            i++;
-        
-            // if argv[2] is specified
-            if (argv[i] != NULL) {
-                // call decode driver
-                decode_call(argc, argv);
-                i++;
-            }
+    while ((opt = getopt(argc, argv, "if:lr")) != -1) {
+        switch(opt) {
+            case 'i':
+            case 'l':
+            case 'r':
+                printf("OPTION PASSED IN: %c \n", opt);
+                break;
 
-            // argv[2] not specified
-            else {
-                printf("Error. Check arguments.\n");
-                usage_decode();
-            }
-        }
-        
-        // -h; help  
-        else if (strcmp(argv[i], "-h") == 0) {
-            usage_overview();
-            i++;
-        }
-        
-        else {
-            // if no arguments/flags are recognized, return usage
-            usage_overview();
-            return -1;
+            case 'f':
+                f_flag = 1;
+                printf("FILENAME: %s\n", optarg);
+                break;
+
+            case ':':
+                printf("REQUIRED OPTION: %c \n", optopt);
+                break;
+
+            case '?':
+                red();
+                printf("ERR: Unknown option: %c\n", optopt);
+                reset_color();
+                usage_overview();
+                break;
+            
+            default:
+                printf("Unknown option. %c \n", opt);
+                usage_overview();
+                break;
         }
     }
-    return 0;
+
+
+    // mandatory f flag
+    //if (f_flag == 0) {
+    //    printf("Missing filename\n");
+    //    exit(1);
+    //}
+
+    //else {
+    //    usage_overview();
+    //    exit(1);
+    //}
+    
+    // parsing extra arguments
+    if (optind < argc) {
+        for (; optind < argc; optind++) {
+            red();
+            printf("ERR: Invalid/Extra arguments detected: %s\n", argv[optind]);
+            reset_color();
+            usage_overview();
+        }
+    }
+    else {
+        return 0;
+    }
+
+    // return 0;
+    exit(0);
 }
 

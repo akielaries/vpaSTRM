@@ -30,7 +30,7 @@ BIN			= $(OBJDIR)/run
 BUILDDIR 	= $(PROJDIR)/build
 
 # compiled binary
-TARGET 		= vpaSTRM-1x
+TARGET 		= vpaSTRM-103
 # store compiled binary in /bin/run
 STORE_BIN	= $(addprefix $(BIN)/, $(TARGET))
 LOG_FILES 	= $(shell find $(PROJDIR)/logs/ -name '*.txt')
