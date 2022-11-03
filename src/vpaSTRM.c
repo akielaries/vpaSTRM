@@ -28,6 +28,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <stdbool.h>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <string.h>
@@ -52,10 +53,12 @@ int main(int argc, char *argv[]) {
      * omit '0' since the first argument will always be the same, './vpaSTRM'
      */
     
+    /*<------------------------- TODO ------------------------->*/
     extern char *optarg;
     extern int optind;
     // flags
-    int f_flag = 0;
+    bool null_flag = false, err = false; 
+    bool f_flag = false, d_flag = false;
 
     // option parser
     int opt;
@@ -65,48 +68,93 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
 
-    while ((opt = getopt(argc, argv, "if:lr")) != -1) {
+    /*
+     * For defining and parsing flags & args, the workflow is to look for 
+     * flags(switch/case), then do some work on them based of the 
+     * entries (conditionals). 
+     * 
+     * The syntax for defining a valid string of flags with getopt can be
+     * tricky. The idea is to define which flags require arguments before/after
+     *      - Any flag that requires a parameter with it is suffixed by ':'
+     *          * for example: in the string "df:mps:" flags 'f' and 's' 
+     *          require parametars after being called
+     */
+    while ((opt = getopt(argc, argv, ":d:f:hio:lr")) != -1) {
         switch(opt) {
             case 'i':
+                printf("CALLED: %c\n", opt);
+                break;
+
             case 'l':
+                printf("CALLED: %c\n", opt);
+                break;
+
             case 'r':
                 printf("OPTION PASSED IN: %c \n", opt);
                 break;
 
+            case 'd': 
+                d_flag = true;
+                break;
+
             case 'f':
-                f_flag = 1;
+                f_flag = true;
                 printf("FILENAME: %s\n", optarg);
                 break;
 
+            case 'h':
+                usage_overview();
+                break;
+                exit(0);
+
+            case 'o':
+                printf("");
+                break;
+
             case ':':
-                printf("REQUIRED OPTION: %c \n", optopt);
+                null_flag = true;
                 break;
 
             case '?':
-                red();
-                printf("ERR: Unknown option: %c\n", optopt);
-                reset_color();
-                usage_overview();
+                err = true;
                 break;
             
             default:
-                printf("Unknown option. %c \n", opt);
+                red();
+                printf("Unknown Error\n");
+                reset_color();
                 usage_overview();
                 break;
         }
     }
 
+    if (d_flag) {
+        printf("CAUGHT\n");
+    }
 
-    // mandatory f flag
-    //if (f_flag == 0) {
-    //    printf("Missing filename\n");
-    //    exit(1);
-    //}
+    if (f_flag) {
+        printf("Missing filename\n");
+        exit(1);
+    }
 
     //else {
     //    usage_overview();
     //    exit(1);
     //}
+
+    /* Catching invalid flags and missing reqired arguments */
+    if (null_flag) {
+        red();
+        printf("ERR: '-%c' requires an argument\n", optopt);
+        reset_color();
+        usage_overview();
+    }
+    else if (err) {
+        red();
+        printf("ERR: Unknown flag: '-%c'\n", optopt);
+        reset_color();
+        usage_overview();
+    }
     
     // parsing extra arguments
     if (optind < argc) {
@@ -118,10 +166,10 @@ int main(int argc, char *argv[]) {
         }
     }
     else {
-        return 0;
+        //usage_overview();
+        exit(0);
     }
 
-    // return 0;
-    exit(0);
+    return 0;
 }
 
