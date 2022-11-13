@@ -1,3 +1,5 @@
+![Build](https://github.com/akielaries/vpaSTRM/actions/workflows/build.yml/badge.svg)
+
 # Introduction
 Welcome to v1.0.2 of vpaSTRM! It is fair to say the tool is in a beta 
 stage as it is very simple and limited but stay tuned for more! 
