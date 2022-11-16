@@ -3,9 +3,58 @@
  * project 
  */
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 #include "../../include/util.h"
+
+/*
+ * functions for enclosing our console prints in color
+ * format : \033[x;xxm
+ * x can be 
+ *      0: normal
+ *      1: bold
+ *      2: darker shade 
+ *      3: italicized
+ *      4: underlined
+ *      5: flashing
+ * xx represents a color
+ */
+void black() {
+    printf("\033[1;30m");
+}
+
+void pink() {
+    printf("\033[1;31m");
+}
+
+void green() {
+    printf("\033[1;32m");
+}
+
+void yellow() {
+    printf("\033[1;33m");
+}
+
+void blue() {
+    printf("\033[1;34m");
+}
+
+void cyan() {
+    printf("\033[1;36m");
+}
+
+void red() {
+    printf("\033[1;35m");
+}
+
+void white() {
+    printf("\033[1;37m");
+}
+
+void reset_color() {
+    printf("\033[0m");
+}
 
 /*
  * function to remove spaces from a given string
@@ -67,5 +116,4 @@ void swap_data(void* a, void* b, size_t s){
     memcpy(b, tmp, s);
     free(tmp);
 }
-
 
