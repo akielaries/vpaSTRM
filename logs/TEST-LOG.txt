@@ -749,3 +749,4 @@
 [Thu_Nov__3_03:03:28_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/vid/decode.c][line: 394] 
  <-------DUMPING-------> 
 
+[Wed_Nov_16_14:17:30_2022][/home/akiel/Desktop/Trunk/github/public-repos/OSS/vpaSTRM/src/vpaSTRM.c][line: 59] <-------------------------NEW-SESSION------------------------->

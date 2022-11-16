@@ -314,7 +314,9 @@ int decode_call(int argc, char *argv[]) {
     }
 
     if (video_stream_index == -1) {
-        LOGGING("ERROR (STREAM): File %s does not contain a video stream!", argv[1]);
+        LOGGING("ERROR (STREAM): File %s does not contain a video stream!", 
+                argv[1]);
+
         return -1;
     }
 

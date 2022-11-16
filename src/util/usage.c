@@ -15,7 +15,7 @@ void usage_overview() {
     char src[10] = "./vpaSTRM";
 
     cyan();
-    printf("vpaSTRM version 1.0.3 Copyright (c) 2022, Akiel Aries\n"); 
+    printf("vpaSTRM v1.0.2 2022, akielaries and vpaSTRM contributors\n"); 
     reset_color();
     printf("Lightweight computer vision software tool.\n\n");
     printf("USAGE: %s -[flags] [[in-file opts]]...[out-file]\n", src);
