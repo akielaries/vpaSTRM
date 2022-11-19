@@ -1,3 +1,4 @@
+![Version](https://img.shields.io/github/v/release/akielaries/vpaSTRM?color=%23BF40BF)
 ![Build](https://github.com/akielaries/vpaSTRM/actions/workflows/build.yml/badge.svg)
 
 # Introduction
