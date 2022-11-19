@@ -2,6 +2,9 @@
 ![Build](https://github.com/akielaries/vpaSTRM/actions/workflows/build.yml/badge.svg)
 
 # Introduction
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1f01747bcbb141db879449eb18fd088f)](https://app.codacy.com/gh/akielaries/vpaSTRM?utm_source=github.com&utm_medium=referral&utm_content=akielaries/vpaSTRM&utm_campaign=Badge_Grade_Settings)
+
 Welcome to v1.0.2 of vpaSTRM! It is fair to say the tool is in a beta 
 stage as it is very simple and limited but stay tuned for more! 
 Previously a streaming application implemented in Python for viewing 
