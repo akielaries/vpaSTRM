@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [ v1.x, v1.x-dev ]
 
-
 jobs:
   codacy-analysis-cli:
     name: Codacy Analysis
