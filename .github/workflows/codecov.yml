@@ -2,9 +2,9 @@ name: vpaSTRM Codecov
 
 on:
   push:
-    branches: [ main ]
+    branches: [ v1.x, v1.x-dev ]
   pull_request:
-    branches: [ main ]
+    branches: [ v1.x, v1.x-dev ]
 
 jobs:
   build-and-test:
