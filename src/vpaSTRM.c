@@ -31,8 +31,6 @@
 #include "../include/decode.h"
 #include "../include/usage.h"
 #include "../include/log.h"
-#include <libavcodec/avcodec.h>
-#include <libavformat/avformat.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
