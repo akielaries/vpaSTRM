@@ -36,6 +36,7 @@ void usage_overview() {
 
 /*
  * function returning usage of decode functionality
+ * TODO: PUT USAGE FUNCTIONS IN RESPECTIVE FILES
  */
 void usage_decode() {
     printf("-d, DECODE A VIDEO FILE TO A SERIES OF PICTURES.\n");
