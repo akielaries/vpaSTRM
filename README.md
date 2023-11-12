@@ -4,5 +4,6 @@
 ![Build](https://github.com/akielaries/vpaSTRM/actions/workflows/build.yml/badge.svg)
 ![license](https://img.shields.io/github/license/akielaries/vpaSTRM?color=%23228B22)
 # On Hold
-Keeping this project in my backpocket while I work on [openMTPK](https://github.com/akielaries/openMTPK), which
-I will introduce as a dependency to build vpaSTRM on top of. In the meantime, checkout the status of openMTPK.
+On hold until proper implementations reached in the ML and other usefule modules of 
+openGPMP that can be incorporated into this project. Checkout [openGPMP](https://github.com/akielaries/openGPMP)
+in the meantime...
